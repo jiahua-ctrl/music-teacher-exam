@@ -1,5 +1,6 @@
 const QUESTIONS = Array.isArray(window.LOCAL_QUESTIONS) ? window.LOCAL_QUESTIONS : [];
 const ESSAYS = Array.isArray(window.ESSAY_PROMPTS) ? window.ESSAY_PROMPTS : [];
+const SOURCES = Array.isArray(window.EXAM_SOURCES) ? window.EXAM_SOURCES : [];
 const STORAGE_KEY = 'musicTeacherExamStatsV1';
 const THEME_KEY = 'musicTeacherExamThemeV1';
 
@@ -47,6 +48,9 @@ function calcAccuracy(filter){
   });
   return total ? Math.round(correct/total*100) : null;
 }
+function escapeHtml(s=''){
+  return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+}
 function renderHome(){
   const stats=loadStats();
   $('totalQuestions').textContent=QUESTIONS.length;
@@ -70,9 +74,33 @@ function renderHome(){
   if(!topicEntries.length){ box.innerHTML='<p class="muted">作答後會開始分析。</p>'; return; }
   box.innerHTML=topicEntries.slice(0,8).map(x=>`<div class="weak-row"><div class="weak-label">${escapeHtml(x.topic)}</div><div class="weak-bar"><span style="width:${x.acc}%"></span></div><div class="weak-score">${x.acc}% · ${x.total}題次</div></div>`).join('');
 }
-function escapeHtml(s=''){
-  return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+function filteredPool(){
+  const year=$('yearFilter')?.value || '';
+  const subject=$('subjectFilter')?.value || '';
+  const topic=$('topicFilter')?.value || '';
+  return QUESTIONS.filter(q=>(!year || q.year===year) && (!subject || q.subject===subject) && (!topic || q.topic===topic));
 }
+function populateFilters(){
+  const yearEl=$('yearFilter');
+  const topicEl=$('topicFilter');
+  if(!yearEl || !topicEl) return;
+  const years=[...new Set(QUESTIONS.map(q=>q.year).filter(Boolean))].sort((a,b)=>Number(b)-Number(a));
+  const topics=[...new Set(QUESTIONS.map(q=>q.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+  yearEl.innerHTML='<option value="">全部年度</option>'+years.map(y=>`<option value="${escapeHtml(y)}">${escapeHtml(y)} 年</option>`).join('');
+  topicEl.innerHTML='<option value="">全部主題</option>'+topics.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+}
+function updateFilterCount(){
+  const count=filteredPool().length;
+  if($('filterCount')) $('filterCount').textContent=`目前條件可練習 ${count} 題。`;
+}
+function renderSourceIndex(){
+  const box=$('sourceIndex');
+  if(!box) return;
+  if(!SOURCES.length){ box.innerHTML='<p class="muted">官方來源索引整理中。</p>'; return; }
+  box.innerHTML=SOURCES.map(s=>`<a class="mode-card" href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;align-items:flex-start;text-align:left;"><span class="mode-icon">📄</span><b>${escapeHtml(s.year)}｜${escapeHtml(s.level)}</b><small>${escapeHtml(s.school)}<br>${escapeHtml(s.status)}</small></a>`).join('');
+}
+
 function startQuiz(mode){
   lastMode=mode;
   const stats=loadStats();
@@ -81,7 +109,9 @@ function startQuiz(mode){
   if(mode==='senior') pool=QUESTIONS.filter(q=>q.subject==='高中音樂');
   if(mode==='education') pool=QUESTIONS.filter(q=>q.subject==='教育專業');
   if(mode==='wrong') pool=QUESTIONS.filter(q=>(stats.wrong||[]).includes(q.id));
+  if(mode==='filtered') pool=filteredPool();
   if(mode==='wrong' && !pool.length){ alert('目前沒有錯題，先去做幾題吧！'); return; }
+  if(mode==='filtered' && !pool.length){ alert('目前篩選條件沒有題目，請調整年度、學段或主題。'); return; }
   quiz=shuffle(pool);
   if(mode==='random10') quiz=quiz.slice(0,Math.min(10,quiz.length));
   quizIndex=0; quizCorrect=0;
@@ -180,8 +210,14 @@ function toggleTheme(){
 }
 
 window.addEventListener('DOMContentLoaded',()=>{
-  applyTheme(); renderHome();
+  applyTheme();
+  populateFilters();
+  renderSourceIndex();
+  updateFilterCount();
+  renderHome();
   document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>startQuiz(btn.dataset.mode)));
+  ['yearFilter','subjectFilter','topicFilter'].forEach(id=>$(id)?.addEventListener('change',updateFilterCount));
+  $('filteredQuizBtn')?.addEventListener('click',()=>startQuiz('filtered'));
   $('nextBtn').addEventListener('click',nextQuestion);
   $('quitBtn').addEventListener('click',()=>{showView('homeView');renderHome();});
   $('homeBtn').addEventListener('click',()=>{showView('homeView');renderHome();});
