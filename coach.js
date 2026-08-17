@@ -1,0 +1,96 @@
+(() => {
+  const STATS_KEY='musicTeacherExamStatsV1';
+  const COACH_KEY='musicTeacherExamCoachV1';
+  const ESSAY_KEY='musicTeacherExamEssayPracticeV1';
+  const BEST_STREAK_KEY='musicTeacherExamBestStreakV1';
+  let streak=0;
+
+  const load=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
+  const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+  const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+  const stats=()=>load(STATS_KEY,{attempts:{},wrong:[],daily:{},topics:{}});
+  const questions=()=>Array.isArray(window.LOCAL_QUESTIONS)?window.LOCAL_QUESTIONS:[];
+
+  function allAttempts(){return Object.values(stats().attempts||{}).reduce((n,x)=>n+(x.total||0),0)}
+  function accuracy(subject){
+    const s=stats(); let c=0,t=0;
+    questions().filter(q=>q.subject===subject).forEach(q=>{const a=s.attempts?.[q.id];if(a){c+=a.correct||0;t+=a.total||0}});
+    return t?Math.round(c/t*100):null;
+  }
+  function weakestTopic(){
+    const entries=Object.entries(stats().topics||{}).filter(([,v])=>(v.total||0)>=3)
+      .map(([name,v])=>({name,rate:Math.round((v.correct||0)/(v.total||1)*100),total:v.total||0}))
+      .sort((a,b)=>a.rate-b.rate||b.total-a.total);
+    return entries[0]||null;
+  }
+  function todayEssayCount(){return load(ESSAY_KEY,{})[todayKey()]||0}
+  function studyDays(){
+    const s=stats(); const days=new Set(Object.keys(s.daily||{}).filter(k=>(s.daily[k]||0)>0));
+    const e=load(ESSAY_KEY,{}); Object.keys(e).filter(k=>(e[k]||0)>0).forEach(k=>days.add(k));
+    return days;
+  }
+  function shift(key,delta){const [y,m,d]=key.split('-').map(Number);const x=new Date(y,m-1,d);x.setDate(x.getDate()+delta);return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`}
+  function dayStreak(){
+    const days=studyDays(); let cursor=days.has(todayKey())?todayKey():shift(todayKey(),-1); let n=0;
+    while(days.has(cursor)){n++;cursor=shift(cursor,-1)} return n;
+  }
+  function todayWeakCount(){
+    const weak=weakestTopic(); if(!weak)return 0;
+    const s=stats(); let n=0;
+    questions().filter(q=>q.topic===weak.name).forEach(q=>{
+      const a=s.attempts?.[q.id];
+      if(a?.lastDate===todayKey()) n+=a.today||1;
+    });
+    return n;
+  }
+  function task(label,current,target){const p=Math.min(100,Math.round(current/target*100));return `<div class="mt-coach-task ${current>=target?'done':''}"><div><b>${current>=target?'✅':'□'} ${label}</b><span>${current}/${target}</span></div><i><em style="width:${p}%"></em></i></div>`}
+  function badge(icon,title,hint,on){return `<div class="mt-badge ${on?'':'locked'}"><b>${icon} ${title}</b><small>${on?'已解鎖':hint}</small></div>`}
+
+  function ensureStyles(){
+    if(document.getElementById('mtCoachStyles'))return;
+    const s=document.createElement('style');s.id='mtCoachStyles';s.textContent=`
+      .mt-coach{padding:24px;margin-bottom:18px}.mt-coach-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.mt-coach-streak{padding:7px 10px;border-radius:999px;background:var(--soft);color:var(--brand);font-size:12px;font-weight:800;white-space:nowrap}.mt-coach-note{margin:12px 0 16px;padding:13px 15px;border-radius:13px;background:var(--soft);line-height:1.6;font-weight:700}.mt-coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.mt-coach-box{border:1px solid var(--line);border-radius:16px;padding:16px}.mt-coach-box h4{margin:0 0 12px}.mt-coach-tasks{display:grid;gap:10px}.mt-coach-task{padding:10px 11px;border-radius:11px;background:color-mix(in srgb,var(--soft) 65%,var(--panel))}.mt-coach-task>div{display:flex;justify-content:space-between;gap:8px;font-size:13px}.mt-coach-task>div span{color:var(--muted)}.mt-coach-task i{display:block;height:7px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:7px}.mt-coach-task em{display:block;height:100%;background:var(--brand);border-radius:99px}.mt-badges{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mt-badge{padding:10px;border:1px solid var(--line);border-radius:11px}.mt-badge b{display:block;font-size:13px}.mt-badge small{color:var(--muted)}.mt-badge.locked{opacity:.42}.mt-answer-streak{padding:3px 8px;border-radius:999px;background:var(--soft);color:var(--brand);font-weight:800}.mt-coach-feedback{margin:10px 0;padding:9px 11px;border-radius:10px;background:var(--soft);font-size:13px;font-weight:700;line-height:1.5}@media(max-width:720px){.mt-coach-grid{grid-template-columns:1fr}}
+    `;document.head.appendChild(s);
+  }
+  function ensurePanel(){
+    if(document.getElementById('mtCoach'))return;
+    const daily=document.querySelector('.section-card'); if(!daily)return;
+    const p=document.createElement('section');p.id='mtCoach';p.className='card mt-coach';
+    daily.insertAdjacentElement('afterend',p);
+  }
+  function render(){
+    ensurePanel();const p=document.getElementById('mtCoach');if(!p)return;
+    const s=stats(),today=s.daily?.[todayKey()]||0,weak=weakestTopic(),weakToday=todayWeakCount(),essays=todayEssayCount();
+    const a=allAttempts(),days=dayStreak(),best=Number(localStorage.getItem(BEST_STREAK_KEY)||0);
+    const ja=accuracy('國中音樂'),ha=accuracy('高中音樂'),ea=accuracy('教育專業');
+    let note='今天不用把所有內容讀完，只要讓「能想起來」比昨天多一點。';
+    if(today>=10&&essays>=1)note='🎉 今日基本任務完成。接下來優先把錯題和最弱主題回收。';
+    else if(weak)note=`🎯 目前最弱主題是「${weak.name}」(${weak.rate}%)，今天留5題給它。`;
+    p.innerHTML=`<div class="mt-coach-head"><div><span class="eyebrow">備考教練</span><h3 style="margin:4px 0 0">今天的任務與累積</h3></div><span class="mt-coach-streak">🔥 連續練習 ${days} 天</span></div><div class="mt-coach-note">${note}</div><div class="mt-coach-grid"><div class="mt-coach-box"><h4>🎯 今日任務</h4><div class="mt-coach-tasks">${task('選擇題 10 題',today,10)}${task(weak?`弱點「${weak.name}」5題`:'錯題／弱點 5 題',weakToday,5)}${task('申論／試教 1 題',essays,1)}</div></div><div class="mt-coach-box"><h4>🏆 成就徽章</h4><div class="mt-badges">${badge('🌱','開始累積','完成10題',a>=10)}${badge('🎵','百題手感','累積100題次',a>=100)}${badge('🔥','連對高手','單輪連對5題',best>=5)}${badge('📅','穩定三日','連續練習3天',days>=3)}${badge('🏫','國中穩定區','國中音樂≥80%',ja!==null&&ja>=80)}${badge('🎓','高中穩定區','高中音樂≥80%',ha!==null&&ha>=80)}${badge('📚','教育穩定區','教育專業≥80%',ea!==null&&ea>=80)}${badge('✍️','輸出練習','累積申論/試教10次',Object.values(load(ESSAY_KEY,{})).reduce((n,x)=>n+x,0)>=10)}</div></div></div>`;
+  }
+
+  function observeAnswers(){
+    const fb=document.getElementById('feedback');if(!fb)return;
+    const observer=new MutationObserver(()=>{
+      if(fb.classList.contains('hidden'))return;
+      const good=(document.getElementById('feedbackTitle')?.textContent||'').includes('答對');
+      streak=good?streak+1:0;localStorage.setItem(BEST_STREAK_KEY,String(Math.max(Number(localStorage.getItem(BEST_STREAK_KEY)||0),streak)));
+      let pill=document.getElementById('mtAnswerStreak');
+      if(!pill){pill=document.createElement('span');pill.id='mtAnswerStreak';pill.className='mt-answer-streak';document.querySelector('.progress-meta')?.appendChild(pill)}
+      if(pill)pill.textContent=`🔥 連對 ${streak}`;
+      let note=document.getElementById('mtCoachFeedback');if(!note){note=document.createElement('div');note.id='mtCoachFeedback';note.className='mt-coach-feedback';document.getElementById('sourceBox')?.before(note)}
+      const topic=document.getElementById('questionTopic')?.textContent||'';
+      if(note)note.textContent=good?(streak>=5?`🔥 連續答對 ${streak} 題，節奏很好。`:`✅ 這題有抓到核心，下一次要確認幾天後還能不能自己想起來。`):`🧠 先別急著重讀整章，找出「${topic||'這個主題'}」是哪個關鍵點沒有提取出來。`;
+      setTimeout(render,0);
+    });observer.observe(fb,{attributes:true,attributeFilter:['class']});
+  }
+
+  function trackEssay(){
+    const btn=document.getElementById('showHintBtn');if(!btn)return;
+    btn.addEventListener('click',()=>{
+      const key=todayKey(),data=load(ESSAY_KEY,{});data[key]=(data[key]||0)+1;save(ESSAY_KEY,data);setTimeout(render,0);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{ensureStyles();setTimeout(()=>{render();observeAnswers();trackEssay()},20)});
+})();
