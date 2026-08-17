@@ -1,0 +1,9 @@
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"藝術領綱",difficulty:"中高",question:"依十二年國教藝術領域音樂課程，國中階段『創作展現』較強調下列哪一種表現？",options:["僅模仿教師提供的固定旋律","融入傳統、當代或流行音樂風格進行改編並表達觀點","只辨認五線譜上的音高","只需欣賞作品而不進行創作"],answer:1,explanation:"國中階段的創作展現已進入較具觀點與風格意識的改編與創作，不只是初階探索。",source:"阿摩115新北國中音樂第1題考點改寫"},
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"藝術領綱",difficulty:"中",question:"國中音樂課程的讀譜學習內容，較適合包含下列何者？",options:["只辨認聲音大小","音樂符號與術語、記譜法或簡易音樂軟體","只使用圖形譜而不接觸五線譜","只背誦作曲家出生年份"],answer:1,explanation:"國中階段讀譜內容已包含音樂符號與術語、不同記譜方式，並可結合簡易音樂軟體。",source:"阿摩115新北國中音樂第2題考點改寫"},
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"中國傳統音樂",difficulty:"中高",question:"關於工尺譜，下列何者較正確？",options:["屬文字譜的一種，具有首調性質","源自歐洲教會調式","尺固定等同西洋唱名 Do","只能記錄打擊樂節奏"],answer:0,explanation:"工尺譜屬中國傳統文字譜系統，具有首調性質；各字與音高關係不能簡化成固定唱名。",source:"阿摩115新北國中音樂第3題考點改寫"},
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"世界音樂",difficulty:"中",question:"下列『音樂／樂器－地區』配對何者正確？",options:["Shamisen－日本","Gamelan－德國","Gayageum－西班牙","Tango－韓國"],answer:0,explanation:"三味線（Shamisen）是日本代表性傳統樂器；Gamelan主要見於印尼，Gayageum為韓國伽倻琴，Tango與阿根廷、烏拉圭文化密切相關。",source:"阿摩115新北國中音樂第4題考點改寫"},
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"世界音樂",difficulty:"中",question:"Gamelan 最具代表性的文化區域為何？",options:["印尼爪哇與峇里島","德國巴伐利亞","西班牙安達魯西亞","加拿大魁北克"],answer:0,explanation:"甘美朗（Gamelan）是印尼爪哇、峇里等地重要的合奏音樂文化。",source:"阿摩115新北國中音樂世界音樂考點延伸"},
+{year:"115",level:"國中音樂",exam:"新北市立國民中學教師聯合甄選",topic:"世界音樂",difficulty:"中",question:"Gayageum（伽倻琴）屬於哪一國的傳統弦樂器？",options:["韓國","印度","日本","越南"],answer:0,explanation:"Gayageum 是韓國代表性的傳統撥弦樂器。",source:"阿摩115新北國中音樂第4題考點延伸"}
+);
