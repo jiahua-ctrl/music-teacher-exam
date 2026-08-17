@@ -1,0 +1,6 @@
+window.EXAM_SOURCES = window.EXAM_SOURCES || [];
+window.EXAM_SOURCES.push(
+{year:"114",level:"教育專業",school:"新北市立國民中學教師聯合甄選",title:"114教育專業科",url:"https://yamol.tw/exam-%E7%84%A1%E5%B9%B4%E5%BA%A6%2B%2B114%2B%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8_%E6%95%99%E5%B8%AB%E8%81%AF%E5%90%88%E7%94%84%E9%81%B8%E8%A9%A6%E9%A1%8C%EF%BC%9A%E6%95%99%E8%82%B2%E5%B0%88%E6%A5%AD%E7%A7%91127214-127214.htm",status:"阿摩完整80題；持續整理"},
+{year:"114",level:"教育專業",school:"臺南市立國民中學正式教師聯合甄選",title:"114教育專業科目",url:"https://yamol.tw/exam-114%E5%B9%B4%2B%2B114%2B%E8%87%BA%E5%8D%97%E5%B8%82%E5%B8%82%E7%AB%8B%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8_%E6%AD%A3%E5%BC%8F%E6%95%99%E5%B8%AB%E8%81%AF%E5%90%88%E7%94%84%E9%81%B8%E8%A9%A6%E9%A1%8C%EF%BC%9A%E6%95%99%E8%82%B2%E5%B0%88%E6%A5%AD%E7%A7%91%E7%9B%AE128-128063.htm",status:"阿摩完整90題；持續整理"},
+{year:"114",level:"高中音樂",school:"國立臺灣師範大學附屬高級中學",title:"114正式教師甄選音樂科",url:"https://yamol.tw/exam-114%E5%B9%B4%2B%2B1141%2B%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E5%A4%A7%E9%99%84%E4%B8%AD_%E6%AD%A3%E5%BC%8F%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%E8%A9%A6%E9%A1%8C%EF%BC%9A%E9%9F%B3%E6%A8%82%E7%A7%91126221-126221.htm",status:"阿摩10題選擇＋13題非選；持續整理"}
+);
