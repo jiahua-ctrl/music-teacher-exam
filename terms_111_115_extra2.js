@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:"TERM-073",term:"撮把戲",zh:"撮把戲",topic:"臺灣傳統表演藝術",level:"高中音樂",definition:"臺灣早期民間街頭表演與賣藝文化相關的稱呼，常結合技藝、戲法、說唱或招徠觀眾的表演活動。",exam:"111 中壢高中名詞解釋；作答宜交代民間表演、街頭／廟會文化脈絡，避免只寫字面。",related:"臺灣民間表演；街頭賣藝；廟會文化"},
+{id:"TERM-074",term:"Ella Fitzgerald",zh:"艾拉・費茲潔拉",topic:"爵士與流行音樂",level:"高中音樂",definition:"美國重要爵士女歌手，以精準音準、靈活節奏與 scat singing 即興演唱聞名，被譽為 First Lady of Song。",exam:"111 中壢高中直接列為名詞解釋；至少寫爵士歌手、scat singing 與美國爵士史地位。",related:"jazz；scat singing；First Lady of Song"},
+{id:"TERM-075",term:"Blues",zh:"藍調",topic:"爵士與流行音樂",level:"高中音樂",definition:"源自美國非裔音樂文化的重要聲樂與器樂傳統，常見藍調音、十二小節藍調與呼應等特徵，對爵士、搖滾與流行音樂影響深遠。",exam:"113 教育部高中聯招非選題以歷史敘述辨識；答題可寫 African American、blue notes、12-bar blues、call and response。",related:"African American music；12-bar blues；blue notes"},
+{id:"TERM-076",term:"《桃花泣血記》",zh:"《桃花泣血記》",topic:"臺灣流行音樂史",level:"高中音樂",definition:"1930年代臺灣流行歌曲發展的重要作品之一，與同名電影宣傳及臺語流行歌產業早期發展密切相關。",exam:"113 教育部高中聯招名詞解釋；複習時應連結日治時期唱片工業、臺語流行歌與電影宣傳文化。",related:"1930年代臺灣；臺語流行歌；唱片產業"},
+{id:"TERM-077",term:"口白歌仔",zh:"口白歌仔",topic:"臺灣傳統音樂",level:"高中音樂",definition:"歌仔戲／歌仔相關表演脈絡中的說唱形式，重視口語說白與歌唱交錯，以敘事和角色表達推進內容。",exam:"115 中山女高簡答考點；答題要連結歌仔戲本土發展，並指出說白與歌唱交替的敘事性。",related:"歌仔戲；說唱；臺灣戲曲"},
+{id:"TERM-078",term:"來甦",zh:"來甦",topic:"臺灣傳統音樂",level:"高中音樂",definition:"臺灣傳統音樂與戲曲脈絡中的專門術語，屬近年高中教甄冷門本土音樂考點；實際作答需依劇種與音樂脈絡精確說明。",exam:"115 高雄高中名詞解釋直接命題。此詞具高度鑑別度，複習時應搭配南部傳統音樂／戲曲資料進一步核對。",related:"臺灣傳統音樂；南部傳統音樂"},
+{id:"TERM-079",term:"南部四大調",zh:"南部四大調",topic:"臺灣傳統音樂",level:"高中音樂",definition:"臺灣南部傳統音樂／戲曲聲腔系統的重要分類稱呼，指一組具代表性的主要曲調傳統。",exam:"115 高雄高中直接考名詞解釋；屬本土音樂高鑑別度題，應進一步熟悉各調名稱、使用劇種與聲腔特色。",related:"臺灣南部傳統音樂；戲曲聲腔"},
+{id:"TERM-080",term:"New German School",zh:"新德意志樂派",topic:"浪漫時期音樂",level:"高中音樂",definition:"19世紀中葉與 Liszt、Wagner 等進步派作曲家相關的音樂思潮，支持標題音樂、音樂戲劇與形式革新，並與較保守陣營形成浪漫派論戰。",exam:"115 彰化高中以英文敘述填名詞；關鍵線索 Franz Liszt、Richard Wagner、War of the Romantics。",related:"Liszt；Wagner；War of the Romantics"},
+{id:"TERM-081",term:"Singspiel",zh:"歌唱劇／德語歌唱劇",topic:"歌劇與音樂劇場",level:"高中音樂",definition:"德語地區的歌劇／音樂劇場類型，以歌曲、重唱等音樂段落與口說對白交替為重要特色。",exam:"115 教育部高中聯招填充題考德國 Comic Opera 稱呼；典型作品可連結 Mozart《Die Zauberflöte》。",related:"German comic opera；spoken dialogue；Mozart"},
+{id:"TERM-082",term:"Ballad Opera",zh:"民謠歌劇／敘事歌劇",topic:"歌劇與音樂劇場",level:"高中音樂",definition:"18世紀英國流行的音樂劇場類型，以口說對白搭配既有民謠、流行曲調或改編歌曲，常帶有諷刺性。",exam:"115 教育部高中聯招填充題考英國 Comic Opera 的相關稱呼；可連結《The Beggar's Opera》。",related:"England；spoken dialogue；The Beggar's Opera"}
+]);
