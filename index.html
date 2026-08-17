@@ -64,6 +64,34 @@
       </section>
 
       <section class="card section-card">
+        <div class="section-title"><div><span class="eyebrow">111～115 題庫</span><h3>依年度／學段／主題刷題</h3></div></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:12px 0 10px;">
+          <label>年度
+            <select id="yearFilter" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid #c9c9d4;background:var(--card,#fff);color:inherit;"></select>
+          </label>
+          <label>學段
+            <select id="subjectFilter" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid #c9c9d4;background:var(--card,#fff);color:inherit;">
+              <option value="">全部</option>
+              <option value="國中音樂">國中音樂</option>
+              <option value="高中音樂">高中音樂</option>
+              <option value="教育專業">教育專業</option>
+            </select>
+          </label>
+          <label>主題
+            <select id="topicFilter" style="width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid #c9c9d4;background:var(--card,#fff);color:inherit;"></select>
+          </label>
+        </div>
+        <p id="filterCount" class="muted">正在整理可練習題數…</p>
+        <button id="filteredQuizBtn" class="primary wide">🎯 開始篩選練習</button>
+      </section>
+
+      <section class="card section-card">
+        <div class="section-title"><div><span class="eyebrow">官方資料先核對</span><h3>111～115 教甄來源索引</h3></div></div>
+        <p class="muted">網站題目採「考點改寫」為主；需要核對時，可直接回到學校或教育處官方公告。</p>
+        <div id="sourceIndex" class="mode-grid"></div>
+      </section>
+
+      <section class="card section-card">
         <div class="section-title"><div><span class="eyebrow">高中教甄不能只刷選擇題</span><h3>申論／試教挑戰</h3></div></div>
         <p class="muted">每次抽一題，先自己限時回答，再展開答題提示。</p>
         <button id="essayBtn" class="primary wide">✍️ 抽一題申論／試教題</button>
@@ -76,7 +104,7 @@
 
       <section class="notice card">
         <b>題庫說明</b>
-        <p>第一版以「教甄核心知識練習」與官方考古題常見考點改寫為主，不把自編題誤標成正式原題。後續會逐年加入 111～115 年可公開取得的國中、高中音樂教甄題目來源。</p>
+        <p>題目以「教甄核心知識練習」與官方考古題考點改寫為主，不把自編題誤標成正式原題。已建立 111～115 年官方來源索引，並持續逐題整理。</p>
       </section>
     </section>
 
@@ -128,10 +156,12 @@
     </section>
   </main>
 
-  <footer><span>作答紀錄僅儲存在此裝置瀏覽器</span><span>｜</span><span>題庫來源會逐步補齊官方連結</span></footer>
+  <footer><span>作答紀錄僅儲存在此裝置瀏覽器</span><span>｜</span><span>題庫來源可由官方索引核對</span></footer>
 
   <script src="questions.js"></script>
   <script src="questions_recent.js"></script>
+  <script src="questions_official_111_115.js"></script>
+  <script src="source_index.js"></script>
   <script src="essay_prompts.js"></script>
   <script src="app.js"></script>
   <script src="coach.js?v=20260818"></script>
