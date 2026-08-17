@@ -1,3 +1,5 @@
+document.write('<script src="questions_batch_114_newtaipei_tainan_ntnu_part7.js"><\/script>');
+document.write('<script src="source_append_114_part7.js"><\/script>');
 (()=>{
   function addRefresh(){
     const topbar=document.querySelector('.topbar');
