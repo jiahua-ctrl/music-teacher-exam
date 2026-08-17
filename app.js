@@ -49,7 +49,7 @@ function calcAccuracy(filter){
   return total ? Math.round(correct/total*100) : null;
 }
 function escapeHtml(s=''){
-  return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  return String(s).replace(/[&<>'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c]));
 }
 function renderHome(){
   const stats=loadStats();
@@ -118,6 +118,24 @@ function startQuiz(mode){
   showView('quizView');
   renderQuestion();
 }
+function startCustomQuiz(pool,label='自訂練習',limit=10){
+  const cleaned=[...new Map((Array.isArray(pool)?pool:[]).filter(Boolean).map(q=>[q.id,q])).values()];
+  if(!cleaned.length){ alert('目前沒有符合條件的題目。'); return; }
+  lastMode='custom';
+  quiz=shuffle(cleaned).slice(0,Math.min(limit||cleaned.length,cleaned.length));
+  quizIndex=0; quizCorrect=0;
+  showView('quizView');
+  renderQuestion();
+  if($('quizScore')) $('quizScore').textContent=`${label} · 答對 0`;
+}
+window.MusicTeacherExam={
+  questions:QUESTIONS,
+  essays:ESSAYS,
+  loadStats,
+  startQuiz,
+  startCustomQuiz,
+  showView
+};
 function renderQuestion(){
   const q=quiz[quizIndex];
   if(!q){ finishQuiz(); return; }
@@ -221,7 +239,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   $('nextBtn').addEventListener('click',nextQuestion);
   $('quitBtn').addEventListener('click',()=>{showView('homeView');renderHome();});
   $('homeBtn').addEventListener('click',()=>{showView('homeView');renderHome();});
-  $('retryBtn').addEventListener('click',()=>startQuiz(lastMode));
+  $('retryBtn').addEventListener('click',()=>lastMode==='custom'?showView('homeView'):startQuiz(lastMode));
   $('essayBtn').addEventListener('click',openEssay);
   $('essayBackBtn').addEventListener('click',()=>{showView('homeView');renderHome();});
   $('showHintBtn').addEventListener('click',showEssayHint);
