@@ -50,7 +50,8 @@ function calcAccuracy(filter){
 function renderHome(){
   const stats=loadStats();
   $('totalQuestions').textContent=QUESTIONS.length;
-  $('dataStatus').textContent=`目前 ${QUESTIONS.length} 題選擇題＋${ESSAYS.length} 題申論／試教挑戰。`;
+  const sourced=QUESTIONS.filter(q=>q.source_type && q.source_type!=='自編練習').length;
+  $('dataStatus').textContent=`目前 ${QUESTIONS.length} 題選擇題＋${ESSAYS.length} 題申論／試教挑戰，其中 ${sourced} 題具近年考點來源標示。`;
   $('todayPractice').textContent=stats.daily?.[todayKey()] || 0;
   const ja=calcAccuracy(q=>q.subject==='國中音樂');
   const ha=calcAccuracy(q=>q.subject==='高中音樂');
@@ -95,7 +96,7 @@ function renderQuestion(){
   $('progressBar').style.width=`${quizIndex/quiz.length*100}%`;
   $('questionSubject').textContent=q.subject;
   $('questionTopic').textContent=q.topic;
-  $('questionLevel').textContent=q.level;
+  $('questionLevel').textContent=q.year ? `${q.level} · ${q.year}年` : q.level;
   $('questionText').textContent=q.question;
   $('feedback').classList.add('hidden');
   $('nextBtn').classList.add('hidden');
@@ -114,7 +115,10 @@ function answerQuestion(choice){
   });
   $('feedbackTitle').textContent=correct ? '✅ 答對了' : `❌ 正確答案是 ${q.answer}`;
   $('explanation').textContent=q.explanation;
-  $('sourceBox').innerHTML=`來源標示：${escapeHtml(q.source_title||'練習題')}<br>題號：${escapeHtml(q.id)}`;
+  const meta=[q.year?`${q.year}年`:null,q.exam,q.source_type].filter(Boolean).map(escapeHtml).join('｜');
+  const sourceTitle=escapeHtml(q.source_title||'練習題');
+  const sourceLink=q.source_url ? `<br><a href="${escapeHtml(q.source_url)}" target="_blank" rel="noopener noreferrer">🔗 查看來源／核對考點</a>` : '';
+  $('sourceBox').innerHTML=`${meta?`<b>${meta}</b><br>`:''}來源標示：${sourceTitle}<br>題號：${escapeHtml(q.id)}${sourceLink}`;
   $('feedback').classList.remove('hidden');
   $('nextBtn').classList.remove('hidden');
   recordAttempt(q,correct);
