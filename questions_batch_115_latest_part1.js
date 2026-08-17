@@ -1,0 +1,13 @@
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",level:"教育專業",exam:"新北市立國民中學教師聯合甄選",topic:"教育心理",difficulty:"中",question:"所謂負向偏誤（negativity bias），最接近下列哪一種現象？",options:["只會把他人的行為解讀成惡意","負向事件通常比同等強度的正向事件造成更大的心理影響","成年後負向偏誤會自然消失","情緒教育應先消除所有負向情緒"],answer:1,explanation:"負向偏誤指人類對負向訊息與事件往往給予較高注意與權重，其心理影響常大於同等強度的正向事件。",source:"阿摩115新北教育專業第1題考點改寫"},
+{year:"115",level:"教育專業",exam:"新北市立國民中學教師聯合甄選",topic:"創造力",difficulty:"中",question:"Guilford 擴散思考常見的四個創造力向度為何？",options:["速度、正確、廣度、深度","流暢性、變通性、獨創性、精進性","語文、圖形、動作、音樂","發現、解決、評估、修正"],answer:1,explanation:"擴散思考常以流暢性、變通性（靈活性）、獨創性與精進性評估創造思考表現。",source:"阿摩115新北教育專業第2題考點改寫"},
+{year:"115",level:"國中音樂",exam:"中區縣市政府教師甄選策略聯盟",topic:"臺灣音樂",difficulty:"中",question:"民間藝人陳達演唱恆春民謠時，最常見的自彈自唱伴奏樂器為何？",options:["三弦","月琴","琵琶","阮咸"],answer:1,explanation:"陳達以月琴自彈自唱恆春民謠的形象最具代表性。",source:"阿摩115中區國中音樂第1題考點改寫"},
+{year:"115",level:"國中音樂",exam:"中區縣市政府教師甄選策略聯盟",topic:"國樂",difficulty:"中",question:"下列哪一首作品原初即以二胡獨奏曲形式創作？",options:["《月兒高》","《賽馬》","《廣陵散》","《離騷》"],answer:1,explanation:"《賽馬》為黃海懷創作的二胡獨奏名曲；其餘作品原始樂種與編制不同。",source:"阿摩115中區國中音樂第2題考點改寫"},
+{year:"115",level:"國中音樂",exam:"中區縣市政府教師甄選策略聯盟",topic:"譜表",difficulty:"中高",question:"若某種 C 譜表使五線譜第三間記作 F，該譜表為何？",options:["Soprano clef","Mezzo-Soprano clef","Alto clef","Tenor clef"],answer:2,explanation:"Alto clef 的 C 位於第三線，因此第三間為 F。",source:"阿摩115中區國中音樂第6題考點改寫"},
+{year:"115",level:"國中音樂",exam:"中區縣市政府教師甄選策略聯盟",topic:"巴洛克音樂",difficulty:"中高",question:"J. S. Bach 管風琴協奏曲 BWV 596 改編自哪位作曲家的協奏曲？",options:["Handel","Purcell","Rameau","Vivaldi"],answer:3,explanation:"BWV 596 是 Bach 改編 Vivaldi 的協奏曲作品，展現其研究義大利協奏曲風格的歷程。",source:"阿摩115中區國中音樂第7題考點改寫"},
+{year:"115",level:"高中音樂",exam:"教育部受託辦理115學年度公立高級中等學校教師甄選",topic:"臺灣歌謠",difficulty:"中",question:"位於臺南柳營、以故居設置音樂紀念館，並創作《綠島小夜曲》等作品的臺灣歌謠作曲家為誰？",options:["鄧雨賢","周藍萍","許石","楊三郎"],answer:2,explanation:"許石故居位於臺南柳營，並設有許石音樂圖書館／紀念空間；《綠島小夜曲》為其代表作品之一。",source:"阿摩115教育部高中音樂第2題考點改寫"},
+{year:"115",level:"高中音樂",exam:"高雄市立高雄高級中學正式教師甄選",topic:"管弦樂法",difficulty:"中",question:"一般大型管弦樂總譜由上而下的基本排列邏輯，最接近下列何者？",options:["木管－銅管－打擊－豎琴／鍵盤－弦樂","弦樂－木管－銅管－打擊－豎琴","打擊－木管－弦樂－銅管－鋼琴","銅管－木管－弦樂－打擊－豎琴"],answer:0,explanation:"傳統管弦樂總譜通常由木管、銅管、打擊，再到豎琴／鍵盤等，最下方為弦樂。",source:"阿摩115高雄高中音樂第1題考點改寫"},
+{year:"115",level:"高中音樂",exam:"高雄市立高雄高級中學正式教師甄選",topic:"客家音樂",difficulty:"中",question:"客家歌謠《天公落水》通常歸類於哪一類？",options:["老山歌","山歌子","平板","小調"],answer:3,explanation:"《天公落水》一般歸為客家小調。",source:"阿摩115高雄高中音樂第3題考點改寫"},
+{year:"115",level:"高中音樂",exam:"高雄市立高雄高級中學正式教師甄選",topic:"臺灣音樂",difficulty:"中高",question:"下列『作品－作曲家』配對何者正確？",options:["《1947序曲》－蕭泰然","《水龍吟》－郭芝苑","《馬蘭姑娘》－江文也","《野台高歌》－馬水龍"],answer:0,explanation:"《1947序曲》為蕭泰然作品；《水龍吟》與馬水龍相關，《野台高歌》為賴德和作品。",source:"阿摩115高雄高中音樂第4題考點改寫"}
+);
