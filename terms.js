@@ -1,0 +1,14 @@
+window.TERM_PROMPTS = [
+  {id:"TERM-001",term:"Prepared Piano",zh:"預置鋼琴／加料鋼琴",topic:"20世紀音樂",level:"高中音樂",definition:"在鋼琴琴弦之間或琴弦上放置螺絲、橡皮、金屬等物件，改變原本的音色與共鳴。",exam:"常與 John Cage 連結；作答時要寫出『改變鋼琴音色』與『在琴弦上／間置入物件』。",related:"John Cage；Sonatas and Interludes"},
+  {id:"TERM-002",term:"Cori Spezzati",zh:"分置合唱／分置合唱團",topic:"文藝復興音樂",level:"高中音樂",definition:"將兩組或多組合唱團分置於不同空間位置，以交替、呼應或合唱形成空間性的複合聲響。",exam:"常與威尼斯樂派、聖馬可大教堂的空間聲學連結。",related:"Venetian School；Giovanni Gabrieli；St. Mark's Basilica"},
+  {id:"TERM-003",term:"Hexachord",zh:"六音音列／六音階系統",topic:"中世紀與樂理",level:"高中音樂",definition:"由六個音構成的音列；在中世紀視唱理論中，Guido 傳統以 ut–re–mi–fa–sol–la 六音系統組織音高。",exam:"若題目涉及中世紀 hexachord，要注意 natural、hard、soft hexachord 與移位唱名。",related:"Guido of Arezzo；solmization"},
+  {id:"TERM-004",term:"Polytonality",zh:"多調性",topic:"20世紀音樂",level:"高中音樂",definition:"同一時間並置兩個或以上可辨識的調性中心；若主要是兩個調性並置，也常稱 bitonality。",exam:"不要與無調性混淆：多調性仍可聽出／分析出多個調性中心。",related:"20世紀和聲語法；bitonality"},
+  {id:"TERM-005",term:"Mystic Chord",zh:"神祕和弦",topic:"20世紀音樂",level:"高中音樂",definition:"與 Alexander Scriabin 密切相關的六音和弦集合，常以增四度與四度堆疊等方式描述其特殊和聲色彩。",exam:"看到 Scriabin、Prometheus、六音和弦等線索要能連結 Mystic Chord。",related:"Alexander Scriabin；Prometheus: The Poem of Fire"},
+  {id:"TERM-006",term:"Spectrogram",zh:"聲譜圖",topic:"音樂科技",level:"高中音樂",definition:"將聲音的頻率能量隨時間變化視覺化的圖像，通常以時間、頻率與強度呈現聲音結構。",exam:"可用於分析音色、泛音、語音、樂器頻譜與聲音事件。",related:"frequency；amplitude/intensity；timbre"},
+  {id:"TERM-007",term:"Kora",zh:"科拉琴",topic:"世界音樂",level:"高中音樂",definition:"西非曼丁文化圈常見的橋式豎琴／豎琴魯特類撥弦樂器，傳統上與 griot／jeli 說唱音樂文化密切相關。",exam:"辨識重點是『西非』、『多弦撥弦樂器』與 griot/jeli 傳統。",related:"West Africa；Mande；griot/jeli"},
+  {id:"TERM-008",term:"Pansori",zh:"盤索里",topic:"世界音樂",level:"高中音樂",definition:"韓國傳統敘事聲樂，由一名歌者與一名鼓手為核心，以歌唱、說白、動作共同敘事。",exam:"不要和韓國宮廷樂或農樂混淆；核心編制是歌者＋鼓手。",related:"Korea；sorikkun；gosu"},
+  {id:"TERM-009",term:"Fado",zh:"法朵",topic:"世界音樂",level:"高中音樂",definition:"葡萄牙都市歌唱傳統，以強烈情感、命運感與 saudade 等情緒意涵著稱，常搭配葡萄牙吉他。",exam:"辨識國家是葡萄牙，常考 saudade 與 Portuguese guitar。",related:"Portugal；saudade；Portuguese guitar"},
+  {id:"TERM-010",term:"Aleatory Music",zh:"機遇音樂／偶然音樂",topic:"20世紀音樂",level:"高中音樂",definition:"將作品的某些創作、排列或演奏決定交由偶然程序或演奏者選擇，使每次實現可能不同。",exam:"John Cage 是常見連結人物；但不同作品對偶然性的控制程度不同。",related:"John Cage；chance operations；indeterminacy"},
+  {id:"TERM-011",term:"Hemiola",zh:"赫米奧拉／節拍錯置",topic:"樂理與節奏",level:"高中音樂",definition:"常指三拍與二拍的節奏分組關係暫時互換，例如兩組三拍被感知為三組二拍。",exam:"巴洛克舞曲與終止附近常見；重點是 3:2 的節奏／重音重新分組。",related:"3:2；metric regrouping"},
+  {id:"TERM-012",term:"Alberti Bass",zh:"阿爾貝蒂低音",topic:"古典時期與織度",level:"高中音樂",definition:"將和弦音以固定分解型態反覆奏出的伴奏音型，典型順序常為低－高－中－高。",exam:"常見於古典時期鍵盤作品；辨識重點是反覆的分解和弦伴奏。",related:"Classical period；broken-chord accompaniment"}
+];
