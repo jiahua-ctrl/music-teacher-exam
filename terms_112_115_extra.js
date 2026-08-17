@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:"TERM-063",term:"Theremin",zh:"特雷門琴",topic:"音樂科技與電子音樂",level:"高中音樂",definition:"早期電子樂器之一，演奏者不需接觸樂器本體，而以雙手在天線附近的位置改變音高與音量。",exam:"112 中興大學附中名詞解釋；答題關鍵：電子樂器、非接觸式演奏、天線控制音高與音量。",related:"Léon Theremin；electronic instrument"},
+{id:"TERM-064",term:"Suno",zh:"Suno AI 音樂生成",topic:"AI與音樂科技",level:"高中音樂",definition:"以生成式人工智慧依文字提示等輸入產生歌曲、器樂、歌聲與相關音樂內容的 AI 音樂生成服務。",exam:"115 新竹高中名詞／教學應用考點；除了定義，也應能討論著作權、AI素養與教學使用。",related:"generative AI；music generation；AI literacy"},
+{id:"TERM-065",term:"七字調",zh:"七字調",topic:"臺灣傳統音樂",level:"高中音樂",definition:"歌仔戲重要的基本曲調之一，名稱與其傳統七字句式唱詞結構相關，能依劇情與語氣作旋律變化。",exam:"115 新竹高中名詞與教學應用考點；應連結歌仔戲及臺灣本土戲曲。",related:"歌仔戲；臺灣戲曲"},
+{id:"TERM-066",term:"什音",zh:"什音",topic:"臺灣傳統音樂",level:"高中音樂",definition:"臺灣傳統音樂與戲曲語境中使用的術語；複習時應連同實際劇種、曲牌與聲腔脈絡辨識，而非只背字面。",exam:"115 新竹高中直接列入名詞解釋與教學應用題，屬較冷門、具鑑別度的本土音樂考點。",related:"臺灣傳統音樂；戲曲聲腔"},
+{id:"TERM-067",term:"島唄",zh:"島唄／Shima-uta",topic:"世界音樂",level:"高中音樂",definition:"日本島嶼文化中的歌謠稱呼，特別常與奄美群島等地的傳統民歌文化連結；不同地域對此詞的使用脈絡可能不同。",exam:"115 新竹高中名詞解釋；答題宜交代地域與民歌文化背景，避免只寫成一般『島上的歌』。",related:"Amami Islands；Japanese folk music"},
+{id:"TERM-068",term:"十二律",zh:"十二律",topic:"中國傳統樂律",level:"高中音樂",definition:"中國傳統律學將八度音域中的音高關係建立為十二個律位的理論系統，包含六律與六呂。",exam:"115 新竹高中名詞解釋；可進一步連結三分損益法與黃鐘。",related:"六律六呂；三分損益法；黃鐘"},
+{id:"TERM-069",term:"Fixed Do",zh:"固定唱名法",topic:"音樂教育與視唱",level:"高中音樂",definition:"唱名與絕對音高固定對應的唱名系統，例如 C 永遠唱 Do，不因調性改變而改變唱名。",exam:"115 新竹高中名詞解釋；常與 Movable Do 比較。",related:"Movable Do；solfège；sight singing"},
+{id:"TERM-070",term:"Legit",zh:"Legit 音樂劇唱法",topic:"音樂劇與聲樂",level:"高中音樂",definition:"音樂劇聲樂中較接近古典聲樂美學的演唱方式，重視連貫線條、共鳴與較傳統的音色，常見於早期或古典風格音樂劇。",exam:"115 新竹高中名詞解釋；應能與 belt 等音樂劇唱法區辨。",related:"musical theatre；classical vocal technique；belt"},
+{id:"TERM-071",term:"CLIL",zh:"內容與語言整合學習",topic:"跨領域與雙語教育",level:"高中音樂",definition:"Content and Language Integrated Learning，將學科內容學習與第二／外語學習整合，使學生同時發展內容知識與語言能力。",exam:"115 新竹高中列入音樂教學名詞；答題應能說明如何在音樂課同時設定音樂與語言目標。",related:"Content and Language Integrated Learning；雙語教育"},
+{id:"TERM-072",term:"Foley",zh:"擬音／Foley 音效",topic:"音樂科技與影像聲音",level:"高中音樂",definition:"影視後製中由擬音師重新製作、錄製與畫面動作同步的日常聲響，例如腳步、衣物摩擦或物件碰撞。",exam:"114 教育部高中聯招名詞解釋；不要與配樂或單純現場收音混淆。",related:"film sound；sound effects；Jack Foley"}
+]);
