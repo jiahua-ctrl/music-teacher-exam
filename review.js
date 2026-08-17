@@ -1,0 +1,27 @@
+(() => {
+  const QUESTIONS=Array.isArray(window.LOCAL_QUESTIONS)?window.LOCAL_QUESTIONS:[];
+  const REVIEW_KEY='musicTeacherExamSpacedReviewV1';
+  const STATS_KEY='musicTeacherExamStatsV1';
+  const $=id=>document.getElementById(id);
+  const load=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
+  const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+  const addHours=(d,h)=>new Date(d.getTime()+h*3600000),addDays=(d,x)=>addHours(d,x*24);
+  const fmt=d=>`${d.getMonth()+1}/${d.getDate()}`;
+  const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  let quiz=[],idx=0,correct=0,answered=false;
+
+  function bootstrap(){
+    const r=load(REVIEW_KEY,{}),s=load(STATS_KEY,{attempts:{},wrong:[],daily:{},topics:{}});let changed=false;
+    QUESTIONS.forEach(q=>{const a=s.attempts?.[q.id];if(!a?.total||r[q.id])return;const acc=(a.correct||0)/a.total;r[q.id]={due:new Date().toISOString(),correctStreak:acc===1?1:0,lastResult:acc===1?'correct':'wrong',hadWrong:acc<1,lastReviewed:null,intervalDays:0};changed=true});if(changed)save(REVIEW_KEY,r);return r;
+  }
+  function state(q,r,s){const a=s.attempts?.[q.id];if(!a?.total)return'new';const x=r[q.id],acc=(a.correct||0)/a.total;if(!x||x.lastResult==='wrong'||acc<.6)return'red';if((x.correctStreak||0)>=3&&new Date(x.due)>new Date())return'green';return'yellow'}
+  function dueQuestions(){const r=bootstrap(),s=load(STATS_KEY,{attempts:{}}),now=new Date();const arr=[];QUESTIONS.forEach(q=>{const x=r[q.id];if(x?.due&&new Date(x.due)<=now)arr.push({q,state:state(q,r,s),due:new Date(x.due)})});arr.sort((a,b)=>({red:0,yellow:1,green:2}[a.state]-({red:0,yellow:1,green:2}[b.state])||a.due-b.due);return arr.slice(0,20)}
+  function update(q,isCorrect){const r=bootstrap(),prev=r[q.id]||{correctStreak:0,hadWrong:false,lastResult:null},now=new Date();let due;if(!isCorrect){const again=prev.lastResult==='wrong';due=again?addDays(now,1):addHours(now,4);r[q.id]={...prev,due:due.toISOString(),correctStreak:0,hadWrong:true,lastResult:'wrong',lastReviewed:now.toISOString(),intervalDays:again?1:0};}else{const n=(prev.correctStreak||0)+1,days=n===1?3:n===2?7:n===3?14:21;due=addDays(now,days);r[q.id]={...prev,due:due.toISOString(),correctStreak:n,lastResult:'correct',lastReviewed:now.toISOString(),intervalDays:days};}save(REVIEW_KEY,r);return due}
+  function recordAttempt(q,isCorrect){const s=load(STATS_KEY,{attempts:{},wrong:[],daily:{},topics:{}});s.attempts=s.attempts||{};s.attempts[q.id]=s.attempts[q.id]||{total:0,correct:0};s.attempts[q.id].total++;if(isCorrect)s.attempts[q.id].correct++;s.topics=s.topics||{};s.topics[q.topic]=s.topics[q.topic]||{total:0,correct:0};s.topics[q.topic].total++;if(isCorrect)s.topics[q.topic].correct++;const d=new Date(),key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;s.daily=s.daily||{};s.daily[key]=(s.daily[key]||0)+1;const w=new Set(s.wrong||[]);if(isCorrect)w.delete(q.id);else w.add(q.id);s.wrong=[...w];save(STATS_KEY,s)}
+  function show(id){['reviewIntro','reviewQuiz','reviewResult'].forEach(x=>$(x)?.classList.toggle('active',x===id))}
+  function render(){answered=false;const item=quiz[idx];if(!item){finish();return}const q=item.q;$('reviewProgress').textContent=`${idx+1} / ${quiz.length}`;$('reviewScore').textContent=`答對 ${correct}`;$('reviewBar').style.width=`${idx/quiz.length*100}%`;$('reviewSubject').textContent=q.subject;$('reviewTopic').textContent=q.topic;$('reviewState').textContent=item.state==='red'?'🔴 容易忘記':'🟡 待複習';$('reviewQuestion').textContent=q.question;$('reviewFeedback').classList.add('hidden');$('reviewNextBtn').classList.add('hidden');$('reviewOptions').innerHTML=[['A',q.option_a],['B',q.option_b],['C',q.option_c],['D',q.option_d]].map(([k,t])=>`<button class="option-btn" data-choice="${k}"><b>${k}.</b> ${esc(t)}</button>`).join('');document.querySelectorAll('.option-btn').forEach(b=>b.addEventListener('click',()=>answer(b.dataset.choice)))}
+  function answer(choice){if(answered)return;answered=true;const q=quiz[idx].q,isCorrect=choice===q.answer;if(isCorrect)correct++;document.querySelectorAll('.option-btn').forEach(b=>{b.disabled=true;if(b.dataset.choice===q.answer)b.classList.add('correct');if(b.dataset.choice===choice&&!isCorrect)b.classList.add('wrong')});recordAttempt(q,isCorrect);const due=update(q,isCorrect);$('reviewFeedbackTitle').textContent=isCorrect?'✅ 答對了':'❌ 正確答案是 '+q.answer;$('reviewExplanation').textContent=q.explanation||'';$('reviewNext').textContent=isCorrect?`🧠 下一次安排：${fmt(due)}。`:`🧠 這題會在 ${fmt(due)} 再出現。`;$('reviewSource').innerHTML=`來源標示：${esc(q.source_title||'練習題')}<br>題號：${esc(q.id)}`;$('reviewFeedback').classList.remove('hidden');$('reviewNextBtn').textContent=idx===quiz.length-1?'查看結果 →':'下一題 →';$('reviewNextBtn').classList.remove('hidden');$('reviewScore').textContent=`答對 ${correct}`}
+  function next(){if(!answered)return;idx++;idx>=quiz.length?finish():render()}
+  function finish(){const score=quiz.length?Math.round(correct/quiz.length*100):0;$('reviewResultScore').textContent=score;$('reviewResultText').textContent=`今天複習 ${quiz.length} 題，答對 ${correct} 題。答對的題目已延長間隔，答錯的題目會更快再出現。`;show('reviewResult')}
+  document.addEventListener('DOMContentLoaded',()=>{quiz=dueQuestions();if(!quiz.length){$('reviewStatus').textContent='今天沒有到期題目，可以回首頁做新題或申論／試教練習。';return}$('reviewStatus').textContent=`今天有 ${quiz.length} 題到期，會優先從容易忘記的題目開始。`;show('reviewQuiz');render();$('reviewNextBtn').addEventListener('click',next)});
+})();
