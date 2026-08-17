@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:"TERM-R401",term:"Serialism",zh:"序列主義",topic:"20世紀音樂",level:"高中音樂｜👹冷門",definition:"以預先安排的音高、節奏、力度、音色等序列作為作品組織原則的作曲思維；十二音技法是其中重要來源，但全面序列主義可將序列概念擴展到其他音樂參數。",exam:"110 中正高中名詞釋義考點。作答避免把 Serialism 完全等同十二音技法。",related:"Schoenberg；Webern；total serialism"},
+{id:"TERM-R402",term:"新法密律",zh:"新法密律",topic:"中國音樂史／律學",level:"高中音樂｜👹冷門",definition:"明代朱載堉提出的律學方法，以精密計算建立十二律的等比關係，被視為與十二平均律原理密切相關的重要律學成果。",exam:"110 中正高中名詞釋義考點。核心人物朱載堉；不要與三分損益法混淆。",related:"朱載堉；十二律；十二平均律"},
+{id:"TERM-R403",term:"四字聯仔",zh:"四字聯仔",topic:"臺灣傳統音樂",level:"高中音樂｜👹冷門",definition:"臺灣傳統說唱與戲曲語境中可見的韻文／念唱形式，名稱涉及四字句式或成組的語言節奏組織；實際運用須依曲種脈絡辨識。",exam:"110 臺南女中非選題考點。此詞地域與曲種語境較強，答題時宜連結臺灣傳統音樂的念唱、韻文與表演脈絡。",related:"臺灣說唱；戲曲；念唱"},
+{id:"TERM-R404",term:"老山歌",zh:"老山歌",topic:"臺灣客家音樂",level:"高中音樂｜👹冷門",definition:"臺灣客家山歌的重要傳統曲調類型之一，常具自由悠長的歌唱特性，與山歌仔、平板等曲調共同構成客家山歌的重要系統。",exam:"110 臺南女中要求比較老山歌與山歌仔。準備時要能從旋律、節奏、場合與曲調特徵比較。",related:"客家山歌；山歌仔；平板"},
+{id:"TERM-R405",term:"山歌仔",zh:"山歌仔",topic:"臺灣客家音樂",level:"高中音樂｜👹冷門",definition:"臺灣客家山歌常見曲調類型之一，與老山歌、平板等並列；其旋律與節奏組織較具固定曲調性，常用於客家歌唱與對唱脈絡。",exam:"110 臺南女中比較題考點。不要只背名稱，要能與老山歌進行比較。",related:"客家山歌；老山歌；平板"},
+{id:"TERM-R406",term:"kinakaian 母親的舌頭",zh:"kinakaian 母親的舌頭",topic:"臺灣原住民族／流行音樂",level:"高中音樂｜👹冷門",definition:"阿爆（Aljenljeng Tjaluvie）的音樂作品／專輯脈絡，凸顯排灣族語、族群文化記憶與當代流行音樂創作之連結。",exam:"110 臺南女中直接以作品與阿爆出題。準備時要掌握原住民族語創作、當代編曲與文化認同。",related:"阿爆 ABAO；排灣族；族語音樂"},
+{id:"TERM-R407",term:"Sturm und Drang",zh:"狂飆運動／狂飆突進",topic:"古典時期／音樂史",level:"高中音樂｜👹冷門",definition:"18世紀德語文化中的文學藝術思潮，強調強烈情感、戲劇性與個人表達；音樂史上常用來描述海頓等作曲家部分作品中小調、強烈動態與戲劇張力的風格。",exam:"115 師大附中把它與 castrato、verismo、aleatory、idée fixe 做年代排序。要能判斷其18世紀位置。",related:"Haydn；18世紀；Empfindsamer Stil"},
+{id:"TERM-R408",term:"Idée fixe",zh:"固定樂思",topic:"浪漫時期／標題音樂",level:"高中音樂｜👹冷門",definition:"白遼士在《幻想交響曲》中以反覆出現且隨情境變形的主題代表特定人物或觀念的手法，是浪漫時期標題音樂的重要概念。",exam:"115 師大附中年代排序考點。需與 Wagner 的 Leitmotif 分辨：兩者相近但歷史與戲劇功能不同。",related:"Berlioz；Symphonie fantastique；Leitmotif"},
+{id:"TERM-R409",term:"Asymmetric Meter",zh:"不對稱拍子／非對稱節拍",topic:"節奏與拍號",level:"高中音樂｜👹冷門",definition:"拍內分組不等長的節拍結構，例如 5/8 可分為2+3或3+2，7/8可形成2+2+3等不均等組合。",exam:"115 師大附中以臺北捷運進站音樂作生活情境題。要能從實際聽覺辨識不對稱分組。",related:"5/8；7/8；additive rhythm"},
+{id:"TERM-R410",term:"Berceuse",zh:"搖籃曲",topic:"音樂術語／曲種",level:"高中音樂｜👹冷門",definition:"法文意為搖籃曲，通常具有柔和、搖曳、反覆的伴奏節奏與抒情旋律。",exam:"115 高雄高中直接考法文字義，並以 Lullaby 作為對應。教甄常用義大利文、德文、法文術語做冷門辨識。",related:"Lullaby；Chopin；法文音樂術語"}
+]);
