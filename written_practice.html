@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6b4fa3">
+  <title>高中書寫／分析實戰｜中等音樂教甄上岸</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .written-wrap{max-width:980px;margin:0 auto;padding:24px 16px 48px}.written-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.written-back{text-decoration:none;color:inherit}.written-hero{padding:24px;margin-bottom:18px}.written-hero h1{margin:6px 0 8px;font-size:clamp(25px,4vw,38px)}.written-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.written-card{padding:22px}.written-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.written-tab{border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:999px;padding:9px 13px;font-weight:800;cursor:pointer}.written-tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}.written-meta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.written-pill{padding:5px 9px;border-radius:999px;background:var(--soft);font-size:12px;font-weight:800}.written-prompt{font-size:17px;line-height:1.75;font-weight:720;white-space:pre-line}.written-paper{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--soft);font-size:13px;line-height:1.6}.written-timer{font-size:42px;font-weight:900;color:var(--brand);letter-spacing:1px;margin:14px 0}.written-actions{display:flex;gap:8px;flex-wrap:wrap}.written-actions button,.written-actions a{border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer;text-decoration:none}.written-actions .primary-action{background:var(--brand);color:#fff;border-color:var(--brand)}.written-answer{width:100%;min-height:250px;border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--panel);color:inherit;font:inherit;line-height:1.65;resize:vertical}.written-check{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:14px}.written-check h3{margin-top:0}.written-checklist{display:grid;gap:9px}.written-checklist label{display:flex;gap:9px;align-items:flex-start;line-height:1.5}.written-score{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.written-history{display:grid;gap:9px}.written-history-row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:11px;font-size:13px}.written-history-row small{color:var(--muted)}.written-empty{color:var(--muted)}
+    @media(max-width:760px){.written-grid{grid-template-columns:1fr}.written-timer{font-size:34px}.written-top{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="written-wrap">
+    <div class="written-top">
+      <a class="written-back ghost small" href="index.html">← 回首頁</a>
+      <span class="eyebrow">高中音樂教甄｜輸出訓練</span>
+    </div>
+
+    <section class="card written-hero">
+      <span class="eyebrow">不只知道答案，要能寫得出來</span>
+      <h1>高中書寫／分析實戰</h1>
+      <p class="muted">和聲題建議同步拿五線譜紙作答；網站負責抽題、計時、記錄分析思路與自評。曲式與申論則直接在下方輸入答題架構。</p>
+      <div class="written-tabs" id="writtenTabs">
+        <button class="written-tab active" data-kind="harmony">🎹 四部和聲</button>
+        <button class="written-tab" data-kind="form">🧩 曲式／對位</button>
+        <button class="written-tab" data-kind="essay">✍️ 音樂專業申論</button>
+        <button class="written-tab" data-kind="all">🔥 混合抽題</button>
+      </div>
+    </section>
+
+    <div class="written-grid">
+      <section class="card written-card">
+        <span class="eyebrow">本次題目</span>
+        <div class="written-meta"><span id="wpKind" class="written-pill"></span><span id="wpLevel" class="written-pill"></span><span id="wpSource" class="written-pill"></span></div>
+        <div id="wpPrompt" class="written-prompt">載入題目中…</div>
+        <div id="wpPaperNote" class="written-paper"></div>
+        <div id="wpTimer" class="written-timer">20:00</div>
+        <div class="written-actions">
+          <button id="wpNew">🎲 換一題</button>
+          <button id="wpStart" class="primary-action">▶ 開始計時</button>
+          <button id="wpReset">↺ 重設</button>
+        </div>
+      </section>
+
+      <section class="card written-card">
+        <span class="eyebrow">你的作答</span>
+        <h2 style="margin:6px 0 12px">先寫，再看檢核</h2>
+        <textarea id="wpAnswer" class="written-answer" placeholder="和聲題：記錄羅馬數字、功能、聲部進行與容易出錯處。\n曲式題：先列段落、調性、終止式、主題功能與判斷證據。\n申論題：先列3～5個主論點，再補作品／作曲家／教學例證。"></textarea>
+        <div class="written-actions" style="margin-top:12px">
+          <button id="wpShowCheck">📋 展開自評檢核</button>
+          <button id="wpSave" class="primary-action">💾 儲存這次練習</button>
+        </div>
+        <div id="wpCheck" class="written-check" hidden></div>
+      </section>
+    </div>
+
+    <section class="card written-card" style="margin-top:18px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><span class="eyebrow">累積輸出</span><h2 style="margin:5px 0 0">最近練習</h2></div><div id="wpSummary" class="written-pill">0 次</div></div>
+      <div id="wpHistory" class="written-history" style="margin-top:14px"></div>
+    </section>
+  </div>
+
+  <script src="written_practice.js?v=20260818"></script>
+</body>
+</html>
