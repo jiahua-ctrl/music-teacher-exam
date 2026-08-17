@@ -1,0 +1,16 @@
+// 111 新北音樂＋金門教育專業：依阿摩歷屆考點改寫
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"111",level:"國中音樂",exam:"新北市國中教師聯合甄選",topic:"臺灣音樂",difficulty:"中",q:"下列何者是臺灣作曲家蕭泰然的重要室內樂作品？",options:["鋼琴三重奏《福爾摩沙》","交響詩《孔雀東南飛》","《淡水組曲》","十二首鋼琴奏鳴曲"],answer:0,explanation:"蕭泰然的重要作品之一為鋼琴三重奏《福爾摩沙》。本題依111新北音樂科第46題考點改寫。",source:"阿摩：111新北國中音樂"},
+{year:"111",level:"國中音樂",exam:"新北市國中教師聯合甄選",topic:"西洋音樂史",difficulty:"中",q:"鋼琴炫技名曲《Islamey（伊斯拉美）》的作曲家是誰？",options:["Balakirev","Liszt","Mussorgsky","Rachmaninov"],answer:0,explanation:"《Islamey》是俄國作曲家巴拉基列夫（Mily Balakirev）的鋼琴作品。",source:"阿摩：111新北國中音樂"},
+{year:"111",level:"國中音樂",exam:"新北市國中教師聯合甄選",topic:"民族樂派",difficulty:"中",q:"交響詩套曲《Má vlast（我的祖國）》是哪位作曲家的代表作？",options:["Smetana","Sibelius","Grieg","Dvořák"],answer:0,explanation:"《我的祖國》為捷克民族樂派作曲家史麥塔納的交響詩套曲，其中《Vltava（莫爾道河）》尤其著名。",source:"阿摩：111新北國中音樂"},
+{year:"111",level:"國中音樂",exam:"新北市國中教師聯合甄選",topic:"音樂術語",difficulty:"中",q:"下列哪一個術語主要表示速度／時間處理，而非表情或性格？",options:["Dolente","Religioso","Strepitoso","Ritenuto"],answer:3,explanation:"Ritenuto 表示立即放慢或速度收住；其餘三者較偏向表情、性格指示。",source:"阿摩：111新北國中音樂"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"教育法規",difficulty:"易",q:"為明定教師權利義務、保障教師工作及生活並提升教師專業地位，我國主要制定哪一部法律？",options:["教師法","教育基本法","國民教育法","師資培育法"],answer:0,explanation:"《教師法》的立法目的即包含明定教師權利義務、保障教師工作及生活、提升教師專業地位並維護學生學習權。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"教育心理學",difficulty:"易",q:"教師讓學生累積點數，再用點數兌換獎勵，主要使用哪一類增強物？",options:["物質增強物","代幣增強物","活動增強物","社會增強物"],answer:1,explanation:"點數本身可交換其他增強物，屬於代幣增強（token reinforcement）。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"行為改變技術",difficulty:"中",q:"學生以干擾行為吸引教師注意；教師改為不再給予注意，之後該行為逐漸減少。這最符合哪個原理？",options:["正增強","負增強","消弱","懲罰"],answer:2,explanation:"原本維持行為的增強（教師注意）被撤除，使行為逐漸下降，屬消弱（extinction）。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"班級經營",difficulty:"中",q:"教師強調清楚規則、堅定要求學生遵守，並以適當獎懲建立良好學習環境，較接近哪一種班級經營模式？",options:["果斷紀律","目標導向","團體動力","權變理論"],answer:0,explanation:"Canter 的果斷紀律（Assertive Discipline）強調教師明確建立規則、後果與一致執行。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"教育心理學",difficulty:"易",q:"以個體較喜歡、較常出現的活動作為較不喜歡行為的增強物，稱為什麼原則？",options:["比馬龍效應","Premack principle","漣漪效應","團體後效"],answer:1,explanation:"Premack principle 常稱普墨克原則或祖母原則：高機率行為可增強低機率行為。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"班級經營",difficulty:"中",q:"教師獎勵或處理某位學生的行為，同時影響班上其他學生的行為，Kounin 稱此現象為何？",options:["比馬龍效應","月暈效應","連鎖效應","漣漪效應"],answer:3,explanation:"Kounin 的 ripple effect（漣漪效應）指教師對一名學生的處置會影響其他旁觀學生。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"教育社會學",difficulty:"中",q:"個人自願或被迫學習另一文化的過程，通常稱為何者？",options:["同化 assimilation","涵化 acculturation","濡化 enculturation","社會化 socialization"],answer:1,explanation:"Acculturation（涵化）指不同文化接觸後，個人或群體學習、採納異文化元素的歷程。",source:"阿摩：111金門國中教育專業"},
+{year:"111",level:"教育專業",exam:"金門縣國中正式教師聯合甄選",topic:"發展心理學",difficulty:"中",q:"Piaget 認為同化與調適透過平衡作用促成認知發展，其理論基礎最接近哪一觀念？",options:["生物適應論","生態環境論","學習準備度","訊息處理論"],answer:0,explanation:"Piaget 將認知發展視為個體適應環境的歷程，同化與調適概念深受生物適應觀點影響。",source:"阿摩：111金門國中教育專業"}
+);
