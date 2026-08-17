@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6b4fa3">
+  <title>高中音樂筆試模擬卷｜中等音樂教甄上岸</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mock-wrap{max-width:980px;margin:0 auto;padding:24px 16px 48px}.mock-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}.mock-hero,.mock-card{padding:24px;margin-bottom:16px}.mock-timer{font-size:42px;font-weight:900;color:var(--brand)}.mock-progress{display:flex;justify-content:space-between;gap:12px;align-items:center}.mock-q{padding:18px 0;border-top:1px solid var(--line)}.mock-q:first-child{border-top:0}.mock-q h3{font-size:17px;line-height:1.6}.mock-options{display:grid;gap:8px}.mock-options label{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:11px;cursor:pointer}.mock-written textarea{width:100%;min-height:180px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:inherit;padding:12px;font:inherit;line-height:1.6;box-sizing:border-box}.mock-actions{display:flex;gap:8px;flex-wrap:wrap}.mock-actions button,.mock-actions a{border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:10px;padding:10px 13px;font-weight:800;text-decoration:none;cursor:pointer}.mock-actions .go{background:var(--brand);color:#fff;border-color:var(--brand)}.mock-result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mock-stat{padding:15px;border:1px solid var(--line);border-radius:12px}.mock-stat b{font-size:26px;display:block}.mock-topic{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}.mock-hidden{display:none!important}.mock-note{font-size:13px;color:var(--muted);line-height:1.6}.mock-checks{display:grid;gap:8px;margin-top:10px}.mock-checks label{display:flex;gap:8px;align-items:flex-start}@media(max-width:700px){.mock-result-grid{grid-template-columns:1fr}.mock-top{align-items:flex-start;flex-direction:column}.mock-timer{font-size:34px}}
+  </style>
+</head>
+<body>
+  <div class="mock-wrap">
+    <div class="mock-top"><a class="ghost small" href="index.html" style="text-decoration:none">← 回首頁</a><span class="eyebrow">高中音樂｜60 分鐘模擬</span></div>
+    <section class="card mock-hero">
+      <span class="eyebrow">整份作答，不看答案</span>
+      <h1 style="margin:6px 0 8px">高中音樂筆試模擬卷</h1>
+      <p class="muted">第一部分：30 題選擇題，共 60 分。第二部分：2 題書寫題，共 40 分。交卷後才顯示選擇題答案與弱點分析；書寫題以自評規準計分。</p>
+      <div class="mock-progress"><div><b id="mockStatus">尚未開始</b><div class="mock-note">建議準備紙筆與五線譜紙。</div></div><div id="mockTimer" class="mock-timer">60:00</div></div>
+      <div class="mock-actions" style="margin-top:12px"><button id="mockStart" class="go">▶ 開始新模擬卷</button><button id="mockReset">↺ 重抽一份</button></div>
+    </section>
+
+    <section id="mockPaper" class="mock-hidden">
+      <section class="card mock-card"><span class="eyebrow">第一部分｜60 分</span><h2>選擇題 30 題</h2><div id="mcQuestions"></div></section>
+      <section class="card mock-card"><span class="eyebrow">第二部分｜40 分</span><h2>書寫題 2 題</h2><div id="writtenQuestions"></div><div class="mock-actions" style="margin-top:16px"><button id="mockSubmit" class="go">📮 交卷</button></div></section>
+    </section>
+
+    <section id="mockResult" class="card mock-card mock-hidden">
+      <span class="eyebrow">本次模擬結果</span><h2>成績與弱點報告</h2>
+      <div class="mock-result-grid">
+        <div class="mock-stat"><small>選擇題</small><b id="mcScore">0</b><span>/ 60</span></div>
+        <div class="mock-stat"><small>書寫題自評</small><b id="writtenScore">0</b><span>/ 40</span></div>
+        <div class="mock-stat"><small>總分</small><b id="totalScore">0</b><span>/ 100</span></div>
+      </div>
+      <div id="mockSummary" class="mock-note" style="margin-top:14px"></div>
+      <h3>選擇題弱點</h3><div id="topicReport"></div>
+      <h3>錯題回看</h3><div id="wrongReview"></div>
+      <div class="mock-actions" style="margin-top:16px"><button id="mockAgain" class="go">再考一份</button><a href="written_practice.html">去做書寫／分析實戰</a></div>
+    </section>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="questions_recent.js"></script>
+  <script src="questions_official_111_115.js"></script>
+  <script src="mock_exam.js?v=20260818"></script>
+</body>
+</html>
