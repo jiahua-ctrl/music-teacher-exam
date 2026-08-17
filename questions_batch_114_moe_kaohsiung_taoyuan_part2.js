@@ -1,0 +1,17 @@
+// 114 教甄考點改寫：教育部高中音樂、高雄高中音樂、桃園國中教育專業
+// 題目依公開歷屆試題考點重新命題，避免逐字大量重製原卷。
+window.QUESTION_BANK = window.QUESTION_BANK || [];
+window.QUESTION_BANK.push(
+{year:"114",level:"高中音樂",category:"臺灣傳統音樂",difficulty:"中",exam:"教育部公立高中教師甄選",question:"以客家採茶戲研究、傳承與推廣為主要特色的臺灣劇團，其核心文化藝術最接近下列何者？",options:["高甲戲","客家採茶戲","歌仔戲","梨園戲"],answer:1,explanation:"榮興客家採茶劇團長期投入客家採茶戲的研究、保存、創作與推廣。",source:"114教育部公立高級中等學校教師甄選音樂科考點改寫"},
+{year:"114",level:"高中音樂",category:"臺灣原住民族音樂文化",difficulty:"中",exam:"教育部公立高中教師甄選",question:"臺灣原住民族祭儀中的「刺球」活動，最具代表性地出現在哪一族群的重要祭典？",options:["阿美族豐年祭","排灣族五年祭","布農族射耳祭","達悟族飛魚祭"],answer:1,explanation:"刺球是排灣族五年祭的重要儀式之一。",source:"114教育部公立高級中等學校教師甄選音樂科考點改寫"},
+{year:"114",level:"高中音樂",category:"西洋音樂史",difficulty:"中",exam:"教育部公立高中教師甄選",question:"若參加德國 Bayreuth Festival，依其核心傳統，最不可能以哪位作曲家的歌劇作為主要演出曲目？",options:["Wagner","Wagner 的《Parsifal》","Wagner 的《Lohengrin》","Verdi 的《Macbeth》"],answer:3,explanation:"拜魯特音樂節以華格納歌劇為核心，《Macbeth》為 Verdi 歌劇。",source:"114教育部公立高級中等學校教師甄選音樂科考點改寫"},
+{year:"114",level:"高中音樂",category:"和聲",difficulty:"難",exam:"教育部公立高中教師甄選",question:"和聲分析中，非和弦音由前一和弦延留至下一和弦，先形成不協和後再級進解決，最典型稱為何者？",options:["倚音","掛留音","鄰音","經過音"],answer:1,explanation:"Suspension 的典型特徵是準備、延留形成不協和、再級進解決。",source:"114教育部公立高級中等學校教師甄選和聲考點改寫"},
+{year:"114",level:"高中音樂",category:"臺灣民俗藝陣",difficulty:"中",exam:"高雄中學教師甄選",question:"高雄內門地區最具代表性的傳統民俗藝陣之一為何？",options:["宋江陣","梨園戲","北管子弟陣","南管館閣"],answer:0,explanation:"高雄內門以宋江陣文化聞名，並形成具地方特色的藝陣活動。",source:"114高雄中學教師甄選音樂科考點改寫"},
+{year:"114",level:"高中音樂",category:"古琴",difficulty:"難",exam:"高雄中學教師甄選",question:"中國古琴譜中，將左右手指法、弦序與徽位等資訊組合成特殊符號的記譜法稱為何者？",options:["工尺譜","減字譜","律呂譜","二四譜"],answer:1,explanation:"減字譜是古琴的重要指法譜，以漢字部件減筆組合記錄演奏資訊。",source:"114高雄中學教師甄選音樂科考點改寫"},
+{year:"114",level:"高中音樂",category:"日本傳統音樂",difficulty:"難",exam:"高雄中學教師甄選",question:"下列何者屬於日本傳統音樂常見的調式／音階名稱？",options:["都節音階","全音音階","匈牙利小音階","Blues scale"],answer:0,explanation:"都節音階（Miyako-bushi scale）是日本傳統音樂常見的重要音階概念。",source:"114高雄中學教師甄選音樂科考點改寫"},
+{year:"114",level:"教育專業",category:"教育法規",difficulty:"中",exam:"桃園市國中教師聯合甄選",question:"2019 年《教師法》全文修正的重要方向，最主要是針對哪一類制度進行更細緻的程序與法律效果區分？",options:["學生升學制度","不適任教師處理機制","學校午餐制度","教師退休金投資制度"],answer:1,explanation:"2019 年教師法修正的重要內容之一，是依案件類型與程度重整不適任教師之解聘、不續聘、停聘等處理機制。",source:"114桃園市國中教師聯合甄選教育專業考點改寫"},
+{year:"114",level:"教育專業",category:"課程與教學",difficulty:"易",exam:"桃園市國中教師聯合甄選",question:"學校透過校園空間、標語、世界地圖或日常制度，讓學生在未明列於正式課程的情況下形成價值與態度，最接近哪一種課程？",options:["正式課程","空無課程","潛在課程","懸缺課程"],answer:2,explanation:"未明列於正式課表，卻透過環境、制度與文化產生學習效果，屬潛在課程。",source:"114桃園市國中教師聯合甄選教育專業考點改寫"},
+{year:"114",level:"教育專業",category:"教育哲學",difficulty:"中",exam:"桃園市國中教師聯合甄選",question:"品德教育若強調培養誠實、守信、勇氣等穩定人格品質，使人成為具有良好品格的人，最接近哪一倫理學立場？",options:["效益論","義務論","德行倫理學","倫理利己主義"],answer:2,explanation:"德行倫理學著重良好品格與德行的養成，而非僅依行為結果或義務規則判斷。",source:"114桃園市國中教師聯合甄選教育專業考點改寫"},
+{year:"114",level:"教育專業",category:"教育哲學",difficulty:"中",exam:"桃園市國中教師聯合甄選",question:"教師要求學生大量背誦事實，卻完全不追求理解與認知視野的拓展，最直接違反 Peters 教育三規準中的哪一項？",options:["合價值性","合認知性","合自願性","合市場性"],answer:1,explanation:"Peters 的合認知性要求教育須帶來知識、理解與認知觀點的深化，而非只是機械記憶。",source:"114桃園市國中教師聯合甄選教育專業考點改寫"},
+{year:"114",level:"教育專業",category:"教育政策與生涯",difficulty:"中",exam:"桃園市國中教師聯合甄選",question:"高中職入學制度中，若同一志願報名超額，制度特別鼓勵曾修習國中技藝教育課程學生銜接職業技能學習，最符合哪一類型課程的政策精神？",options:["實用技能學程","學術資優班","普通高中數理班","雙語實驗班"],answer:0,explanation:"實用技能學程強調職業技能學習與適性銜接，與國中技藝教育具有明顯連結。",source:"114桃園市國中教師聯合甄選教育專業考點改寫"}
+);
