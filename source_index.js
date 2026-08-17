@@ -3,11 +3,16 @@ document.write('<script src="questions_batch_113_central_newtaipei_part1.js"><\/
 document.write('<script src="questions_batch_113_central_newtaipei_part2.js"><\/script>');
 document.write('<script src="questions_batch_113_central_edu_part1.js"><\/script>');
 document.write('<script src="questions_batch_112_music_edu_part1.js"><\/script>');
+document.write('<script src="questions_batch_111_110_part1.js"><\/script>');
 document.write('<script src="smart_practice.js?v=20260818b"><\/script>');
 document.write('<script src="unknown_review.js?v=20260818"><\/script>');
 document.write('<script src="refresh_button.js?v=20260818"><\/script>');
 
 window.EXAM_SOURCES = [
+  {year:"110",level:"高中音樂",school:"教育部受託辦理公立高級中等學校教師甄選",title:"110音樂科",url:"https://yamol.tw/exam-110%E5%B9%B4%2B%2B110%2B%E6%95%99%E8%82%B2%E9%83%A8%E5%8F%97%E8%A8%97%E8%BE%A6%E7%90%86%E5%85%AC%E7%AB%8B%E9%AB%98%E7%B4%9A%E4%B8%AD%E7%AD%89%E5%AD%B8%E6%A0%A1%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%EF%BC%9A%E9%9F%B3%E6%A8%82%E7%A7%91%28%E4%B8%80%E8%88%AC%E7%A7%91%E7%9B%AE%299-99895.htm",status:"阿摩20題選擇＋27題非選；已開始整理"},
+  {year:"110",level:"國中音樂",school:"新竹市立建功高中",title:"110-1第一次正式教師甄選國中音樂",url:"https://yamol.tw/exam-110%E5%B9%B4%2B%2B1101%2B%2B%E6%96%B0%E7%AB%B9%E5%B8%82%E7%AB%8B%E5%BB%BA%E5%8A%9F%E9%AB%98%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%AD%A3%E5%BC%8F%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%EF%BC%9A%E5%9C%8B%E4%B8%AD%E9%9F%B3%E6%A8%8299969-99969.htm",status:"阿摩11題非選；已開始轉為考點題"},
+  {year:"110",level:"高中音樂",school:"高雄市立高雄高級中學",title:"110教師甄選音樂科",url:"https://yamol.tw/exam-110%E5%B9%B4%2B%2B110%2B%E9%AB%98%E9%9B%84%E5%B8%82%E7%AB%8B%E9%AB%98%E9%9B%84%E9%AB%98%E7%B4%9A%E4%B8%AD%E7%AD%89%E5%AD%B8%E6%A0%A1_%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%EF%BC%9A%E9%9F%B3%E6%A8%82%E7%A7%9198551-98551.htm",status:"阿摩10題選擇；已開始整理"},
+  {year:"111",level:"教育專業",school:"中區縣市政府教師甄選策略聯盟",title:"111國中教育專業科目",url:"https://yamol.tw/exam-%E7%84%A1%E5%B9%B4%E5%BA%A6%2B%2B111%2B%E4%B8%AD%E5%8D%80%E7%B8%A3%E5%B8%82%E6%94%BF%E5%BA%9C%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%E7%AD%96%E7%95%A5%E8%81%AF%E7%9B%9F%EF%BC%9A%E5%9C%8B%E4%B8%AD%E6%95%99%E8%82%B2%E5%B0%88%E6%A5%AD%E7%A7%91%E7%9B%AE108959-108959.htm",status:"阿摩完整50題；已開始整理"},
   {year:"111",level:"高中音樂",school:"國立臺灣師範大學附屬高級中學",title:"111學年度第1次教師甄選音樂科試題與答案",url:"https://www.hs.ntnu.edu.tw/academic/content?a=T0RESU5ERTBORFUwT1RZPXdZak13VWpOeDRrVGludGVseQ%3D%3D&cat=T0RESU1qVXlNVGd3TWpVPXhrak55SWpOeElrVGludGVseQ%3D%3D",status:"已整理部分題型"},
   {year:"112",level:"國中音樂",school:"新北市立國民中學教師聯合甄選",title:"112音樂科",url:"https://yamol.tw/exam-112%E5%B9%B4%2B%2B112%2B%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8%E6%95%99%E5%B8%AB%E8%81%AF%E5%90%88%E7%94%84%E9%81%B8%EF%BC%9A%E9%9F%B3%E6%A8%82%E7%A7%91115027-115027.htm",status:"阿摩完整50題；已開始整理"},
   {year:"112",level:"國中音樂",school:"臺北市立國民中學正式教師聯合甄選",title:"112音樂（雙語）科",url:"https://yamol.tw/exam-112%E5%B9%B4%2B%2B112%2B%E8%87%BA%E5%8C%97%E5%B8%82%E5%B8%82%E7%AB%8B%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8%E6%AD%A3%E5%BC%8F%E6%95%99%E5%B8%AB%E8%81%AF%E5%90%88%E7%94%84%E9%81%B8%EF%BC%9A%E9%9F%B3%E6%A8%82%28%E9%9B%99%E8%AA%9E%29%E7%A7%9111469-114693.htm",status:"阿摩完整40題；已開始整理"},
