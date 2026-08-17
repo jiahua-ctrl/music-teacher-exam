@@ -1,0 +1,13 @@
+window.TERM_PROMPTS = window.TERM_PROMPTS || [];
+window.TERM_PROMPTS.push(
+{id:'TERM-R7-001',term:'Program Music',zh:'標題音樂／標題性器樂',topic:'浪漫時期',level:'高中音樂・魔王',definition:'以器樂表現或暗示文學、故事、自然景象、人物或其他非音樂內容的音樂概念。',exam:'答題要能與 absolute music 對照；浪漫時期交響詩、標題交響曲是重要脈絡。',related:'Berlioz；Liszt；symphonic poem'},
+{id:'TERM-R7-002',term:'Gayageum',zh:'伽倻琴',topic:'世界音樂／韓國',level:'高中音樂・魔王',definition:'韓國傳統撥弦齊特琴類樂器，琴弦架於可移動琴柱上，以手指撥奏並可用左手按弦製造滑音與裝飾。',exam:'世界樂器辨識常與日本 koto、中國 guzheng 混淆；要記住韓國。',related:'Korea；zither；sanjo'},
+{id:'TERM-R7-003',term:'Kalimba',zh:'卡林巴／拇指琴',topic:'世界音樂／非洲',level:'高中音樂・魔王',definition:'非洲常見的片簧類自鳴樂器，以手指或拇指撥動固定於共鳴箱或共鳴板上的金屬簧片發聲。',exam:'Hornbostel–Sachs 分類屬 idiophone；常與 mbira 一起比較。',related:'mbira；lamellophone；idiophone'},
+{id:'TERM-R7-004',term:'Imitation Mass',zh:'模仿彌撒／仿作彌撒',topic:'文藝復興音樂',level:'高中音樂・魔王',definition:'文藝復興時期彌撒創作類型之一，以既有複音作品的多個聲部或其重要材料作為新彌撒的創作基礎。',exam:'不要只寫「模仿旋律」；重點是取用既有複音作品較完整的多聲部材料。舊稱 parody mass 亦常見。',related:'Renaissance Mass；parody mass'},
+{id:'TERM-R7-005',term:'Poème électronique',zh:'《電子詩》',topic:'20世紀音樂／電子音樂',level:'高中音樂・魔王',definition:'Edgard Varèse 為1958年布魯塞爾世界博覽會 Philips Pavilion 創作的電子音樂作品，與建築、聲音投射及多媒體空間經驗密切相關。',exam:'三個關鍵詞：Varèse、1958 Brussels World’s Fair、Philips Pavilion。',related:'Edgard Varèse；Philips Pavilion；electronic music'},
+{id:'TERM-R7-006',term:'Neue Zeitschrift für Musik',zh:'《新音樂雜誌》',topic:'浪漫時期',level:'高中音樂・魔王',definition:'19世紀德國重要音樂期刊，Robert Schumann 參與創辦並長期以評論推介新音樂與作曲家。',exam:'教甄常考舒曼評論家身分；可連結他對 Chopin、Brahms 等人的評論與推介。',related:'Robert Schumann；music criticism'},
+{id:'TERM-R7-007',term:'Pasibutbut',zh:'祈禱小米豐收歌',topic:'臺灣原住民族音樂',level:'高中音樂・魔王',definition:'布農族重要祭儀歌唱，與小米祭儀及祈求豐收相關，以男性群體歌唱和特殊複音聲響聞名。',exam:'🔥 近年高頻。除了中文名稱，務必直接記住族語拼法 Pasibutbut 與布農族。',related:'Bunun；millet ritual；polyphonic singing'},
+{id:'TERM-R7-008',term:'Absolute Music',zh:'絕對音樂',topic:'19世紀美學',level:'高中音樂・魔王',definition:'強調音樂本身形式、聲響與結構價值，而非依賴故事、文學標題或具體外在敘事來理解的音樂觀念。',exam:'常與 Program Music、19世紀浪漫派美學論爭一起考；不要簡化成「沒有標題的音樂」。',related:'Program Music；Hanslick；Brahms'},
+{id:'TERM-R7-009',term:'Belt',zh:'音樂劇 Belt 唱法',topic:'音樂劇',level:'高中音樂・魔王',definition:'音樂劇與流行聲樂常見的強烈發聲風格，通常具有較明亮、具穿透力且偏胸聲主導的音色感。',exam:'常與 Legit 比較；答題避免把 Belt 等同於單純吼叫，核心是特定的聲區協調與音色美學。',related:'musical theatre；Legit；vocal technique'},
+{id:'TERM-R7-010',term:'Empfindsamer Stil',zh:'感性風格／敏感風格',topic:'18世紀音樂',level:'高中音樂・魔王',definition:'18世紀中葉德語地區的重要音樂風格，追求細膩、突變且個人化的情感表達，常見突然的力度、和聲、節奏與情緒轉折。',exam:'年代大約落在1730–1770前後；C. P. E. Bach 是核心人物之一。不要與 Sturm und Drang 完全等同。',related:'C. P. E. Bach；pre-Classical style'}
+);
