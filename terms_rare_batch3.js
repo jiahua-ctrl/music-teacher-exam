@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:'TERM-R301',term:'Idiophone',zh:'體鳴樂器',topic:'民族音樂學／樂器分類',level:'高中音樂',definition:'主要由樂器本體材料的振動直接發聲，不依賴弦、膜或氣柱作為主要振動體。',exam:'🔥 115建國高中直接名詞解釋。答題可補Hornbostel–Sachs分類與例子，如木琴、鈴、鑼。',related:'Hornbostel–Sachs；xylophone；gong'},
+{id:'TERM-R302',term:'Polychord',zh:'複合和弦／多和弦',topic:'20世紀和聲',level:'高中音樂',definition:'將兩個或更多可辨識的和弦結構同時疊置，形成複合和聲。',exam:'🔥 115建國高中直接名詞解釋。注意polychord是和弦結構疊置，polytonality著重多個調性中心並存。',related:'20th-century harmony；polytonality'},
+{id:'TERM-R303',term:'Sonata da chiesa',zh:'教堂奏鳴曲',topic:'巴洛克音樂',level:'高中音樂',definition:'巴洛克時期器樂奏鳴曲類型之一，常採慢－快－慢－快的四樂章配置，風格較嚴謹，與教堂使用脈絡相關。',exam:'🔥 115建國高中要求定義並列3個音樂特色。要能與sonata da camera區辨。',related:'Corelli；Baroque sonata；sonata da camera'},
+{id:'TERM-R304',term:'交錯拍',zh:'交錯拍／複合節奏感',topic:'節奏與拍號',level:'高中音樂',definition:'不同聲部或節奏層之重音、分組彼此交錯，使聽覺上形成互相錯位或跨越原拍節結構的效果。',exam:'115建國高中要求與「變化拍」分別定義並舉教學樂曲；作答需配合具體譜例或作品說明。',related:'meter；rhythmic displacement；polyrhythm'},
+{id:'TERM-R305',term:'變化拍',zh:'變化拍子',topic:'節奏與拍號',level:'高中音樂',definition:'樂曲進行中拍號或每小節拍數發生改變，使拍節結構具有不規則或持續變動的特徵。',exam:'115建國高中直接要求定義與教學作品。可連結20世紀作品中的changing meter。',related:'changing meter；Stravinsky；20th-century rhythm'},
+{id:'TERM-R306',term:'細曲',zh:'細曲',topic:'臺灣／傳統音樂',level:'高中音樂',definition:'傳統音樂語境中的曲種或演唱分類名稱；不同樂種中的用法需依脈絡判斷，不宜只靠字面解釋。',exam:'👹 113教育部高中聯招直接列為名詞解釋。屬高度冷門題，複習時要連同題源脈絡與相關傳統樂種一起辨識。',related:'臺灣傳統音樂；曲種辨識'},
+{id:'TERM-R307',term:'《風入松》',zh:'風入松',topic:'中國／臺灣傳統音樂',level:'高中音樂',definition:'傳統音樂與曲牌系統中可見的名稱；在教甄作答時應依題目所指樂種、曲牌或作品脈絡說明。',exam:'👹 113教育部高中聯招直接列為名詞解釋。此類同名曲牌跨樂種存在，答題尤其要注意脈絡。',related:'曲牌；傳統音樂'},
+{id:'TERM-R308',term:'NiceChord',zh:'NiceChord',topic:'音樂科技／數位工具',level:'高中音樂',definition:'與和弦、編曲或音樂創作輔助相關的數位音樂工具名稱；教甄可能以當代音樂科技應用作為冷門名詞題。',exam:'👹 108高師大附中直接名詞解釋。此類工具更新快，應掌握其「和弦／創作輔助」定位並注意版本差異。',related:'music technology；chord tool；digital music'},
+{id:'TERM-R309',term:'Musique concrète',zh:'具象音樂',topic:'20世紀音樂／電子音樂',level:'高中音樂',definition:'以錄製的現實聲響作為創作素材，經剪接、變速、反轉等處理後組織成作品的電子音樂實踐。',exam:'曾以名詞解釋形式出現。核心人物Pierre Schaeffer；不要與純電子振盪器生成聲音的電子音樂混為一談。',related:'Pierre Schaeffer；tape music；electroacoustic music'},
+{id:'TERM-R310',term:'九腔十八調',zh:'九腔十八調',topic:'臺灣傳統音樂／客家',level:'高中音樂',definition:'常用來概括客家傳統山歌中多樣的腔調與曲調系統，強調其豐富的唱腔類型，而非機械地理解為固定只有27種。',exam:'👹 曾被高中音樂教甄直接列為名詞解釋。答題要連結客家山歌、腔調系統與地方音樂文化。',related:'客家山歌；山歌子；平板；老山歌'}
+]);
