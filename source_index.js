@@ -4,6 +4,7 @@ document.write('<script src="questions_batch_113_central_newtaipei_part2.js"><\/
 document.write('<script src="questions_batch_113_central_edu_part1.js"><\/script>');
 document.write('<script src="smart_practice.js?v=20260818b"><\/script>');
 document.write('<script src="unknown_review.js?v=20260818"><\/script>');
+document.write('<script src="refresh_button.js?v=20260818"><\/script>');
 
 window.EXAM_SOURCES = [
   {year:"111",level:"高中音樂",school:"國立臺灣師範大學附屬高級中學",title:"111學年度第1次教師甄選音樂科試題與答案",url:"https://www.hs.ntnu.edu.tw/academic/content?a=T0RESU5ERTBORFUwT1RZPXdZak13VWpOeDRrVGludGVseQ%3D%3D&cat=T0RESU1qVXlNVGd3TWpVPXhrak55SWpOeElrVGludGVseQ%3D%3D",status:"已整理部分題型"},
@@ -13,7 +14,7 @@ window.EXAM_SOURCES = [
   {year:"113",level:"教育專業",school:"中區縣市政府教師甄選策略聯盟",title:"113學年度國中教育專業科目",url:"https://yamol.tw/exam-%E7%84%A1%E5%B9%B4%E5%BA%A6%2B%2B113%2B%E4%B8%AD%E5%8D%80%E7%B8%A3%E5%B8%82%E6%94%BF%E5%BA%9C%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%E7%AD%96%E7%95%A5%E8%81%AF%E7%9B%9F%EF%BC%9A%E5%9C%8B%E4%B8%AD%E6%95%99%E8%82%B2%E5%B0%88%E6%A5%AD%E7%A7%91%E7%9B%AE120103-120103.htm",status:"50題題源；已新增2題法規與輔導考點"},
   {year:"113",level:"高中音樂",school:"國立臺灣師範大學附屬高級中學",title:"113學年度第1次正式教師甄選音樂科試題與參考解答",url:"https://www.hs.ntnu.edu.tw/academic/content?a=T0RESU16Y3dOek15TURrPTJNVE94RXpOeDRrVGludGVseQ%3D%3D&c=T0RESU5ESTJORFF4TURBPTFnVE14TWpOeElrVGludGVseQ%3D%3D&cat=T0RESTEyNTIxODAyNTk2MjI2MVRDaW50ZWx5",status:"已整理部分題型"},
   {year:"114",level:"國中音樂",school:"國立臺灣師範大學附屬高級中學",title:"114學年度第1次正式教師甄選音樂科試題與選擇題答案",url:"https://www.hs.ntnu.edu.tw/music/content?a=T0RESVRtcG5NVTFxUVhoT1ZGazk0bGthTnBYVTY1RWUwc0dWaW50ZWx5",status:"已整理部分題型"},
-  {year:"114",level:"高中音樂",school:"國立基隆高級中學",title:"114學年度第1次教師甄選音樂科試題與參考解答",url:"https://www.klsh.kl.edu.tw/2025/06/09/%E3%80%90%E6%95%99%E5%B8%AB%E7%94%84%E8%A9%A6%E3%80%8B114%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC1%E6%AC%A1%E6%95%99%E5%B8%AB%E7%94%84%E8%A9%A6%E8%A9%A6%E9%A1%8C%E5%85%AC%E5%91%8A/",status:"已新增12題考點改寫"},
+  {year:"114",level:"高中音樂",school:"國立基隆高級中學",title:"114學年度第1次教師甄選音樂科試題與參考解答",url:"https://www.klsh.kl.edu.tw/2025/06/09/%E3%80%90%E6%95%99%E5%B8%AB%E7%94%84%E8%A9%A6%E3%80%8B114%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC1%E6%AC%A1%E6%95%99%E5%B8%AB%E7%94%84%E9%81%B8%E8%A9%A6%E9%A1%8C%E5%85%AC%E5%91%8A/",status:"已新增12題考點改寫"},
   {year:"115",level:"國中音樂",school:"國立臺灣師範大學附屬高級中學",title:"115學年度第1次專任教師甄選音樂科試題與解答",url:"https://www.hs.ntnu.edu.tw/academic/content?a=T0RESU16TTJOell4T0RjPTRZak4wY3pOeDRrVGludGVseQ%3D%3D&c=T0RESU5ESTJORFF4TURBPTFnVE14TWpOeElrVGludGVseQ%3D%3D&cat=T0RESTEyNTIxODAyNTk2MjI2MVRDaW50ZWx5",status:"已整理部分題型；官方曾更正音樂科第23題答案為C"},
   {year:"115",level:"高中音樂",school:"臺北市立建國高級中學",title:"115學年度第1次正式教師甄選音樂科試題暨參考答案",url:"https://www.ck.tp.edu.tw/nss/main/freeze/5abf2d62aa93092cee58ceb4/IXZld9j7619/69b35de4bc9f64c0fd239567",status:"官方來源已確認，待逐題整理"}
 ];
