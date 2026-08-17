@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:"TERM-R061",term:"Gayageum",zh:"伽倻琴",topic:"世界音樂／韓國",level:"高中音樂・冷門魔王",definition:"韓國傳統撥弦樂器，長形共鳴箱上張弦，以手指撥奏，常可藉按弦產生滑音與音高裝飾。",exam:"112 臺中一中名詞題。辨識重點：韓國、撥弦、按弦裝飾；不要與日本箏混淆。",related:"Korea；zither；sanjo"},
+{id:"TERM-R062",term:"Kalimba",zh:"卡林巴／拇指琴",topic:"世界音樂／非洲",level:"高中音樂・冷門魔王",definition:"非洲簧片類體鳴樂器，以拇指撥動固定在共鳴體上的金屬簧片發聲，屬 lamellophone。",exam:"112 臺中一中名詞題。Hornbostel–Sachs 分類可連結 idiophone／lamellophone。",related:"Africa；lamellophone；mbira"},
+{id:"TERM-R063",term:"Der Freischütz",zh:"《魔彈射手》",topic:"浪漫時期／歌劇",level:"高中音樂・冷門魔王",definition:"Carl Maria von Weber 的德語歌劇，1821 年首演，融合德國民間、超自然題材與浪漫主義色彩。",exam:"112 臺中一中名詞題。要能寫出 Weber、德國浪漫歌劇及《魔彈射手》。",related:"Carl Maria von Weber；German Romantic opera"},
+{id:"TERM-R064",term:"La forza del destino",zh:"《命運之力》",topic:"浪漫時期／歌劇",level:"高中音樂・冷門魔王",definition:"Giuseppe Verdi 的義大利歌劇，中文常譯《命運之力》，以戲劇性的命運衝突與著名序曲／序奏聞名。",exam:"112 臺中一中名詞題。冷門點在外文作品名與作曲家配對。",related:"Giuseppe Verdi；Italian opera"},
+{id:"TERM-R065",term:"PawPaw",zh:"寶抱／PAW-PAW 鼓",topic:"臺灣原住民族／環境音樂",level:"高中音樂・冷門魔王",definition:"源自臺灣東海岸部落創意的環保鼓，利用廢棄漁業浮筒等材料製作鼓身，結合地方文化與再利用概念。",exam:"112 高雄高中直接考『寶抱(PawPaw)』。可連結阿美族文化、環境永續與廢棄物再生。",related:"比西里岸；阿美族；環保樂器"},
+{id:"TERM-R066",term:"臀鈴",zh:"臀鈴",topic:"臺灣原住民族",level:"高中音樂・高頻冷門",definition:"賽夏族矮靈祭歌舞的重要聲響器物，佩於身體後側，舞動時發聲，兼具音樂、舞蹈與祭儀意義。",exam:"112 高雄高中名詞題，且歷屆選擇題反覆出現。🔥 高頻：賽夏族＝臀鈴＝矮靈祭。",related:"賽夏族；矮靈祭"},
+{id:"TERM-R067",term:"Kabuki",zh:"歌舞伎",topic:"世界音樂／日本劇場",level:"高中音樂・冷門魔王",definition:"日本傳統劇場形式，結合戲劇、舞蹈、音樂、華麗服裝與高度程式化表演，歷史可追溯至江戶時代初期。",exam:"112 高雄高中名詞題。可連結女形、三味線與日本傳統劇場。",related:"Japan；onnagata；shamisen"},
+{id:"TERM-R068",term:"Imitation Mass",zh:"仿作彌撒／模仿彌撒",topic:"文藝復興音樂",level:"高中音樂・冷門魔王",definition:"文藝復興時期彌撒曲類型之一，從既有複音作品借用多個聲部、主題或結構素材，再重新組織於彌撒各樂章。",exam:"115 高雄高中名詞題。注意與只借用單一固定旋律的 cantus firmus mass 區別。",related:"Renaissance Mass；parody mass"},
+{id:"TERM-R069",term:"Poème électronique",zh:"《電子音詩》",topic:"20世紀／電子音樂",level:"高中音樂・冷門魔王",definition:"Edgard Varèse 為 1958 年布魯塞爾世界博覽會 Philips Pavilion 創作的電子音樂作品，與建築、聲音空間化及多媒體呈現密切相關。",exam:"115 高雄高中名詞題。三個關鍵：Varèse、1958、Philips Pavilion。",related:"Edgard Varèse；Philips Pavilion；electronic music"},
+{id:"TERM-R070",term:"Symphony No. 2 'Resurrection'",zh:"第二號交響曲《復活》",topic:"浪漫晚期／交響曲",level:"高中音樂・冷門魔王",definition:"Gustav Mahler 的第二號交響曲，後段加入獨唱與合唱，以死亡、重生與復活為精神主題。",exam:"115 高雄高中名詞題。看到 Resurrection Symphony 要立即連結 Mahler Symphony No.2。",related:"Gustav Mahler；choral symphony"}
+]);
