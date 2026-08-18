@@ -1,3 +1,4 @@
+document.write('<script src="latest_loader_bootstrap.js?v=20260818m"><\/script>');
 (()=>{
   function mount(){
     const byId=id=>document.getElementById(id);
