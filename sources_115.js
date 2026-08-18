@@ -25,6 +25,7 @@ document.write('<script src="terms_114_kaohsiung_jhs_batch32.js?v=20260818"><\/s
 document.write('<script src="terms_114_kaohsiung_jhs_batch33.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_kaohsiung_jhs_batch34.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_hemei_batch35.js?v=20260818"><\/script>');
+document.write('<script src="terms_110_moe_hell_batch36.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_moe_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_kshs_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_hchs_batch.js?v=20260818"><\/script>');
