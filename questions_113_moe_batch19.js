@@ -1,0 +1,13 @@
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:'113',subject:'高中音樂',topic:'音樂科技',level:'進階',question:'113教育部高中聯招考點｜Synthesizer（合成器）最適合如何描述？',options:['以電子方式產生、塑造或組合聲音的電子樂器／設備','只能播放預先錄製聲音，無法改變音色','專指以MIDI連接的鋼琴鍵盤','必須以麥克風收音才能產生聲音'],answer:0,explanation:'合成器可利用振盪器、濾波、包絡等方式產生與塑造電子聲響；MIDI鍵盤只是可能的控制介面之一。',source:'113教育部高中聯招音樂科考點'},
+{year:'113',subject:'高中音樂',topic:'表演術語',level:'進階',question:'德文樂器名稱 Geige 通常指哪一種樂器？',options:['雙簧管','小提琴','法國號','小號'],answer:1,explanation:'Geige 是德文「小提琴」的常用名稱。',source:'113教育部高中聯招第13題'},
+{year:'113',subject:'高中音樂',topic:'表演術語',level:'基礎',question:'樂譜上的德文 mit Dämpfer 意指？',options:['裝上弱音器','輕巧演奏','跳音','維持pp'],answer:0,explanation:'Dämpfer 是弱音器；mit Dämpfer 即「加上／使用弱音器」。',source:'113教育部高中聯招第14題'},
+{year:'113',subject:'高中音樂',topic:'世界音樂',level:'魔王 👹',question:'關於日本能劇（Noh）的樂器編制，下列何者不屬典型 hayashi 囃子？',options:['能管 nohkan','小鼓 kotsuzumi','大鼓 ōtsuzumi','三味線 shamisen'],answer:3,explanation:'能劇典型囃子包括能管、小鼓、大鼓與太鼓；三味線並非典型能劇囃子編制。',source:'113教育部高中聯招第19題'},
+{year:'113',subject:'高中音樂',topic:'音樂術語',level:'魔王 👹',question:'義大利文 a battuta 最接近下列何意？',options:['速度加倍','即刻進入下一樂段','恢復／依嚴格拍子演奏','自由依旋律速度伴奏'],answer:2,explanation:'a battuta 表示回到明確、規律的拍子或依拍演奏，常用於自由速度段落之後。',source:'113教育部高中聯招第20題'},
+{year:'113',subject:'高中音樂',topic:'室內樂編制',level:'魔王 👹',question:'下列哪一部作品的原始編制沒有單簧管？',options:['Messiaen《世界末日四重奏》','Stravinsky《士兵的故事》','Bartók《對比》','Dvořák《美國四重奏》'],answer:3,explanation:'Dvořák《美國四重奏》是弦樂四重奏（兩把小提琴、中提琴、大提琴）；其餘列舉作品皆涉及單簧管。',source:'113教育部高中聯招第18題'},
+{year:'113',subject:'高中音樂',topic:'音樂史',level:'進階',question:'依出生年代先後排序，何者正確？',options:['Balakirev→Monteverdi→Pergolesi→Palestrina','Monteverdi→Palestrina→Pergolesi→Balakirev','Monteverdi→Pergolesi→Balakirev→Palestrina','Palestrina→Monteverdi→Pergolesi→Balakirev'],answer:3,explanation:'Palestrina（約1525）→Monteverdi（1567）→Pergolesi（1710）→Balakirev（1837）。',source:'113教育部高中聯招第17題'},
+{year:'113',subject:'高中音樂',topic:'20世紀音樂',level:'進階',question:'Sprechstimme 最具代表性的作品之一為何？',options:['Schoenberg《月光小丑》','Orff《布蘭詩歌》','Ravel《波麗露》','Puccini《杜蘭朵》'],answer:0,explanation:'Schoenberg《Pierrot lunaire（月光小丑）》大量使用介於說與唱之間的 Sprechstimme。',source:'113教育部高中聯招非選名詞考點'},
+{year:'113',subject:'高中音樂',topic:'文藝復興音樂',level:'魔王 👹',question:'Polychoral style 與下列哪個歷史場域／樂派關係最密切？',options:['巴黎聖母院樂派','威尼斯聖馬可大教堂與威尼斯樂派','曼海姆樂派','第二維也納樂派'],answer:1,explanation:'複合合唱／分置合唱風格與聖馬可大教堂空間、Gabrieli 家族及威尼斯樂派關係密切。',source:'113教育部高中聯招非選名詞考點'},
+{year:'113',subject:'高中音樂',topic:'音樂織體',level:'基礎',question:'一條清楚主旋律搭配和弦式伴奏，最典型屬於哪種織體？',options:['Monophony','Homophony','Polyphony','Heterophony'],answer:1,explanation:'Homophony 強調主旋律與和聲支持之主從關係。',source:'113教育部高中聯招非選名詞考點'}
+);
