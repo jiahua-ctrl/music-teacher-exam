@@ -11,5 +11,10 @@
   box.innerHTML=data.slice(0,40).map((x,i)=>`<details style="border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:7px 0"><summary style="cursor:pointer;font-weight:850">${i+1}. ${esc(x.term)} <small style="color:var(--muted)">｜${x.yearN} 年｜${x.examN} 卷</small></summary><div style="padding-top:8px;font-size:13px;line-height:1.7">${[...x.exams.values()].sort((a,b)=>Number(b.year)-Number(a.year)).map(e=>`<div><b>${esc(e.year)}｜${esc(e.level)}</b>｜<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.exam)}</a></div>`).join('')}</div></details>`).join('')||'<p class="muted">尚無資料。</p>';
  }
  function mount(){const home=document.getElementById('homeView');if(!home||document.getElementById('preciseTermRadar'))return;const s=document.createElement('section');s.id='preciseTermRadar';s.className='card section-card';s.innerHTML=`<div class="section-title"><div><span class="eyebrow">106～115 阿摩考古題人工精標</span><h3>🔬 精準名詞雷達</h3></div></div><p id="preciseTermMeta" class="muted"></p><div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px"><button class="ghost small ptr active" data-l="">全部</button><button class="ghost small ptr" data-l="國中音樂">國中音樂</button><button class="ghost small ptr" data-l="高中音樂">高中音樂</button><button class="ghost small ptr" data-l="教育專業">教育專業</button></div><div id="preciseTermList"></div>`;home.appendChild(s);s.querySelectorAll('.ptr').forEach(b=>b.onclick=()=>{s.querySelectorAll('.ptr').forEach(x=>x.classList.toggle('active',x===b));render(b.dataset.l)});render('')}
- window.addEventListener('DOMContentLoaded',()=>setTimeout(mount,300));window.PreciseTermRadar={build};
+ function loadScript(src,next){const s=document.createElement('script');s.src=src;s.onload=()=>next&&next();document.body.appendChild(s)}
+ function loadDetailedAnswers(){
+   if(window.__DETAIL_ANSWERS_LOADING__)return;window.__DETAIL_ANSWERS_LOADING__=true;
+   loadScript('detailed_answers.js?v=20260818d',()=>loadScript('detailed_answer_ui.js?v=20260818d'));
+ }
+ window.addEventListener('DOMContentLoaded',()=>{setTimeout(mount,300);setTimeout(loadDetailedAnswers,50)});window.PreciseTermRadar={build};
 })();
