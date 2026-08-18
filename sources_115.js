@@ -6,9 +6,12 @@ document.write('<script src="questions_114_newtaipei_batch24.js?v=20260818"><\/s
 document.write('<script src="terms_114_moe_batch22.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_kshs_batch23.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_hsnu_batch25.js?v=20260818"><\/script>');
+document.write('<script src="terms_114_klsh_batch26.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_moe_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_kshs_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_hchs_batch.js?v=20260818"><\/script>');
+document.write('<script src="essay_114_hsnu_batch.js?v=20260818"><\/script>');
+document.write('<script src="essay_114_klsh_batch.js?v=20260818"><\/script>');
 document.write('<script src="terms_110_zzsh_batch24.js?v=20260818"><\/script>');
 document.write('<script src="essay_110_zzsh_batch.js?v=20260818"><\/script>');
 
