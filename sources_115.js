@@ -1,10 +1,12 @@
 document.write('<script src="questions_batch_115_latest_part4.js"><\/script>');
 document.write('<script src="questions_114_moe_batch21.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_kshs_batch22.js?v=20260818"><\/script>');
+document.write('<script src="questions_114_newtaipei_jhs_batch23.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_moe_batch22.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_kshs_batch23.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_moe_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_kshs_batch.js?v=20260818"><\/script>');
+document.write('<script src="essay_114_hchs_batch.js?v=20260818"><\/script>');
 document.write('<script src="terms_110_zzsh_batch24.js?v=20260818"><\/script>');
 document.write('<script src="essay_110_zzsh_batch.js?v=20260818"><\/script>');
 
