@@ -30,14 +30,18 @@ document.write('<script src="latest_loader_bootstrap.js?v=20260818p"><\/script>'
       });
     }
   }
-  function loadTermLearning(){
-    if(document.querySelector('script[data-term-learning]'))return;
+  function loadScript(src,flag){
+    if(document.querySelector(`script[data-${flag}]`))return;
     const s=document.createElement('script');
-    s.src='term-learning.js?v=20260818b';
-    s.dataset.termLearning='1';
+    s.src=src;
+    s.dataset[flag.replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]='1';
     s.defer=true;
     document.body.appendChild(s);
   }
-  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',()=>{mount();loadTermLearning();});
-  else {mount();loadTermLearning();}
+  function loadTermTools(){
+    loadScript('term-learning.js?v=20260818c','term-learning');
+    loadScript('term-dashboard.js?v=20260818a','term-dashboard');
+  }
+  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',()=>{mount();loadTermTools();});
+  else {mount();loadTermTools();}
 })();
