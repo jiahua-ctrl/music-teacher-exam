@@ -1,0 +1,12 @@
+// 114 國立和美實驗學校正式教師甄試｜高鑑別題第一批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"臺灣流行音樂史",question:"關於1979年楊祖珺演唱〈美麗島〉，下列何者較正確？",options:["歌詞直接出自陳秀喜同名詩作","歌詞與臺灣1970年代末社會文化脈絡密切相關，人物與文本來源須精確辨認","是鄧雨賢1930年代作品","屬南管曲目"],answer:1,explanation:"教甄常以『作品—詞作者—演唱者—年代』交叉換位。〈美麗島〉與1970年代末臺灣社會文化脈絡相關，但不能把相關人物任意互換。遇到本土音樂史題應同時核對年代、詞曲作者與演唱者。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"南管",question:"南管『上四管』的核心樂器組合為何？",options:["琵琶、三絃、洞簫、二絃","嗩吶、笙、鼓、鑼","古琴、箏、笛、簫","月琴、殼仔弦、大廣弦、笛"],answer:0,explanation:"南管上四管通常指琵琶、三絃、洞簫、二絃，是教甄常見固定配對。可與下四管及北管、歌仔戲樂器編制作比較。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"舞曲",question:"Tarantella（塔朗泰拉）最主要與哪一地區的傳統舞蹈音樂相關？",options:["西班牙","義大利南部","奧地利","匈牙利"],answer:1,explanation:"Tarantella與義大利南部傳統舞蹈密切相關，常見快速6/8等複拍子。題目很容易利用『地中海／南歐』印象把義大利偷換成西班牙。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"浪漫樂派",question:"關於Liszt與交響詩，下列何者正確？",options:["交響詩通常為單樂章管弦樂作品，常具標題性或文學藝術聯想","Liszt所作交響詩全部是四樂章奏鳴交響曲","交響詩由Haydn首創","交響詩必須包含聲樂獨唱"],answer:0,explanation:"Liszt是交響詩發展的重要人物。Symphonic Poem通常為單樂章管弦樂作品，以標題、文學、繪畫、哲學等外在意念為靈感。『交響』二字不代表一定多樂章。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"中",topic:"聲樂體裁",question:"Oratorio（神劇／清唱劇）的典型特徵為何？",options:["通常具有宗教或敘事題材，使用獨唱、合唱與管弦樂，但一般不以完整舞台服裝布景演出","完全無器樂伴奏","必定以舞蹈為核心","只能使用拉丁文"],answer:0,explanation:"Oratorio通常具有獨唱、合唱與管弦樂伴奏，常見宗教／聖經題材，但不像歌劇以完整舞台動作、服裝與布景為核心。『清唱劇＝無伴奏』是常見陷阱。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"藝術歌曲",question:"Schubert《Erlkönig／魔王》最適合如何描述？",options:["典型分節歌，每段完全相同","應詞歌／通作歌形式，一位歌者在敘述者、父親、兒子與魔王等角色間轉換","純器樂鋼琴曲","義大利歌劇詠嘆調"],answer:1,explanation:"《魔王》為Schubert代表性藝術歌曲，採through-composed形式。演唱者需區辨敘述者、父親、兒子與魔王等聲音性格；鋼琴連續快速音型營造奔馬與緊張感。原題若只列三個角色，容易漏掉敘述者。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"臺灣原住民族音樂",question:"關於臺灣泰雅族傳統木琴，下列何者最適合作為教甄答題觀念？",options:["只是一種西洋木琴的縮小版","除音樂演奏外，也可連結族群生活、訊息傳遞與社會文化功能理解","主要使用十二平均律演奏巴洛克作品","與泰雅文化沒有特殊關聯"],answer:1,explanation:"民族音樂題不能只背樂器外型。泰雅族木琴可從材料、演奏方式、音樂功能及族群生活脈絡理解；教學時也應避免把原住民族音樂去脈絡化成單純音色展示。"},
+{year:"114",school:"國立和美實驗學校",level:"高中",type:"choice",difficulty:"👹",topic:"20世紀音樂",question:"Minimalism在1960年代後的典型音樂特徵，何者最符合？",options:["大量重複短小音型、漸進式變化與穩定脈動","完全禁止任何重複","只使用十二音列且無脈動","以浪漫派自由速度與巨型終止為唯一特徵"],answer:0,explanation:"Minimalism常見重複音型、穩定脈動、漸進過程與有限材料，Steve Reich、Philip Glass等為重要代表。教甄常把Minimalism與Serialism混淆。"}
+);
