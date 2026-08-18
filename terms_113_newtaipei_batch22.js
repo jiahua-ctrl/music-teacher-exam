@@ -1,0 +1,7 @@
+// 113 新北高中聯招延伸冷門名詞
+window.EXTRA_TERMS = window.EXTRA_TERMS || [];
+window.EXTRA_TERMS.push(
+{name:'Melismatic Organum',zh:'花唱式奧干農／華唱式奧干農',topic:'中世紀音樂',level:'👹魔王',definition:'中世紀複音音樂的一種奧干農型態。下方 tenor 通常取自既有聖詠，將每個音拉成很長的時值；上方聲部則在一個長音之上演唱許多較短音，形成高度裝飾性的 melisma。',context:'約12世紀巴黎聖母院樂派的複音發展中特別重要，可與 Léonin 等人物及 Magnus Liber Organi 的傳統聯繫。它反映西方複音由早期平行奧干農逐步走向聲部獨立與節奏組織化。',keywords:'tenor／定旋律長音、上聲部多音花唱、Notre Dame school、Léonin、中世紀複音',examAnswer:'Melismatic Organum 是中世紀奧干農的一種。其主要特色為下方 tenor 採用既有格雷果聖詠並將音值大幅延長，上方聲部則在每一長音之上演唱多個裝飾性音群，形成 melismatic 的複音織體。此技法在12世紀巴黎聖母院樂派中特別重要，與 Léonin 等人的複音實踐相關，顯示西方音樂由早期簡單平行複音逐漸走向更獨立、華麗的多聲部寫作。'},
+{name:'Imperfect Authentic Cadence (IAC)',zh:'不完全正格終止',topic:'和聲',level:'進階',definition:'具有屬功能和弦進入主和弦的正格終止，但未同時符合完全正格終止（PAC）的全部條件。',context:'PAC 通常要求 V–I（或 V7–I）皆為根音位置，且最高聲部在最後主和弦落於主音。只要正格終止缺少其中一項條件，例如最高聲部落在三音或五音，即可形成 IAC。',keywords:'V–I、dominant to tonic、非PAC、最高聲部非主音／轉位',examAnswer:'IAC（Imperfect Authentic Cadence）譯為「不完全正格終止」。它仍保有屬和弦進入主和弦的 V–I 正格終止功能，但沒有滿足 PAC 的所有嚴格條件。例如 V 或 I 出現轉位，或最後主和弦最高聲部並非主音，都可能構成 IAC。作答時應特別與半終止（停在V）、變格終止（IV–I）及欺騙終止（V–vi）區分。'},
+{name:'Music Aptitude',zh:'音樂性向',topic:'音樂教育',level:'👹魔王',definition:'指個體學習音樂的潛在能力或可能性，不等同於經過教學後已表現出的音樂成就。',context:'Edwin E. Gordon 的音樂學習理論特別重視 aptitude 與 achievement 的區別，並發展多種音樂性向測驗，用於了解不同年齡學生的音樂學習潛能。',keywords:'Edwin Gordon、潛能、aptitude ≠ achievement、音樂性向測驗、個別差異',examAnswer:'Music Aptitude（音樂性向）是個體學習音樂的潛在能力，重點在「能夠學到多少」的可能性，而不是目前已經會多少，因此應與 Music Achievement（音樂成就）區分。Edwin E. Gordon 對此概念有系統性的研究，並發展多種音樂性向測驗。教育上，性向評量可協助教師了解學生在調性、節奏等面向的個別差異，進而進行適性教學，但不宜將測驗結果視為固定不變的能力標籤。'}
+);
