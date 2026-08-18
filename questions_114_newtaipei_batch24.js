@@ -1,0 +1,8 @@
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{level:'國中音樂',topic:'臺灣音樂史',question:'【114新北國中｜👹】下列哪一位日本人士未曾以臺灣音樂調查或音樂教育推廣為主要活動？',options:['田邊尚雄','伊澤修二','黑澤隆朝','鈴木鎮一'],answer:3,explanation:'答案：鈴木鎮一。田邊尚雄與黑澤隆朝皆與臺灣音樂調查史有關；伊澤修二與臺灣近代音樂教育制度建立密切相關。鈴木鎮一以Suzuki Method小提琴教育法聞名。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'表演藝術文化',question:'【114新北國中｜👹】關於「藝穗節 Fringe Festival」的敘述，何者錯誤？',options:['Fringe原有邊緣之意','著名源流與Edinburgh Festival Fringe有關','早期精神包含開放、不審查與非主流展演','最早源自美國Edinburgh Festival Fringe'],answer:3,explanation:'答案：最早源自美國Edinburgh Festival Fringe。Edinburgh（愛丁堡）位於蘇格蘭。1947年未受邀團體在愛丁堡國際藝術節外圍自行演出，逐漸形成Fringe精神。教甄常以「地名＋國家」偷換概念。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'音樂術語',question:'【114新北國中】義大利音樂術語 Grazioso 最接近下列何意？',options:['輕快的','激動的','優雅的、柔美的','有力的'],answer:2,explanation:'答案：優雅的、柔美的。Grazioso來自義大利文「優雅、迷人」之意，演奏時除了速度，更要呈現姿態與表情性格。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'樂器學',question:'【114新北國中｜👹】將二胡、三味線、烏克麗麗、吉他依常見琴弦數量由少至多排列，何者正確？',options:['二胡→三味線→烏克麗麗→吉他','三味線→二胡→烏克麗麗→吉他','二胡→烏克麗麗→三味線→吉他','吉他→烏克麗麗→三味線→二胡'],answer:0,explanation:'答案：二胡2弦→三味線3弦→烏克麗麗4弦→吉他通常6弦。這類題不是只考樂器名稱，而是考構造知識。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'浪漫樂派',question:'【114新北國中】下列哪一首作品原為鋼琴曲集？',options:['Winterreise《冬之旅》','Kinderszenen《兒時情景》','Peer Gynt《皮爾金組曲》','Pelléas et Mélisande《佩利亞斯與梅麗桑德》'],answer:1,explanation:'答案：Schumann《Kinderszenen／兒時情景》，Op.15，是13首鋼琴小品組成的曲集，其中《Träumerei／夢幻曲》尤其著名。Winterreise是Schubert藝術歌曲集。',source:'114 新北市立國民中學教師聯合甄選音樂科'}
+);
