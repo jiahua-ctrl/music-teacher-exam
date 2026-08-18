@@ -1,0 +1,12 @@
+// 115 桃園市國中教師聯甄音樂科｜高鑑別題第一批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣傳統戲曲",question:"傳統戲曲武場以『倉、才、大、八』等口傳字音記憶與組織打擊聲響，此系統最接近下列何者？",options:["工尺譜","鑼鼓經","減字譜","律呂譜"],answer:1,explanation:"鑼鼓經是戲曲武場常用的口傳／口訣式擊樂記譜與記憶系統，不記錄絕對音高，而以特定字音暗示不同擊樂器或組合音色、節奏型與句法功能。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣傳統戲曲",question:"下列哪一項最能區分北管與南管？",options:["北管多見熱鬧高亢、鑼鼓與嗩吶等聲響；南管風格較典雅細緻","北管與南管皆以洞簫、二弦、琵琶、三弦為核心編制且風格相同","北管完全不使用打擊樂器","南管主要使用電聲樂器伴奏"],answer:0,explanation:"北管常與廟會、陣頭、戲曲場合及較強烈熱鬧的文武場聲響相關；南管則以典雅細緻著稱。題目常將南管的上四管編制偷換成北管。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣歌仔戲",question:"創辦薪傳歌仔戲劇團，並有『東方最美詠嘆調』美譽的歌仔戲表演藝術家是？",options:["楊麗花","廖瓊枝","孫翠鳳","陳亞蘭"],answer:1,explanation:"廖瓊枝是臺灣歌仔戲重要表演藝術家與傳承者，長期投入歌仔戲保存、教學與人才培育。教甄常把她與楊麗花、孫翠鳳、陳亞蘭混淆。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"世界音樂",question:"西原鑼鉦（Cồng Chiêng）最常與哪個國家的傳統音樂文化連結？",options:["越南","日本","墨西哥","葡萄牙"],answer:0,explanation:"Cồng Chiêng與越南中部高原地區的鑼鉦文化密切相關。命題常把Talking Drum、Ukulele、Gamelan、Cồng Chiêng等世界音樂代表物件跨國錯配。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"中",topic:"臺灣作曲家",question:"關於馬水龍《梆笛協奏曲》，下列何者最正確？",options:["以鋼琴為主奏樂器","結合中國民族器樂與西方管弦樂思維","完全採十二音列技法","主要依南管古譜逐字改編"],answer:1,explanation:"《梆笛協奏曲》以梆笛為主奏，展現中國民族器樂音色與現代管弦樂語彙的結合，是臺灣現代音樂常考作品。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"A Cappella",question:"下列哪一個團體並非以A Cappella無伴奏合唱為主要表演形式？",options:["Pentatonix","The King's Singers","VOX","Camerata Salzburg"],answer:3,explanation:"Camerata Salzburg是室內樂團／管弦樂團體，不是A Cappella人聲團體。A Cappella不等於沒有節奏或沒有低音，而是核心在於不使用器樂伴奏。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣流行音樂史",question:"下列哪一項最不適合用來代表臺灣近現代流行音樂發展？",options:["鄧雨賢—早期臺語流行歌","林強—新臺語歌與跨類型聲響","滅火器—獨立樂團與當代社會議題","林生祥—以爵士即興與原住民族複音為主要核心"],answer:3,explanation:"林生祥的重要特色在於臺灣土地、客家文化、社會議題與民謠／搖滾等跨界，不宜簡化成『爵士即興＋原民複音』。這是典型的人物風格偷換題。"},
+{year:"115",school:"桃園市國中教師聯甄",level:"國中",type:"choice",difficulty:"👹",topic:"流行文化",question:"短影音平台上的舞蹈挑戰與視覺迷因，對熱門歌曲快速擴散最能反映哪一種現象？",options:["實體唱片完全取代串流","社群演算法與可模仿視覺內容提升歌曲傳播","長篇前衛搖滾成為市場唯一主流","AI已完全取代真人歌手"],answer:1,explanation:"115桃園題目直接以2025金曲獎與全民模仿舞蹈現象切入，考的是短影音、迷因、社群平台與流行音樂傳播之間的關係。"}
+);
