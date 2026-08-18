@@ -1,4 +1,6 @@
 (() => {
+  if(window.__MUSIC_TEACHER_SRS_LOADED__)return;
+  window.__MUSIC_TEACHER_SRS_LOADED__=true;
   const REVIEW_KEY='musicTeacherExamSpacedReviewV1';
   const STATS_KEY='musicTeacherExamStatsV1';
   const load=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
