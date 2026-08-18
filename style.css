@@ -9,11 +9,15 @@
   --good:#1d7a5b;
   --bad:#b54242;
   --shadow:0 10px 30px rgba(59,42,94,.08);
+  --brand:var(--primary);
+  --line:var(--border);
+  --panel:var(--card);
+  --soft:color-mix(in srgb,var(--primary) 9%,var(--card));
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-body.dark{--bg:#17131f;--card:#221c2e;--text:#f5f0ff;--muted:#b8adc8;--primary:#a98adf;--primary-2:#c0a7ea;--border:#3a304b;--shadow:none}
+body.dark{--bg:#17131f;--card:#221c2e;--text:#f5f0ff;--muted:#b8adc8;--primary:#a98adf;--primary-2:#c0a7ea;--border:#3a304b;--shadow:none;--brand:var(--primary);--line:var(--border);--panel:var(--card);--soft:color-mix(in srgb,var(--primary) 12%,var(--card))}
 button,textarea{font:inherit}
 button{cursor:pointer}
 .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
