@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:'TERM-R9-001',term:'Through-composed Song',zh:'通作歌曲',topic:'曲式與藝術歌曲',level:'冷門魔王',definition:'歌曲各段依文本持續使用新音樂材料，而非固定反覆同一段音樂的曲式安排。',exam:'111 基隆高中名詞題。作答要與 strophic song 分辨，指出音樂隨文本發展而持續變化。',related:'art song；strophic form'},
+{id:'TERM-R9-002',term:'Also sprach Zarathustra',zh:'《查拉圖斯特拉如是說》',topic:'浪漫晚期',level:'冷門魔王',definition:'Richard Strauss 於1896年創作的交響詩，靈感來自 Nietzsche 同名著作。',exam:'111 基隆高中直接以作品名稱作名詞解釋；應寫 Strauss、交響詩與 Nietzsche。',related:'Richard Strauss；Nietzsche；symphonic poem'},
+{id:'TERM-R9-003',term:'九甲戲',zh:'九甲戲',topic:'臺灣戲曲',level:'冷門魔王',definition:'臺灣傳統戲曲相關術語之一，屬教甄可能以地方戲曲名稱直接要求辨識與說明的冷門考點。',exam:'111 基隆高中直接列入名詞解釋。複習時應連同臺灣地方戲曲源流、腔調與表演文化一起建立脈絡。',related:'臺灣傳統戲曲；地方劇種'},
+{id:'TERM-R9-004',term:'Funk',zh:'放克音樂',topic:'爵士與流行',level:'高鑑別度',definition:'1960年代後形成的非裔美國流行音樂風格，強調強烈律動、切分、反覆低音與節奏組的 groove。',exam:'111 基隆高中名詞題。不要只寫「流行音樂」，需指出 groove、切分與非裔美國音樂脈絡。',related:'James Brown；groove；soul'},
+{id:'TERM-R9-005',term:'Bunraku',zh:'文樂／日本人形淨瑠璃',topic:'世界戲劇音樂',level:'冷門魔王',definition:'日本傳統人形劇藝術，以大型人偶操演、太夫說唱與三味線伴奏結合。',exam:'111 基隆高中名詞題。三個關鍵詞：日本、人形劇、淨瑠璃說唱＋三味線。',related:'Japan；jōruri；shamisen'},
+{id:'TERM-R9-006',term:'Edgard Varèse',zh:'埃德加・瓦雷茲',topic:'20世紀音樂',level:'冷門魔王',definition:'20世紀作曲家，以音色、節奏、聲響塊與電子聲響探索著稱，作品包括 Ionisation 與 Poème électronique。',exam:'111 基隆高中直接以人物作名詞解釋。答題可寫電子音樂／聲響探索及代表作品。',related:'Ionisation；Poème électronique'},
+{id:'TERM-R9-007',term:'Piphat',zh:'皮帕特',topic:'世界音樂',level:'冷門魔王',definition:'泰國古典音樂的重要合奏類型，通常以鑼圈、木琴類打擊樂器與吹管樂器為核心。',exam:'111 高雄高中聯招名詞題。辨識重點是泰國，而非印尼 Gamelan。',related:'Thailand；ranat；gong circle'},
+{id:'TERM-R9-008',term:'Didgeridoo',zh:'迪吉里杜管',topic:'世界音樂',level:'冷門魔王',definition:'澳洲原住民族傳統長管吹奏樂器，常運用循環換氣形成持續低沉的嗡鳴聲。',exam:'111 高雄高中聯招名詞題。至少寫澳洲原住民族、長管吹奏、循環換氣／持續低音。',related:'Australian Aboriginal music；circular breathing'},
+{id:'TERM-R9-009',term:'Milonga',zh:'米隆加',topic:'世界與流行音樂',level:'冷門魔王',definition:'拉普拉塔河流域的歌曲與舞蹈類型，與阿根廷、烏拉圭文化及 Tango 的形成發展密切相關。',exam:'111 高雄高中聯招簡答題。答題要能把 Milonga 與 Tango 的歷史脈絡連起來。',related:'Argentina；Uruguay；Tango'},
+{id:'TERM-R9-010',term:'Klezmer Modes',zh:'克萊茲默調式',topic:'世界音樂與調式',level:'冷門魔王',definition:'Klezmer 音樂中具有特定音程結構與旋律慣用語的調式系統，常見 Ahava Rabbah 等調式／音階型態。',exam:'111 彰化女中曾以 Klezmer modes 出選擇題。應避免只背「猶太音樂」，還要注意增二度、小二度等特色音程與調式名稱。',related:'Jewish music；Ahava Rabbah；Freygish'}
+]);
