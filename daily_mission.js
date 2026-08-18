@@ -7,7 +7,7 @@
  const shuffle=a=>{a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
  const subjects=['國中音樂','高中音樂','教育專業'];
  function build(){const s=load(STATS,{attempts:{},wrong:[],unknown:[],topics:{}}),r=load(SRS,{}),now=new Date(),all=qs(),used=new Set();
-  const due=all.filter(q=>r[q.id]?.due&&new Date(r[q.id].due)<=now).sort((a,b)=>new Date(r[a.id].due)-new Date(b=r[b.id]?.due));
+  const due=all.filter(q=>r[q.id]?.due&&new Date(r[q.id].due)<=now).sort((a,b)=>new Date(r[a.id].due)-new Date(r[b.id].due));
   const unknown=all.filter(q=>(s.unknown||[]).includes(q.id));
   const wrong=all.filter(q=>(s.wrong||[]).includes(q.id));
   const weakTopics=new Set(Object.entries(s.topics||{}).filter(([,v])=>v.total>=2&&v.correct/v.total<.7).map(([k])=>k));
