@@ -5,6 +5,8 @@ document.write('<script src="terms_114_moe_batch22.js?v=20260818"><\/script>');
 document.write('<script src="terms_114_kshs_batch23.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_moe_batch.js?v=20260818"><\/script>');
 document.write('<script src="essay_114_kshs_batch.js?v=20260818"><\/script>');
+document.write('<script src="terms_110_zzsh_batch24.js?v=20260818"><\/script>');
+document.write('<script src="essay_110_zzsh_batch.js?v=20260818"><\/script>');
 
 window.EXAM_SOURCES = window.EXAM_SOURCES || [];
 window.EXAM_SOURCES.push(
