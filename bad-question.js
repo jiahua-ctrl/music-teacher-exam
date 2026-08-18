@@ -1,0 +1,24 @@
+(()=>{
+const KEY='musicTeacherExamBadQuestionsV1';
+const STATS_KEY='musicTeacherExamStatsV1';
+const $=id=>document.getElementById(id);
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||{}}catch{return{}}};
+const save=x=>localStorage.setItem(KEY,JSON.stringify(x));
+const all=()=>window.MusicTeacherExam?.questions||window.LOCAL_QUESTIONS||[];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function current(){const text=$('questionText')?.textContent||'';return all().find(q=>q.question===text)||null}
+function cleanStats(id){try{const s=JSON.parse(localStorage.getItem(STATS_KEY))||{};s.wrong=(s.wrong||[]).filter(x=>x!==id);s.unknown=(s.unknown||[]).filter(x=>x!==id);localStorage.setItem(STATS_KEY,JSON.stringify(s))}catch{}}
+function removeFromPool(id){const arr=all();for(let i=arr.length-1;i>=0;i--)if(arr[i]?.id===id)arr.splice(i,1)}
+function restoreToPool(q){const arr=all();if(q&&!arr.some(x=>x.id===q.id))arr.push(q)}
+function applyExcluded(){const bad=load();Object.keys(bad).forEach(removeFromPool);refreshCounts()}
+function refreshCounts(){const total=$('totalQuestions');if(total)total.textContent=all().length;const count=$('badQuestionCount');if(count)count.textContent=Object.keys(load()).length}
+function toast(text){let t=$('badQuestionToast');if(!t){t=document.createElement('div');t.id='badQuestionToast';t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#251f2d;color:#fff;padding:10px 14px;border-radius:999px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.2)';document.body.appendChild(t)}t.textContent=text;t.hidden=false;clearTimeout(t._timer);t._timer=setTimeout(()=>t.hidden=true,2200)}
+function markBad(){const q=current();if(!q)return;const bad=load();bad[q.id]={id:q.id,question:q.question,topic:q.topic||'',subject:q.subject||'',year:q.year||'',source_title:q.source_title||'',file_hint:q.source_file||'',markedAt:new Date().toISOString(),questionData:q};save(bad);cleanStats(q.id);removeFromPool(q.id);renderHome();refreshCounts();toast(`🗑️ 已淘汰：${q.id}`);setTimeout(()=>{$('nextBtn')?.click()},120)}
+function restore(id){const bad=load(),item=bad[id];if(!item)return;restoreToPool(item.questionData);delete bad[id];save(bad);renderHome();refreshCounts();toast(`↩️ 已還原：${id}`)}
+function copyList(){const bad=load(),items=Object.values(bad);if(!items.length){toast('目前沒有待刪題目');return}const text=items.map(x=>`${x.id}\t${x.question}`).join('\n');navigator.clipboard?.writeText(text).then(()=>toast('📋 已複製待刪清單，可貼給 ChatGPT 正式刪除')).catch(()=>prompt('複製以下待刪清單：',text))}
+function mountButton(){const options=$('options');if(!options||$('badQuestionBtn'))return;const b=document.createElement('button');b.id='badQuestionBtn';b.type='button';b.className='ghost wide danger';b.style.marginTop='10px';b.textContent='🗑️ 這題是爛題目｜淘汰';b.addEventListener('click',markBad);options.appendChild(b)}
+function renderHome(){const home=$('homeView');if(!home)return;let box=$('badQuestionPanel');if(!box){box=document.createElement('section');box.id='badQuestionPanel';box.className='card section-card';const weak=$('weaknessList')?.closest('.section-card');if(weak)weak.insertAdjacentElement('afterend',box);else home.appendChild(box)}const bad=load(),items=Object.values(bad);box.innerHTML=`<div class="section-title"><div><span class="eyebrow">題庫品質管理</span><h3>🗑️ 已淘汰題目 <span id="badQuestionCount">${items.length}</span> 題</h3></div></div><p class="muted">按「爛題目」後會立刻從你的練習池排除，也不再算進錯題／不知道。若誤按可以還原。</p>${items.length?`<div style="display:grid;gap:8px">${items.slice(-8).reverse().map(x=>`<div style="border:1px solid var(--line);border-radius:12px;padding:10px"><b>${esc(x.id)}</b> <small class="muted">${esc(x.topic||'')}</small><div style="font-size:13px;margin:4px 0">${esc(x.question)}</div><button class="ghost small" data-restore-bad="${esc(x.id)}">↩️ 還原</button></div>`).join('')}</div><button id="copyBadQuestionsBtn" class="ghost wide" style="margin-top:10px">📋 複製待正式刪除清單</button>`:'<p class="muted">目前沒有淘汰題目。</p>'}`;box.querySelectorAll('[data-restore-bad]').forEach(b=>b.addEventListener('click',()=>restore(b.dataset.restoreBad)));$('copyBadQuestionsBtn')?.addEventListener('click',copyList)}
+function observe(){const options=$('options');if(options)new MutationObserver(()=>setTimeout(mountButton,0)).observe(options,{childList:true});const q=$('questionText');if(q)new MutationObserver(()=>setTimeout(mountButton,0)).observe(q,{childList:true,characterData:true,subtree:true})}
+function init(){applyExcluded();mountButton();renderHome();observe()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(init,120));else setTimeout(init,120);
+})();
