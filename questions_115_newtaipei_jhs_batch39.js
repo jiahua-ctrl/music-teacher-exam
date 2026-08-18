@@ -1,0 +1,10 @@
+// 115 新北市立國民中學教師聯合甄選｜音樂科｜高鑑別第二批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"貝多芬",question:"若以『面對耳疾與內在生命』作為教學脈絡，下列哪首貝多芬鋼琴奏鳴曲最常被連結討論？",options:["《悲愴》","《月光》","《田園》","《暴風雨》"],answer:1,explanation:"115新北原題以貝多芬面對耳疾之苦作為聆賞脈絡，答案指向《月光》奏鳴曲。備考時仍應避免把作品標題當成唯一歷史證據，並區分作品年代、標題來源與作曲家生平。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣作曲家",question:"下列臺灣作曲家作品配對何者正確？",options:["江文也—《台灣舞曲》","馬水龍—《1947序曲》","郭芝苑—《梆笛協奏曲》","蕭泰然—《葬花吟》"],answer:0,explanation:"江文也《台灣舞曲》是臺灣近代音樂史的重要作品；《梆笛協奏曲》為馬水龍，《1947序曲》為郭芝苑。這類人物—作品交叉互換是近年教甄高頻陷阱。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"昆曲",question:"昆曲『水磨腔』的辨識重點，何者最恰當？",options:["以快速打擊與高亢吶喊為核心","講究字音、行腔與節拍的細膩婉轉","專指京劇西皮二黃的合稱","是一種固定十二音列作曲法"],answer:1,explanation:"水磨腔是昆曲重要聲腔特徵，講究咬字、行腔與節拍，風格細膩婉轉。教甄常把戲曲聲腔名稱與其他劇種、現代作曲技法混搭。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"客家戲曲",question:"關於三腳採茶戲，下列何者錯誤？",options:["典型角色為二丑一旦","與客家採茶文化及說唱表演有關","『三腳』主要指三個角色的表演編制","典型編制是一丑二旦"],answer:3,explanation:"三腳採茶戲的典型角色配置是二丑一旦。考題常利用『三個角色』誘導考生憑直覺選一丑二旦。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"Orff Schulwerk",question:"若教師讓學生先用姓名與生活語句創作節奏，再加入身體律動、木琴與即興接龍，最符合哪一理念？",options:["Orff Elemental Music","Gordon Audiation","Suzuki Mother-Tongue Approach","Schoenberg Twelve-tone Method"],answer:0,explanation:"從語言、律動、打擊樂器與即興出發，是Orff Schulwerk的典型實踐。此題把教學法轉成課堂情境，避免只背人名關鍵字。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"歌劇作品辨識",question:"《Gianni Schicchi》與下列哪位作曲家關係最直接？",options:["Verdi","Puccini","Rossini","Donizetti"],answer:1,explanation:"《Gianni Schicchi》為Puccini《Il trittico》（三聯劇）中的一部，以詠嘆調〈O mio babbino caro〉尤其著名。115新北直接以『哪一部不是Verdi』測作品歸屬。"}
+);
