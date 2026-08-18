@@ -24,3 +24,4 @@
   const first=home.querySelector('.stats-grid')?.nextElementSibling;first?.insertAdjacentElement('beforebegin',sec);document.getElementById('startDailyMission')?.addEventListener('click',()=>{const x=build();window.MusicTeacherExam?.startCustomQuiz(x.pool,'📅 今日上岸任務',20)});}
  document.addEventListener('DOMContentLoaded',()=>setTimeout(render,900));window.DailyExamMission={build};
 })();
+(()=>{if(window.__LEARNING_PROGRESS_LOADED__)return;window.__LEARNING_PROGRESS_LOADED__=true;const s=document.createElement('script');s.src='learning_progress.js?v=20260818a';document.body.appendChild(s)})();
