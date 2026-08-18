@@ -1,0 +1,8 @@
+window.termQuestions = window.termQuestions || [];
+window.termQuestions.push(
+ {term:'《1947序曲》',zh:'1947 Overture',level:'高中音樂・魔王',topic:'臺灣音樂',definition:'蕭泰然的重要大型管弦樂作品，以臺灣歷史記憶為題材，透過西方管弦樂語法與臺灣本土旋律素材，表現悲痛、反省與希望。',context:'作品以1947年前後的臺灣歷史經驗為核心。蕭泰然常被視為將臺灣本土音樂素材與西方浪漫派語法融合的重要作曲家。',examPoints:['作曲家：蕭泰然','大型管弦樂作品','臺灣歷史記憶與本土認同','本土旋律素材 × 西方管弦樂語法'],example:'答題時不要誤寫成「紀念美麗島事件」；題名1947即指向1947年的歷史背景。'},
+ {term:'The Mighty Five',zh:'俄國五人組／強力集團',level:'高中音樂・魔王',topic:'西洋音樂史',definition:'19世紀俄國民族樂派的重要作曲家群體，致力建立具有俄羅斯民族特色、不同於西歐學院傳統的音樂語言。',context:'核心人物通常指 Balakirev、Cui、Mussorgsky、Rimsky-Korsakov、Borodin。其創作常吸收俄國民歌、民族題材、異國色彩與特殊和聲配器。',examPoints:['Balakirev','Cui','Mussorgsky','Rimsky-Korsakov','Borodin','俄國民族樂派'],example:'可與柴可夫斯基比較：柴可夫斯基接受較完整學院訓練，並不屬於五人組。'},
+ {term:'Funk',zh:'放克音樂',level:'高中音樂・魔王',topic:'爵士與流行音樂',definition:'1960年代美國非裔音樂文化中發展的重要流行音樂類型，強調節奏律動、切分、反覆音型與強烈的第一拍（the One），常由貝斯、鼓、吉他與銅管形成緊密 groove。',context:'James Brown 對 Funk 發展影響重大，後續也影響 disco、hip-hop、R&B 與 fusion。',examPoints:['groove','syncopation','the One','反覆節奏型','James Brown','非裔美國音樂'],example:'不要只寫「爵士的一種」；Funk 的核心辨識點是節奏與 groove。'},
+ {term:'Theorbo',zh:'泰奧博琴／低音魯特琴',level:'高中音樂・魔王',topic:'樂器學',definition:'巴洛克時期常見的大型長頸撥弦樂器，由魯特琴家族發展而來，具有延長琴頸與額外低音弦，常用於 basso continuo 通奏低音。',context:'16世紀末至17世紀初義大利發展，常見於早期歌劇、室內樂與巴洛克伴奏。',examPoints:['撥弦樂器','魯特琴家族','延長琴頸','低音弦','basso continuo','巴洛克'],example:'看到 chitarrone 也要想到 theorbo 相關歷史用語。'},
+ {term:'Pasibutbut',zh:'布農族祈禱小米豐收歌',level:'高中音樂・魔王',topic:'臺灣原住民族音樂',definition:'布農族重要祭儀歌唱，常被稱為祈禱小米豐收歌，以男性群體圍成圓圈歌唱及聲部逐漸堆疊形成的複音與泛音效果著稱。',context:'歌唱與歲時祭儀、農耕文化及群體合作密切相關。其音響常因聲部移動產生豐富泛音，是臺灣原住民族音樂的重要代表。',examPoints:['布農族','祈禱小米豐收歌','男性群唱','複音','泛音','祭儀'],example:'教甄常拿它與阿美族《老人飲酒歌》、鄒族 Mayasvi 混考。'}
+);
