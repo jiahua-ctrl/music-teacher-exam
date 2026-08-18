@@ -1,0 +1,11 @@
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:114,subject:'高中音樂',topic:'臺灣傳統音樂',level:'👹 冷門',question:'關於歌仔戲與北管樂種，下列敘述何者正確？',options:['福祿戲主奏樂器為殼仔弦','西皮戲主奏樂器為南胡','歌仔戲不使用大廣弦','北管與南管樂器編制完全相同'],answer:0,explanation:'福祿戲常以殼仔弦為主奏；西皮戲則常見吊規仔。歌仔戲常見大廣弦、鴨母笛等；北管與南管的樂器、聲響與演出文化差異很大。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'臺灣傳統音樂',level:'👹 冷門',question:'下列何者最符合傳統三腳採茶戲的主要角色編制？',options:['一生二旦','一丑二旦','二丑一旦','一丑一生一旦'],answer:1,explanation:'三腳採茶戲的核心編制為一丑二旦，是客家傳統表演文化的重要考點。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'20世紀音樂',level:'👹 冷門',question:'Serialism 的概念最適合如何理解？',options:['只允許使用五聲音階','只處理十二音音高，不涉及其他參數','可把序列化原理延伸到音高、節奏、力度、音色等參數','等同於偶然音樂'],answer:2,explanation:'Serialism 序列主義源自十二音技法的序列思維，20世紀中葉進一步可延伸到節奏、力度、音色等多種參數，形成 total serialism 等方向。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'日本傳統音樂',level:'👹 冷門',question:'Nougaku（能樂）最適合下列哪一描述？',options:['日本傳統舞臺藝術體系，主要包含能與狂言','日本沖繩三線音樂的總稱','江戶時代流行歌舞伎中的伴奏類型','日本雅樂中管樂合奏的專稱'],answer:0,explanation:'Nougaku 通常指日本「能」與「狂言」構成的傳統舞臺藝術體系，具有謠、面具、舞與囃子等元素。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'數位音樂文化',level:'一般',question:'初音未來（Hatsune Miku）最核心的技術與文化背景為何？',options:['純粹由大型語言模型即時生成歌聲','以 VOCALOID 聲音資料庫為核心的虛擬歌手文化','傳統能劇角色數位化','只是一位真人歌手的舞臺藝名'],answer:1,explanation:'初音未來由 Crypton Future Media 推出，核心是 VOCALOID 聲音資料庫與虛擬歌手文化，並與UGC、同人創作、網路社群密切相關。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'中國傳統音樂',level:'👹 冷門',question:'「減字譜」主要用來記錄哪一類音樂？',options:['古琴','崑曲唱腔','琵琶輪指','編鐘音高'],answer:0,explanation:'減字譜是古琴的重要記譜法，以簡化漢字符號記錄弦位、指法與徽位等演奏資訊，而非直接以五線譜方式表示固定音高。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'現代演奏法',level:'一般',question:'長笛譜上標示 flutter tongue，通常代表哪一種演奏法？',options:['循環換氣','花舌','拍鍵','泛音'],answer:1,explanation:'flutter tongue 指花舌／顫舌，可用舌尖或喉部快速顫動產生連續顫動音色。',source:'114 高雄市立高雄高級中學教師甄試音樂科'},
+{year:114,subject:'高中音樂',topic:'演奏法與記譜',level:'一般',question:'弦樂譜上空心圓形符號常用來表示哪一演奏效果？',options:['左手撥弦','自然或人工泛音','敲擊琴身','滑音'],answer:1,explanation:'弦樂譜上的小圓圈常用來表示泛音。不同作品仍需依記譜語境判讀，但此為最常見意義。',source:'114 高雄市立高雄高級中學教師甄試音樂科'}
+);
