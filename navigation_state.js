@@ -14,6 +14,8 @@
  function wire(){
   const nav=document.getElementById('homeCategoryNav');
   if(!nav)return false;
+  if(nav.dataset.stateWired)return true;
+  nav.dataset.stateWired='1';
   nav.addEventListener('click',e=>{const b=e.target.closest('button[data-g]');if(b)set(b.dataset.g)});
   activate();
   return true;
@@ -24,9 +26,14 @@
    setTimeout(()=>activate(),100);
   });
  }
- document.addEventListener('DOMContentLoaded',()=>{
-  let n=0;const timer=setInterval(()=>{n++;if(wire()||n>30)clearInterval(timer)},100);
-  restoreAfterHomeAction();
- });
+ function resetOnExplicitRefresh(){
+  document.addEventListener('click',e=>{
+   const b=e.target.closest('.topbar button[onclick*="reload"]');
+   if(!b)return;
+   sessionStorage.removeItem(KEY);
+  },true);
+ }
+ function start(){let n=0;const timer=setInterval(()=>{n++;if(wire()||n>40)clearInterval(timer)},100);restoreAfterHomeAction();resetOnExplicitRefresh()}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
  window.HomeNavigationState={get,set,activate};
 })();
