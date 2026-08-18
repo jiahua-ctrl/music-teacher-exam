@@ -1,0 +1,6 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+  {id:"TERM115CK-001",level:"高中教甄・魔王",topic:"南管",term:"四梅走歸",zh:"南管四大名譜的合稱",definition:"『四梅走歸』是南管『譜』類四首代表性器樂大譜的合稱，通常指《四時景（或四時錦）》、《梅花操》、《走馬（或八駿馬）》與《百鳥歸巢》。南管的『譜』屬純器樂曲，常以四季、花鳥或奔馬等意象為題。",exam:"115建國高中直接以〈四梅走歸〉作簡答題。作答最好不只寫『四大名譜』，還要把四首名稱完整列出，並指出屬南管『譜』類純器樂曲。",related:"南管、指／曲／譜、四時景（四時錦）、梅花操、走馬（八駿馬）、百鳥歸巢"},
+  {id:"TERM115CK-002",level:"高中教甄",topic:"爵士樂",term:"Benny Goodman",zh:"班尼・顧德曼",definition:"美國爵士單簧管演奏家與樂團領袖，被譽為『The King of Swing』。他在1930年代以大型爵士樂團與廣播、錄音、舞廳演出推動Swing進入美國主流流行文化。",exam:"115建國高中要求寫出中外文姓名、代表樂器與歷史貢獻。答題核心：Benny Goodman／班尼・顧德曼、單簧管、Swing、Big Band、將爵士推向主流。",related:"Swing、Big Band、Clarinet、Carnegie Hall 1938"},
+  {id:"TERM115CK-003",level:"高中教甄・魔王",topic:"節拍與節奏",term:"交錯拍",zh:"交錯拍／交替拍號",definition:"在樂曲中依一定次序交替使用不同拍號或拍子組合，使重音組織與拍感在相鄰小節間改變。實際教學時常需從拍號變換與律動感受兩面向說明。",exam:"115建國高中要求與『變化拍』區辨並各舉教學曲例。作答時要清楚說明拍號如何交替，以及學生實際感受到的重音與律動變化。",related:"變化拍、Mixed Meter、Alternating Meter、Asymmetric Meter"},
+  {id:"TERM115CK-004",level:"高中教甄・魔王",topic:"節拍與節奏",term:"變化拍",zh:"變化拍／Mixed Meter",definition:"樂曲進行中拍號或拍子結構不固定，會依音樂需要發生變化；重點是拍組與重音配置會改變，而非全曲維持單一規律拍號。",exam:"115建國高中與『交錯拍』並列。建議答題除了定義，也補一個可讓學生拍手、走步或分組感受拍感改變的曲例與教學方式。",related:"交錯拍、Mixed Meter、Changing Meter、複合節拍"}
+]);
