@@ -1,0 +1,11 @@
+(()=>{const bank={
+'108-ntpc-jh-01':{A:'Eurhythmics 律動是 Dalcroze 的核心，以身體動作感受節奏、拍感、力度與樂句。',B:'Solfège／視唱聽音也是 Dalcroze 體系的重要面向，強調內在聽覺與音高感。',C:'即興是 Dalcroze 三大核心之一，可透過鋼琴、聲音或動作即興培養即時音樂反應。',D:'正確。固定手勢不是 Dalcroze 的唯一音高訓練核心；手號更常與 Kodály／Curwen 系統連結。'},
+'108-ntpc-jh-02':{A:'洞簫屬南管上四管的旋律樂器，不是本題要找的下四管節奏樂器。',B:'正確。拍板負責節拍與節奏組織，是南管下四管的重要打擊／節奏性樂器。',C:'二弦是南管上四管中的擦弦旋律樂器。',D:'琵琶是南管上四管的重要彈撥樂器，與洞簫、二弦、三弦共同構成核心旋律編制。'},
+'108-ntpc-jh-03':{A:'正確。《杯底不可飼金魚》與呂泉生密切相關，是辨識臺灣作曲家／歌曲的重要配對。',B:'《望春風》由鄧雨賢作曲、李臨秋作詞，不是呂泉生作品。',C:'《雨夜花》同樣是鄧雨賢重要臺語歌曲代表作。',D:'《四季紅》也是鄧雨賢代表作品之一；《望春風》《雨夜花》《四季紅》《月夜愁》常合稱「四月望雨」。'},
+'108-moe-sh-01':{A:'正確。拿坡里六和弦核心是 ♭II 上的大三和弦，典型採第一轉位，常具前屬功能。',B:'小調中的 ii°6 是正常音階內二級減三和弦第一轉位，與使用降二級的大三和弦 N6 不同。',C:'iv64 是四級小三和弦第二轉位，根音與功能都不是拿坡里和弦。',D:'V4/2 是屬七和弦第三轉位，屬功能明確，與前屬性的 N6 不同。'},
+'108-moe-sh-02':{A:'巴黎聖母院樂派活躍於12、13世紀，是中世紀複音音樂發展的重要中心。',B:'Léonin 與 Pérotin 是 Notre Dame School 最具代表性的作曲家姓名。',C:'Ars Antiqua「古藝術」可作為理解巴黎聖母院複音、organum 與早期記譜發展的歷史脈絡。',D:'正確。19世紀浪漫派大型管弦樂與巴黎聖母院樂派相隔數百年，時代與音樂語法皆不同。'},
+'109-moe-sh-01':{A:'正確。Bossa nova 1950年代末興起於巴西，常被理解為 Samba 節奏語彙與 Cool Jazz 和聲／質感的交會。',B:'Tango 與阿根廷、烏拉圭文化密切；Bebop 則是1940年代美國爵士，並非 Bossa nova 的典型配對。',C:'Rumba 與古巴音樂文化相關；Free Jazz 的美學也不是 Bossa nova 形成時最典型的爵士來源。',D:'Flamenco 與西班牙安達魯西亞文化相關，Ragtime 則較早興盛於美國，兩者不是 Bossa nova 的核心來源組合。'},
+'109-moe-sh-02':{A:'正確。廖瓊枝以歌仔戲苦旦藝術聞名，被譽為「臺灣第一苦旦」，並投入保存與傳承。',B:'楊麗花是電視歌仔戲極具代表性的演員，尤其以小生形象廣為人知，但不是「第一苦旦」稱號所指。',C:'許秀年是重要歌仔戲演員，長期活躍於舞台與電視，但本題特定稱號不是她。',D:'陳亞蘭是當代歌仔戲重要演員與製作推廣者，承續楊麗花等傳統，但不是「第一苦旦」。'},
+'110-moe-sh-01':{A:'正確。概略歷史可由 New Orleans／Dixieland，進入 Swing 大樂團時代，再到 Bebop、Cool Jazz，之後出現 Free Jazz 等現代發展。',B:'Swing 晚於早期 New Orleans／Dixieland；此選項把早期與中期爵士順序打亂。',C:'Bebop 約1940年代成熟，明顯晚於 Swing 與 New Orleans 爵士，不可能排在最前。',D:'Cool Jazz 與 Free Jazz 都屬較後期發展，不能放在 New Orleans 爵士之前。'},
+'110-hchs-sh-01':{A:'正確。Cambiata 是對位／旋律語境中的非和弦音型態，辨識時要看進出方式與所在和聲。',B:'終止四六和弦是和聲功能與低音配置概念；cambiata 並不固定只出現在此。',C:'拿坡里六和弦是 ♭II 大三和弦第一轉位，屬和弦／功能概念，與單一旋律非和弦音 cambiata 不同。',D:'教會調式如 Dorian、Phrygian 等是音階／調式系統，cambiata 不是調式名稱。'}
+};function apply(){const qs=window.MusicTeacherExam?.questions||window.LOCAL_QUESTIONS||[];qs.forEach(q=>{if(bank[q.id])q.option_explanations={...(q.option_explanations||{}),...bank[q.id]}})}apply();window.addEventListener('musicExamLatestModulesReady',apply);})();
