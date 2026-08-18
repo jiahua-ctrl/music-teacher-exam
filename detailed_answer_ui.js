@@ -29,5 +29,14 @@
       });
     }
   }
-  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',mount); else mount();
+  function loadTermLearning(){
+    if(document.querySelector('script[data-term-learning]'))return;
+    const s=document.createElement('script');
+    s.src='term-learning.js?v=20260818b';
+    s.dataset.termLearning='1';
+    s.defer=true;
+    document.body.appendChild(s);
+  }
+  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',()=>{mount();loadTermLearning();});
+  else {mount();loadTermLearning();}
 })();
