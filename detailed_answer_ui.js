@@ -1,5 +1,5 @@
-document.write('<script src="latest_loader_bootstrap.js?v=20260818p"><\/script>');
 (()=>{
+  if(window.__DETAILED_ANSWER_UI__)return;window.__DETAILED_ANSWER_UI__=true;
   function mount(){
     const byId=id=>document.getElementById(id);
     const esc=s=>String(s||'').replace(/[&<>'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c]));
@@ -31,17 +31,15 @@ document.write('<script src="latest_loader_bootstrap.js?v=20260818p"><\/script>'
     }
   }
   function loadScript(src,flag){
-    if(document.querySelector(`script[data-${flag}]`))return;
+    const base=src.split('?')[0];
+    if([...document.scripts].some(s=>(s.getAttribute('src')||'').split('?')[0]===base))return;
     const s=document.createElement('script');
     s.src=src;
     s.dataset[flag.replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]='1';
     s.defer=true;
     document.body.appendChild(s);
   }
-  function loadTermTools(){
-    loadScript('term-learning.js?v=20260818c','term-learning');
-    loadScript('term-dashboard.js?v=20260818b','term-dashboard');
-  }
-  if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',()=>{mount();loadTermTools();});
-  else {mount();loadTermTools();}
+  function loadTermTools(){loadScript('term-learning.js?v=20260818c','term-learning');}
+  if(document.readyState==='loading')window.addEventListener('DOMContentLoaded',()=>{mount();loadTermTools();});
+  else{mount();loadTermTools();}
 })();
