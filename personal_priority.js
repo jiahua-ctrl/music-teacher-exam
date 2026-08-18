@@ -36,3 +36,12 @@
  document.addEventListener('DOMContentLoaded',()=>setTimeout(()=>{mount();refreshAfterAnswer()},650));
  window.PersonalExamPriority={termRows,render};
 })();
+
+(()=>{
+ const GROUPS={today:'🏠 今天',practice:'📝 練習',radar:'📡 考點',learning:'📊 我的學習',written:'✍️ 非選題'};
+ let active='today';
+ function classify(el){const id=el.id||'',t=(el.textContent||'').replace(/\s+/g,' ');if(id==='dailyMission'||id==='mtSrs'||/每日任務|今日上岸|待學習題庫/.test(t))return'today';if(id==='preciseTermRadar'||id==='mtFrequency'||/高頻考點|精準考點|知識鏈/.test(t))return'radar';if(id==='personalPriorityRadar'||id==='mtWeakTraining'||/弱點分析|上岸優先讀書清單|記憶狀態/.test(t))return'learning';if(id==='mtTrial'||/名詞解釋|申論|試教挑戰|試教模擬/.test(t))return'written';if(id==='mtHighSchoolCenter'||/依目標練習|篩選練習|國中、高中分開準備|高中音樂專業特訓/.test(t))return'practice';return''}
+ function apply(){const home=document.getElementById('homeView');if(!home)return;home.querySelectorAll(':scope > .section-card, :scope > .mt-advanced, :scope > .mt-srs').forEach(el=>{const g=classify(el);if(g){el.dataset.homeGroup=g;el.style.display=g===active?'':'none'}});const stats=home.querySelector(':scope > .stats-grid');if(stats)stats.style.display=active==='learning'?'grid':'none'}
+ function mount(){const home=document.getElementById('homeView'),hero=home?.querySelector('.hero');if(!home||!hero||document.getElementById('homeCategoryNav'))return;const st=document.createElement('style');st.textContent=`#homeCategoryNav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0 18px}#homeCategoryNav button{border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:12px;padding:10px 6px;font-weight:800;cursor:pointer}#homeCategoryNav button.active{background:var(--brand);color:#fff;border-color:var(--brand)}@media(max-width:720px){#homeCategoryNav{grid-template-columns:repeat(3,1fr)}}`;document.head.appendChild(st);const nav=document.createElement('nav');nav.id='homeCategoryNav';nav.innerHTML=Object.entries(GROUPS).map(([k,v])=>`<button data-g="${k}" class="${k===active?'active':''}">${v}</button>`).join('');hero.insertAdjacentElement('afterend',nav);nav.querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.g;nav.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));apply();window.scrollTo({top:0,behavior:'smooth'})});apply();new MutationObserver(()=>apply()).observe(home,{childList:true,subtree:false})}
+ document.addEventListener('DOMContentLoaded',()=>setTimeout(mount,1200));window.HomeCategoryOrganizer={apply,getActive:()=>active};
+})();
