@@ -1,0 +1,15 @@
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{level:'國中音樂',topic:'中國傳統音樂',question:'【114新北國中・冷門】依中國「八音」分類，瑟、筑、篪、箏中，哪一件與其他三件的材料類別不同？',options:['瑟','筑','篪','箏'],answer:2,explanation:'篪為竹製吹管，屬「竹」；瑟、筑、箏主要依弦材分類為「絲」。八音為金、石、土、革、絲、木、匏、竹。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'中國傳統音樂',question:'【114新北國中・陷阱】下列何者不是琵琶的代表古曲？',options:['十面埋伏','霸王卸甲','陽春白雪','廣陵散'],answer:3,explanation:'《廣陵散》是著名古琴曲，不是琵琶代表曲。琵琶依H-S分類屬弦鳴樂器，也是南管上四管之一。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'音樂史',question:'【114新北國中】下列哪一首不是 Stravinsky 的芭蕾作品？',options:['Orpheus','Petrushka','Pulcinella','Ragtime'],answer:3,explanation:'《Ragtime》是Stravinsky的室內器樂作品，不是芭蕾；《Petrushka》《Pulcinella》《Orpheus》皆與芭蕾相關。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'臺灣傳統音樂',question:'【114新北國中】「都馬調」是哪一種臺灣傳統戲曲的重要曲調？',options:['北管','南管','梨園戲','歌仔戲'],answer:3,explanation:'都馬調是歌仔戲重要曲調之一，與「都馬班」傳入臺灣的發展脈絡相關。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'音樂與文學',question:'【114新北國中・冷門】Mahler《大地之歌》部分歌詞所據的中國詩歌，包含哪位詩人的作品？',options:['李白','白居易','杜甫','蘇軾'],answer:0,explanation:'《大地之歌》採用德譯中國詩歌文本，其中包含李白等唐詩人的作品。教甄常以「西洋作品×中國文學」交叉命題。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'中國戲曲史',question:'【114新北國中】《琵琶記》的作者是誰？',options:['高明','王實甫','關漢卿','湯顯祖'],answer:0,explanation:'《琵琶記》為元末明初高明所作南戲／傳奇重要作品；王實甫代表作為《西廂記》。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'世界音樂',question:'【114新北國中】下列何者不是非洲傳統音樂常見概括特徵？',options:['節奏層次豐富','音樂與舞蹈緊密結合','大量運用複節奏','以強調非調性為主要共同特色'],answer:3,explanation:'非洲音樂文化極為多樣，但常見教科書概括包括複節奏、反覆、應答與歌舞結合；「強調非調性」不是適當的共同概括。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'西洋音樂史',question:'【114新北國中】Trio Sonata 最典型地盛行於哪一時期？',options:['中世紀','文藝復興','巴洛克','浪漫'],answer:2,explanation:'Trio sonata是巴洛克重要室內樂類型。「trio」指三條聲部功能，不一定只有三位演奏者，通奏低音常由兩件樂器共同完成。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'西洋音樂史',question:'【114新北國中】交響詩（Symphonic Poem）的發展與哪位作曲家關係最密切？',options:['Liszt','Palestrina','Bach','Haydn'],answer:0,explanation:'Liszt被視為交響詩的重要開創者，以單樂章管弦樂承載文學、繪畫或哲學等標題性內容。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'世界文化遺產',question:'【114新北國中・魔王】2003年 UNESCO 將哪一項與貝多芬相關的音樂文獻列入「世界記憶名錄」？',options:['《第五交響曲》總譜','《第九交響曲》手稿','《月光奏鳴曲》初版','《莊嚴彌撒》首演海報'],answer:1,explanation:'教甄題常簡化稱「世界人類遺產」，更精確地說是貝多芬《第九交響曲》手稿於2001年入選UNESCO Memory of the World Register；遇到年份／名錄名稱要特別核對，避免把「非物質文化遺產」與「世界記憶名錄」混為一談。',source:'114 新北市立國民中學教師聯合甄選音樂科（依原考點校正表述）'},
+{level:'國中音樂',topic:'民族音樂學',question:'【114新北國中・冷門】Ravi Shankar 最著名的演奏樂器為何？',options:['Mbira','Shamisen','Sitar','Tabla'],answer:2,explanation:'Ravi Shankar是印度西塔琴（sitar）大師，對20世紀印度古典音樂國際傳播及西方流行／古典跨界影響深遠。',source:'114 新北市立國民中學教師聯合甄選音樂科'},
+{level:'國中音樂',topic:'世界樂器',question:'【114新北國中・冷門】關於 Oud（烏德琴），何者錯誤？',options:['常見於中東音樂文化','屬彈撥弦鳴樂器','與歐洲lute有歷史關聯','通常以固定琴格確保半音音準'],answer:3,explanation:'Oud典型特徵之一是無琴格（fretless），因此可處理阿拉伯音樂中的細微音高與maqam語彙。',source:'114 新北市立國民中學教師聯合甄選音樂科'}
+);
