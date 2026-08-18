@@ -1,0 +1,14 @@
+// 115 新北市公立高中聯招｜第二批高鑑別選擇題（原卷16-37題延伸）
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"新北高中聯招",difficulty:"🔥",question:"依流行音樂發展脈絡，下列何者最合理？",options:["鄉村音樂→節奏藍調→搖滾→重金屬","鄉村音樂→重金屬→節奏藍調→搖滾","重金屬→搖滾→節奏藍調→鄉村","迪斯可→節奏藍調→鄉村→搖滾"],answer:0,explanation:"教甄常用年代順序偷換。Country與R&B均早於1950年代搖滾成形，而Heavy Metal主要在1960年代末至1970年代發展。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"關於Bobby McFerrin〈Don't Worry, Be Happy〉，何者錯誤？",options:["由Bobby McFerrin創作並演唱","與Meher Baba的名言相關","收錄於《Simple Pleasures》","獲奧斯卡最佳原創歌曲獎"],answer:3,explanation:"此曲曾獲葛萊美重要獎項，但不是奧斯卡最佳原創歌曲得主。考點是不要把知名電影歌曲與Academy Award自動連結。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"巴洛克法式序曲（French Overture）最典型的辨識線索為何？",options:["快速—慢速—快速，源自Scarlatti","莊嚴慢段常具附點節奏，接較快的模仿／賦格性段落","全曲固定快速賦格","以華彩裝飾奏為核心且速度保持不變"],answer:1,explanation:"French Overture與Lully及法國宮廷傳統密切相關，典型開頭為莊嚴附點節奏，後接快速模仿對位段。不要與Italian Overture的快—慢—快混淆。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"Schubert藝術歌曲與詩人配對，何者錯誤？",options:["《An den Mond》—Goethe","《Die Forelle》—C. F. D. Schubart","《Heidenröslein》—Schiller","《Winterreise》—Wilhelm Müller"],answer:2,explanation:"《Heidenröslein》（野玫瑰）詩作者是Goethe，不是Schiller。這類『詩人—歌曲』互換是藝術歌曲常見冷門陷阱。"},
+{year:"115",school:"新北高中聯招",difficulty:"🔥",question:"Stravinsky《Symphony of Psalms》（詩篇交響曲）在管弦樂配置上刻意省略哪一組弦樂器？",options:["小提琴與中提琴","大提琴與低音提琴","所有弦樂器","豎琴與鋼琴"],answer:0,explanation:"《詩篇交響曲》的特殊音色配置省略小提琴與中提琴，但保留大提琴與低音提琴，並大量使用木管、銅管、鋼琴等。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"Fogarty課程統整模式中的Immersed（浸潤式）最接近哪一描述？",options:["不同學科教師共同以單一專題整合全部課程","各科圍繞共同概念平行授課","學習者從自身高度投入的興趣／專業視角，自主把不同領域知識整合起來","單一教師在本科課程中偶爾補充其他學科資料"],answer:2,explanation:"Immersed強調學習者自身透過個人興趣或專業鏡頭整合多領域。若三科教師共同設計專案，反而更接近其他跨學科整合模式。"},
+{year:"115",school:"新北高中聯招",difficulty:"🔥",question:"學生利用VR模擬舞台演出，依自己的演奏與反思紀錄持續修正學習策略，最符合哪一評量理念？",options:["Assessment as Learning","Assessment for Learning","Assessment of Learning","Diagnostic Assessment"],answer:0,explanation:"Assessment as Learning強調學生的後設認知、自我監控與反思，學生本身成為評量與調整學習的重要主體。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"下列音樂術語中，最適合表示『聲音逐漸減弱直到消失』的是？",options:["Morendo／Smorzando","Stringendo／Affrettando","Allargando／Maestoso","Sotto voce／Mezzo forte"],answer:0,explanation:"Morendo有『逐漸消逝』之意；Smorzando亦指聲音／速度漸弱消失。Stringendo、Affrettando偏向加快或催促；Allargando則漸寬廣。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"某泛音列以F為基音，若取第4、5、6泛音，最接近形成何種和弦？",options:["F小三和弦","F大三和弦","C大三和弦","F減三和弦"],answer:1,explanation:"第4、5、6泛音的比例4:5:6形成近似根音—大三度—完全五度，因此構成以F為根音的大三和弦輪廓。"},
+{year:"115",school:"新北高中聯招",difficulty:"👹",question:"在C大調中，D♯–F♯–A–C由低至高組成的和弦，最適合分析為何？",options:["N6","It+6","V7/V","vii°7/iii"],answer:3,explanation:"E小調（iii）的導音為D♯；D♯–F♯–A–C構成D♯全減七和弦，因此是iii的導七和弦 vii°7/iii。"}
+);
