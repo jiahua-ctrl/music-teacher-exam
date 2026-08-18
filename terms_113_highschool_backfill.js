@@ -1,0 +1,13 @@
+window.TERM_PROMPTS = window.TERM_PROMPTS || [];
+window.TERM_PROMPTS.push(
+{id:'term113-hs-01',level:'高中音樂',topic:'二十世紀音樂',term:'Sprechstimme',zh:'說唱式聲音／語唱',definition:'介於說話與歌唱之間的聲音處理方式，音高通常被提示但不以傳統歌唱方式持續固定，與 20 世紀初表現主義音樂密切相關。',exam:'113 中壢高中直接考名詞。答題可連結 Schoenberg 與《Pierrot lunaire》，並區分傳統 bel canto。',related:'Schoenberg、Expressionism、Pierrot lunaire'},
+{id:'term113-hs-02',level:'高中音樂',topic:'織度',term:'Heterophony',zh:'異音織體',definition:'多個聲部共享同一旋律骨架，但同時以不同裝飾、節奏或旋律變體呈現的織度。',exam:'113 中壢高中直接考名詞。答題時應與 monophony、homophony、polyphony 對照。',related:'Monophony、Homophony、Polyphony'},
+{id:'term113-hs-03',level:'高中音樂',topic:'曲式',term:'Rounded Binary',zh:'回返二段體／圓整二段體',definition:'二段體的一種，第二大段末返回第一段開頭的重要主題材料，常概括為 A｜B A′。',exam:'113 中壢高中直接考名詞。關鍵不是「有兩段」，而是第二段後部回到 A 材料。',related:'Binary form、Ternary form、Sonata form'},
+{id:'term113-hs-04',level:'高中音樂',topic:'世界音樂',term:'Khoomei',zh:'呼麥',definition:'蒙古及圖瓦等地的泛音歌唱傳統，歌者透過聲道共鳴控制，使基音上方特定泛音被突出，產生彷彿同時有兩個音高層次的聽覺效果。',exam:'112、113 高中教甄持續出現。需知道不是一般假聲，也不是單純二聲部合唱。',related:'Overtone singing、蒙古音樂、世界音樂'},
+{id:'term113-hs-05',level:'高中音樂',topic:'歌劇與音樂史',term:'Gesamtkunstwerk',zh:'總體藝術作品',definition:'華格納美學的重要概念，主張詩、音樂、戲劇、舞台視覺等藝術元素在樂劇中形成整體。',exam:'113 基隆女中直接考名詞。建議與 leitmotif、music drama、Wagner 一起準備。',related:'Wagner、Leitmotif、Music drama'},
+{id:'term113-hs-06',level:'高中音樂',topic:'世界音樂',term:'Raga',zh:'拉格／印度旋律框架',definition:'印度古典音樂的旋律組織框架，包含特定音高材料、重要音、上行下行方式、慣用旋律語彙及情感或時間聯想，不能簡化成西方「音階」。',exam:'113 基隆女中直接考名詞。常與 tala 對照：raga 偏旋律組織，tala 偏節奏循環。',related:'Tala、Indian classical music'},
+{id:'term113-hs-07',level:'高中音樂',topic:'臺灣原住民族音樂',term:'paSta’ay',zh:'賽夏族矮靈祭',definition:'賽夏族重要祭儀，中文常稱矮靈祭；祭儀歌樂具有高度文化與族群意義，備考不宜只把它當作一首「原住民歌曲」。',exam:'113 中壢高中直接考名詞。作答應寫族群、祭儀性質與音樂文化脈絡。',related:'賽夏族、祭儀音樂、臺灣原住民族音樂'},
+{id:'term113-hs-08',level:'高中音樂',topic:'音樂史',term:'Dies irae',zh:'震怒之日',definition:'拉丁安魂彌撒傳統中的著名聖詠旋律，後世作曲家經常引用其旋律象徵死亡、審判或不祥意涵。',exam:'113 基隆女中列為名詞，師大附中同年又以作品辨識方式考其引用，屬「同年跨校、不同題型」高價值考點。',related:'Gregorian chant、Requiem、Berlioz、Rachmaninoff'},
+{id:'term113-hs-09',level:'高中音樂',topic:'二十世紀音樂',term:'Aleatoric Music',zh:'機遇音樂／偶然音樂',definition:'將作品部分參數交由機率、隨機程序或演奏者選擇決定的 20 世紀創作觀念；不同作品對偶然性的控制程度不同。',exam:'110、112、113 跨年持續出現，已屬高頻名詞。答題可連結 John Cage，但不可把所有機遇音樂都等同 Cage。',related:'Chance Music、John Cage、20th-century music'},
+{id:'term113-hs-10',level:'高中音樂',topic:'音樂史',term:'Castrato',zh:'閹人歌手',definition:'歐洲近代早期曾存在的男性歌唱者類型，因青春期前閹割而保留高音域，同時具有成年男性較大的呼吸與共鳴條件；在 17、18 世紀義大利歌劇與教會音樂中特別重要。',exam:'112 教育部、113 基隆女中與 113 新北高中皆出現，屬明顯跨年／跨校高頻名詞。',related:'Opera seria、Farinelli、Countertenor'}
+);
