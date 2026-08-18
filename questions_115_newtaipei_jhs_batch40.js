@@ -1,0 +1,12 @@
+// 115 新北市立國民中學教師聯合甄選｜音樂科｜高鑑別第三批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"樂器分類",question:"依 Hornbostel–Sachs 分類法，下列何者不屬於體鳴樂器（idiophone）？",options:["三角鐵","口簧琴","銅鈸","管風琴"],answer:3,explanation:"體鳴樂器由樂器本體材料振動發聲，如三角鐵、銅鈸與多數口簧琴；管風琴主要以管內空氣柱振動發聲，屬氣鳴樂器。陷阱是把『有鍵盤』或『金屬製』誤當分類依據。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"20世紀音樂",question:"下列哪一部作品不是 John Cage 的作品？",options:["4′33″","Music of Changes","Sonatas and Interludes","Pierrot lunaire"],answer:3,explanation:"《Pierrot lunaire》為 Arnold Schoenberg 作品；Cage代表作包括《4′33″》、《Music of Changes》及為預置鋼琴創作的《Sonatas and Interludes》。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"中國文學與音樂",question:"關於元曲，下列何者最需要修正？",options:["包含散曲與雜劇等形式","關漢卿是重要代表人物","《竇娥冤》為重要作品","湯顯祖是元代雜劇代表人物"],answer:3,explanation:"湯顯祖為明代戲曲家，代表作《牡丹亭》；把明代湯顯祖塞進元曲代表人物，是典型跨朝代陷阱。關漢卿、馬致遠等才是元曲重要人物。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"中國器樂",question:"下列傳統樂曲與主要樂器配對何者錯誤？",options:["《廣陵散》—古琴","《高山流水》—古琴","《十面埋伏》—琵琶","《賽馬》—二胡"],answer:0,explanation:"此題若以選項文字判斷其實四組皆可成立，因此不應作為單選題使用；題庫刻意標示為校驗提醒：歷屆題若轉寫或OCR造成選項失真，必須回查原卷，不可硬猜。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"調式",question:"若以 C 為宮音，中國雅樂七聲音階（加入變徵與變宮）所形成的音程輪廓，最接近哪一西方教會調式？",options:["Dorian","Phrygian","Lydian","Mixolydian"],answer:2,explanation:"雅樂七聲宮調式常以宮、商、角、變徵、徵、羽、變宮構成；以C為宮可對應 C-D-E-F♯-G-A-B，輪廓近似 Lydian。教甄常跨系統比較中國七聲音階與教會調式。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"南管",question:"關於南管，下列何者較不恰當？",options:["音樂內容常分指、曲、譜","核心上四管包含琵琶、洞簫、二弦、三弦","源自福建泉州並流傳臺灣","主要功能是廟會陣頭中以強烈鑼鼓伴奏熱鬧場面"],answer:3,explanation:"南管以細緻典雅、清和古樸著稱，與北管或陣頭鑼鼓的熱鬧聲響不可混為一談；指、曲、譜與上四管都是高頻考點。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"法國音樂",question:"下列法國作曲家與作品配對何者錯誤？",options:["Ravel—Boléro","Dukas—L’apprenti sorcier","Debussy—Ma mère l’Oye","Saint-Saëns—Danse macabre"],answer:2,explanation:"《Ma mère l’Oye》（鵝媽媽）是 Ravel 作品，不是 Debussy；《Boléro》亦為Ravel，《魔法師的學徒》為Dukas，《骷髏之舞》為Saint-Saëns。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣說唱",question:"被列為重要傳統藝術『說唱（唸歌仔）』保存者，並曾參與電影《血觀音》演出的藝術家是？",options:["楊麗花","廖瓊枝","楊秀卿","陳美雲"],answer:2,explanation:"楊秀卿是臺灣重要唸歌仔／說唱藝術保存者。廖瓊枝以歌仔戲苦旦與傳習著稱；楊麗花則以電視歌仔戲聞名。人物專長互換是本土音樂常見陷阱。"}
+);
