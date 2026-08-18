@@ -1,0 +1,12 @@
+// 115 新北市公立高級中等學校教師聯合甄選｜音樂科｜高鑑別第一批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"🔥",topic:"臺灣歌仔戲",question:"關於薪傳歌仔戲劇團創辦人與藝術成就，下列何者最正確？",options:["陳永明—以大型戶外特效推動歌仔戲精緻化","林竹岸—以文場領奏與樂器保存為主要成就","唐美雲—創辦薪傳並以交響跨界為核心","廖瓊枝—臺灣重要苦旦表演藝術家，長期推動歌仔戲傳習"],answer:3,explanation:"廖瓊枝被譽為臺灣重要苦旦表演藝術家，長期投入歌仔戲傳承教育。教甄常把廖瓊枝、唐美雲、林竹岸等人物角色與成就互換。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"原住民族音樂",question:"哪一位臺灣原住民歌手以卑南族古調為重要創作根基，並融合現代民謠與世界音樂語彙？",options:["桑布伊","陳建年","舒米恩","阿爆"],answer:0,explanation:"桑布伊的創作與卑南族傳統古調關聯密切。陳建年同為卑南族重要音樂人，但命題若強調『卑南古調為核心、世界音樂與當代編曲』，常指向桑布伊。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"原住民族音樂",question:"關於布農族Pasibutbut，下列何者最不恰當？",options:["與祈求小米豐收的祭儀文化有關","以男性多聲部合唱著稱","黑澤隆朝曾於20世紀中葉採錄","核心特色是單旋律齊唱與固定伴奏音型"],answer:3,explanation:"Pasibutbut的重要特徵是男性多聲部合唱與聲部逐層加入、音高上升的音響，不是單旋律齊唱。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"八音分類",question:"依中國傳統八音分類，下列何組配對錯誤？",options:["敔、柷—木","篪、塤—土","搏拊、堂鼓—革","蘆笙、葫蘆絲—匏"],answer:1,explanation:"塤屬土，但篪為竹製吹管樂器，應歸竹類；這題是典型『同組一對一錯』陷阱。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"世界音樂",question:"下列非洲樂器與Hornbostel–Sachs發聲分類何者錯誤？",options:["Balafon—體鳴","Djembe—膜鳴","Kora—弦鳴","Mbira—氣鳴"],answer:3,explanation:"Mbira為彈撥金屬簧片發聲的體鳴樂器（idiophone），不是氣鳴。Balafon為木琴類體鳴、Djembe為膜鳴、Kora為弦鳴。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"印度音樂",question:"下列何者不是印度古典音樂的核心概念？",options:["Raga","Tala","Swaras","Slendro"],answer:3,explanation:"Raga為旋律模式、Tala為節奏循環、Swaras為音級概念；Slendro則屬印尼甘美朗常見調律系統。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"極簡音樂",question:"若教師要示範極簡音樂以反覆分解和弦與琶音製造時間壓迫感，哪一部電影配樂最典型？",options:["《Dune》—Hans Zimmer","《Crouching Tiger, Hidden Dragon》—Tan Dun","《The Hours》—Philip Glass","《The Last Emperor》—Ryuichi Sakamoto"],answer:2,explanation:"Philip Glass是Minimalism代表作曲家，《The Hours》配樂大量運用反覆型、分解和弦與持續推進的織度，是極佳辨識例。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",level:"高中",type:"choice",difficulty:"👹",topic:"Hip-hop",question:"關於Hip-hop文化，下列何者最不恰當？",options:["1970年代紐約Bronx是重要發源地","DJ Kool Herc與breakbeat發展密切相關","Public Enemy以政治與社會議題聞名","Hip-hop最初發源於Harlem並由單一歌手創立"],answer:3,explanation:"Hip-hop並非由單一歌手創立，且其重要發源地是1970年代Bronx；把Harlem或單一創辦人套進去是常見陷阱。"}
+);
