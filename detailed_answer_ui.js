@@ -40,7 +40,7 @@ document.write('<script src="latest_loader_bootstrap.js?v=20260818p"><\/script>'
   }
   function loadTermTools(){
     loadScript('term-learning.js?v=20260818c','term-learning');
-    loadScript('term-dashboard.js?v=20260818a','term-dashboard');
+    loadScript('term-dashboard.js?v=20260818b','term-dashboard');
   }
   if(document.readyState==='loading') window.addEventListener('DOMContentLoaded',()=>{mount();loadTermTools();});
   else {mount();loadTermTools();}
