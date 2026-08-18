@@ -1,0 +1,11 @@
+window.EXTRA_TERMS = (window.EXTRA_TERMS || []).concat([
+{term:'Gayageum',zh:'伽倻琴／伽耶琴',level:'👹 冷門',topic:'世界音樂・韓國',answer:'Gayageum（가야금）是韓國傳統撥弦樂器，屬長形箏類樂器，琴弦架於可移動琴柱上，以右手撥弦、左手按壓琴弦產生滑音、顫音與音高變化。傳統常見十二弦，現代亦發展出更多弦數的改良型。其音色柔和而富彈性，常見於韓國宮廷、民間與當代國樂創作。教甄關鍵字：韓國、箏類、撥弦、可移動琴柱、左手按弦變化音高。'},
+{term:'Kalimba',zh:'卡林巴／拇指琴',level:'👹 冷門',topic:'世界音樂・非洲',answer:'Kalimba 常泛指非洲簧片類拇指琴，屬 lamellophone（薄片／簧片發聲樂器）。演奏者以雙手拇指撥動固定在共鳴箱或木板上的金屬簧片，使簧片振動發聲；不同長度簧片產生不同音高。其相關樂器在非洲各地有不同名稱與形制，mbira 尤具代表性。教甄關鍵字：非洲、拇指琴、lamellophone、金屬簧片、撥奏。'},
+{term:'Der Freischütz',zh:'《魔彈射手》',level:'高頻',topic:'西洋音樂史・歌劇',answer:'《Der Freischütz》（《魔彈射手》）是德國作曲家 Carl Maria von Weber 於1821年首演的重要德語浪漫歌劇。作品結合德國民間傳說、森林與超自然題材，並使用德語對白與歌曲，常被視為德國浪漫歌劇發展的重要里程碑；「狼谷場景」尤其著名。教甄作答宜寫：Weber、1821、德國浪漫歌劇、民間／超自然題材、德語、狼谷。'},
+{term:'La Forza del Destino',zh:'《命運之力》',level:'👹 冷門',topic:'西洋音樂史・歌劇',answer:'《La forza del destino》（《命運之力》）是 Giuseppe Verdi 的四幕歌劇，1862年於聖彼得堡首演，後經修訂。劇情圍繞命運、愛情、家族仇恨與悲劇衝突，著名序曲常獨立演出。辨識時應抓住 Verdi、義大利浪漫歌劇、命運主題與著名序曲；勿與 Weber《魔彈射手》等德國浪漫歌劇混淆。'},
+{term:'Minimalism',zh:'極簡主義音樂',level:'高頻',topic:'20世紀音樂',answer:'Minimalism 是20世紀後半的重要音樂思潮，常以簡潔素材、持續脈動、短小動機反覆、漸進式變化與清晰和聲／調性中心形成長時間音樂過程。代表人物常包括 Steve Reich、Philip Glass、Terry Riley、La Monte Young。作答不要只寫「一直重複」，應強調 repetition ＋ gradual process／phase 等時間性變化。'},
+{term:'Ragtime',zh:'散拍音樂／雷格泰姆',level:'高頻',topic:'爵士與流行音樂史',answer:'Ragtime 是19世紀末至20世紀初盛行於美國的音樂類型，尤其與鋼琴作品密切相關。特色為左手規律低音與和弦伴奏，右手旋律大量使用切分節奏（syncopation），形成「ragged rhythm」。Scott Joplin 是最具代表性的作曲家之一，《Maple Leaf Rag》為代表作。它是早期美國黑人音樂與後來爵士發展的重要背景之一。'},
+{term:'Organum',zh:'奧爾加農／複音聖歌',level:'高頻',topic:'中世紀音樂',answer:'Organum 是中世紀早期西方複音音樂的重要形式，以既有 Gregorian chant 為基礎，在聖歌曲調上增加一個或多個聲部。早期可見平行四、五度進行，後來發展出較自由的複音；12至13世紀巴黎 Notre Dame 樂派的 Léonin、Pérotin 將其推向高度發展。教甄關鍵字：Gregorian chant、早期複音、Notre Dame、Léonin／Pérotin。'},
+{term:'Program Music',zh:'標題音樂',level:'高頻',topic:'浪漫時期音樂',answer:'Program Music 指器樂作品藉標題、文字說明或外在構想，與故事、文學、自然景象、人物或事件建立聯繫。19世紀浪漫時期尤其重要，常見類型包括標題交響曲、交響詩等；代表例可舉 Berlioz《幻想交響曲》與 Liszt 交響詩。與 Absolute Music（絕對音樂）相對時，重點在作品具有明確的音樂外指涉。'},
+{term:'客家八音',zh:'客家八音',level:'👹 冷門',topic:'臺灣傳統音樂',answer:'客家八音是臺灣客家傳統器樂與儀式音樂的重要形式。「八音」原與古代依材質分類樂器的觀念相關，在臺灣客家社會則形成具有地方特色的樂隊與曲目傳統，常服務於婚喪喜慶、祭典、迎神等生命禮俗與社群活動。編制因地區與場合而異，可見嗩吶、鑼鼓、弦樂等。教甄作答宜兼寫「音樂形式＋社會功能」，避免只把八音理解為八件樂器。'}
+]);
