@@ -1,0 +1,18 @@
+(()=>{
+ const rows=[
+ {id:'term110cc01',level:'高中音樂',topic:'音樂教育',term:'Differentiated Instruction',zh:'差異化教學',definition:'依學生的準備度、興趣與學習特質，彈性調整學習內容、學習歷程、成果表現與學習環境，使不同學生能以適切路徑達成重要學習目標。',exam:'110 臺北市立中正高中直接列為名詞釋義。教甄作答不要只寫「因材施教」，應寫出學生差異依據，以及 content／process／product 等可調整面向。',related:'Carol Ann Tomlinson、準備度、興趣、學習特質、形成性評量、彈性分組'},
+ {id:'term110cc02',level:'高中音樂',topic:'西洋音樂史',term:'Ballad Opera',zh:'民謠歌劇／歌謠歌劇',definition:'18 世紀英國盛行的舞臺娛樂形式，以口語對白串連歌曲，常借用當時流行歌曲、民謠或既有旋律並填入新詞，具有諷刺社會與義大利正歌劇的特色。',exam:'答題可抓：18 世紀英國、spoken dialogue、既有通俗旋律、諷刺性。代表作 John Gay《The Beggar’s Opera》(1728)。',related:'John Gay、The Beggar’s Opera、英國、opera seria、Singspiel'},
+ {id:'term110cc03',level:'高中音樂',topic:'二十世紀音樂',term:'Serialism',zh:'序列主義',definition:'以預先安排的序列組織音樂材料的作曲思維。十二音技法主要序列化十二個半音音高；二戰後的 total／integral serialism 更可把節奏、力度、音色等參數納入序列控制。',exam:'不要把 Serialism 完全等同十二音技法。十二音技法是重要的序列技法，但序列化的參數可擴及音高以外。可連結 Schoenberg、Webern、Boulez、Messiaen。',related:'Twelve-tone technique、Schoenberg、Webern、total serialism、Boulez'},
+ {id:'term110cc04',level:'高中音樂',topic:'臺灣原住民族音樂',term:'Pasibutbut',zh:'布農族祈禱小米豐收歌',definition:'布農族重要祭儀歌唱傳統，常由男性圍成圓圈，以多聲部合唱形成持續變化、音域逐漸上行的聲響，與祈求小米豐收的祭儀文化密切相關。',exam:'教甄常把族群、祭儀、聲響特色與採錄史交叉考。至少要能寫：布農族、祭儀、多聲部、圍圈合唱、逐步上行的聲響特徵。',related:'布農族、祈禱小米豐收歌、黑澤隆朝、複音／多聲部'},
+ {id:'term110cc05',level:'高中音樂',topic:'臺灣傳統音樂',term:'上四管',zh:'南管上四管',definition:'南管樂器編制中的核心組合，通常指洞簫、二弦、琵琶、三絃。其音色與演奏方式構成南管細緻典雅的重要聲響骨架。',exam:'最容易與下四管混淆。考場直接寫「洞簫、二弦、琵琶、三絃」並註明南管即可。',related:'南管、洞簫、二弦、琵琶、三絃、下四管'},
+ {id:'term110cc06',level:'高中音樂',topic:'中國音樂史',term:'新法密律',zh:'新法密律',definition:'明代朱載堉提出的律學方法，以等比方式處理十二律之間的音高關係，與現代十二平均律的數學原理高度接近，是中國律學史的重要成果。',exam:'人事時地物：明代、朱載堉、律學、十二律、等比音高關係。不要只寫成「中國的十二平均律」而省略人物與歷史意義。',related:'朱載堉、十二律、律學、十二平均律'},
+ {id:'term110tn01',level:'高中音樂',topic:'臺灣當代音樂',term:'《kinakaian 母親的舌頭》與阿爆',zh:'阿爆（Aljenljeng Tjaluvie）與母語創作',definition:'阿爆為排灣族歌手與創作者，其創作重視族語、族群文化記憶與當代聲響的連結。《kinakaian 母親的舌頭》可作為理解原住民族母語、身份認同與流行音樂跨界實踐的重要案例。',exam:'110 臺南女中直接要求解釋此作品與阿爆。作答宜同時處理「人物＋族群＋語言／文化意義＋當代音樂實踐」，不要只寫歌手簡介。',related:'阿爆、排灣族、族語、原住民族音樂、當代流行音樂'},
+ {id:'term110tn02',level:'高中音樂',topic:'客家音樂',term:'老山歌與山歌仔',zh:'客家山歌曲調類型',definition:'兩者皆屬客家山歌重要曲調類型。老山歌通常音域較寬、節奏自由、拖腔較多，具有較強的山野呼唱性；山歌仔旋律與句式相對規整、流動性較強。實際風格仍會因地域、歌者與演唱場合而異。',exam:'110 臺南女中要求比較兩者。答題最好用「旋律音域、節奏、句式／拖腔、演唱情境」至少三個面向比較，而不是只各寫一句定義。',related:'客家山歌、老山歌、山歌仔、平板'},
+ {id:'term110tn03',level:'高中音樂',topic:'臺灣傳統音樂',term:'四字聯仔',zh:'四字聯仔',definition:'臺灣傳統說唱與民間表演文化中可見的韻文／口語表現形式之一，名稱反映其以短句、節奏化語言組織內容的特性；實際使用脈絡應結合題目指定的劇種、地域或文本判讀。',exam:'110 臺南女中直接列為名詞題。此詞具有地域與表演脈絡差異，備考時應避免只背單一一句；答題要補「所屬傳統、語言節奏、表演功能、例子」。',related:'臺灣說唱、民間歌謠、傳統戲曲、韻文'},
+ {id:'term110tn04',level:'高中音樂',topic:'西洋音樂史',term:'Seconda Practica',zh:'第二作法',definition:'約 1600 年前後與 Monteverdi 密切相關的作曲觀念，主張在表達歌詞與情感需要時，音樂規則可服務於文字表意，因此對不協和音等處理較第一作法自由。此概念與 Artusi 對 Monteverdi 牧歌的批評論戰密切相關。',exam:'關鍵鏈：Monteverdi ↔ Artusi ↔ seconda pratica ↔ text／expression 優先 ↔ 文藝復興晚期到巴洛克早期。不要寫成「完全不要對位規則」。',related:'Monteverdi、Artusi、prima pratica、madrigal、Baroque'},
+ {id:'term110tn05',level:'高中音樂',topic:'二十世紀音樂',term:'二戰後西方音樂發展',zh:'Post-1945 Western art music',definition:'第二次世界大戰後西方藝術音樂呈現高度多元化：序列主義與總體序列、電子音樂與具象音樂、機遇音樂、音色與聲響探索、極簡主義，以及後來的折衷與跨文化實踐並行，不再由單一風格主導。',exam:'110 臺南女中以 6% 申論要求「試述二戰後至今的發展」。作答最好用時間／流派分段，並各舉代表人物與技法，例如 Boulez、Cage、Schaeffer、Stockhausen、Reich／Glass。',related:'total serialism、aleatory、electronic music、musique concrète、minimalism'}
+ ];
+ window.TERM_PROMPTS=Array.isArray(window.TERM_PROMPTS)?window.TERM_PROMPTS:[];
+ const ids=new Set(window.TERM_PROMPTS.map(x=>x.id));
+ rows.forEach(x=>{if(!ids.has(x.id))window.TERM_PROMPTS.push(x)});
+})();
