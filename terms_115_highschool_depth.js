@@ -1,0 +1,9 @@
+// 115 高中教甄｜冷門高鑑別名詞（依阿摩歷屆考點整理）
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+ {id:'term-115-spectrogram',level:'高中音樂',topic:'音樂科技',term:'Spectrogram',zh:'聲譜圖／頻譜圖',definition:'將聲音的頻率成分隨時間變化視覺化的圖像；通常橫軸為時間、縱軸為頻率，明暗或色階表示能量強弱。',exam:'115中山女高直接要求名詞解釋並說明如何運用於音樂課。作答可寫：聲音視覺化→比較音色、泛音、母音或樂器頻譜→連結聽覺與聲學證據。',related:'聲學、泛音、音色、FFT、數位音樂、跨域科學'},
+ {id:'term-115-takarazuka',level:'高中音樂',topic:'音樂劇與表演藝術',term:'Takarazuka Revue',zh:'寶塚歌劇團',definition:'日本女性全員制的歌舞劇表演團體，1913年由小林一三創設；演員皆為女性，並有男役與娘役等角色體系，融合歌唱、舞蹈、戲劇與華麗舞台。',exam:'答題至少抓「日本、全女性、男役／娘役、歌舞劇／音樂劇式綜合表演」；教學可延伸性別展演、東亞表演文化與音樂劇比較。',related:'日本表演藝術、音樂劇、性別議題、男役、娘役'},
+ {id:'term-115-goransson',level:'高中音樂',topic:'影視配樂',term:'Ludwig Göransson',zh:'路德維格・葛瑞森',definition:'瑞典作曲家、製作人與影視配樂家，以跨文化聲響、電子音樂與管弦樂融合著稱；代表配樂包括《Black Panther》、《The Mandalorian》、《Oppenheimer》。',exam:'115中山女高要求名詞解釋與教學運用。不要只寫作品名，應寫其影視配樂身分、聲響融合特色，再舉作品作證。',related:'電影配樂、Black Panther、Oppenheimer、The Mandalorian'},
+ {id:'term-115-kora',level:'高中音樂',topic:'世界音樂',term:'Kora',zh:'科拉琴',definition:'西非曼丁文化圈常見的豎琴式魯特琴，傳統多為21弦，以大型葫蘆覆皮作共鳴箱，與griot／jeli口傳歷史、敘事與歌唱傳統密切相關。',exam:'答題關鍵：西非＋21弦（傳統型）＋葫蘆共鳴箱＋griot/jeli。可與豎琴、魯特琴及口述歷史跨域比較。',related:'西非、Mande、griot、jeli、世界音樂'},
+ {id:'term-115-koubai',level:'高中音樂',topic:'臺灣傳統音樂',term:'口白歌仔',zh:'口白歌仔',definition:'歌仔相關傳統中以說唱、口語敘事與歌唱交替推進內容的表演形態；理解時應放回歌仔的口傳、敘事與表演脈絡，而非只視為一般「念白」。',exam:'115中山女高直接簡答。建議作答採「所屬傳統→表演方式→功能」三層：歌仔脈絡、口白與歌唱交替、敘事／塑造情節。',related:'歌仔戲、歌仔、說唱、臺灣傳統戲曲'},
+ {id:'term-115-triple-threat',level:'高中音樂',topic:'音樂劇',term:'Triple Threat',zh:'三棲表演能力',definition:'音樂劇表演者同時具備歌唱（singing）、舞蹈（dancing）與戲劇表演（acting）三項核心能力。',exam:'115中山女高直接簡答。三項務必完整寫出；若延伸教學，可設計同一段音樂以唱、動作、角色詮釋三站任務。',related:'Musical theatre、singing、dancing、acting'}
+]);
