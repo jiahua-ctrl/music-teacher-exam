@@ -1,6 +1,8 @@
 // Detailed model answers for essay / terminology practice.
 // This file enriches existing question objects without replacing the original prompts.
 (function(){
+  if(window.__DETAIL_ANSWERS_LOADING__) return;
+  window.__DETAIL_ANSWERS_LOADING__=true;
   const essayAnswers = {
     "ESSAY-001":"【擬答】20世紀西方藝術音樂的核心轉變，可從『調性鬆動、節奏與音色解放、技法系統化、媒材科技化』四面向說明。第一，晚期浪漫之後，功能和聲逐漸鬆動，Debussy以教會調式、全音音階與平行和弦削弱傳統調性感；Schoenberg進一步發展無調性與十二音技法，使十二個半音取得較平等的地位。第二，Stravinsky以不規則重音、複節奏與強烈配器改寫節奏觀，《春之祭》是代表。第三，戰間期出現新古典主義，作曲家重新引用巴洛克、古典形式，但以現代和聲與節奏處理，例如Stravinsky《Pulcinella》。第四，二戰後序列音樂、機遇音樂、電子音樂與具象音樂興起，代表如Boulez、Cage、Stockhausen、Pierre Schaeffer。總結而言，20世紀並非單一路線，而是從共同語法走向多元並存，作曲家對『音高、節奏、音色、形式與聲音本身』重新定義。",
     "ESSAY-002":"【擬答】我會以『學生生活中的戲劇聲音』切入，而不是先講歌仔戲年代。先播放兩段不同情緒的歌仔戲唱腔，請學生用音色、速度、旋律走向判斷人物情緒與情境，再揭示角色行當與唱腔功能。第二階段讓小組拿到角色卡、情境卡與唱腔片段，完成配對並說明音樂證據。第三階段補充歌仔戲從宜蘭落地掃、內台／外台到現代劇場的發展，並連結傳統社會娛樂與現代影視／劇場。最後讓學生把生活中的一句話改寫成簡短唱念，體驗『語言聲調—旋律—角色表演』的關係。評量不只問史實，而是要求學生用至少兩個音樂元素解釋唱腔如何塑造角色。如此學生會從聽、演、比較與反思理解歌仔戲，而非只背歷史。",
