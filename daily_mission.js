@@ -1,4 +1,5 @@
 (()=>{
+ if(window.__DAILY_MISSION_LOADED__)return;window.__DAILY_MISSION_LOADED__=true;
  const STATS='musicTeacherExamStatsV1',SRS='musicTeacherExamSpacedReviewV1';
  const load=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
  const qs=()=>window.MusicTeacherExam?.questions||[];
@@ -22,6 +23,6 @@
   const counts=Object.fromEntries(subjects.map(sub=>[sub,pool.filter(q=>q.subject===sub).length]));return{parts,pool:pool.slice(0,20),counts}}
  function render(){const home=document.getElementById('homeView');if(!home||document.getElementById('dailyMission'))return;const m=build(),sec=document.createElement('section');sec.id='dailyMission';sec.className='card section-card';sec.innerHTML=`<div class="section-title"><div><span class="eyebrow">不用自己決定今天刷什麼</span><h3>📅 今日上岸任務</h3></div><span class="pill">${m.pool.length} 題</span></div><p class="muted">優先回收到期、❓不知道與錯題，同時保護三科配比，避免單一科目把今天的練習全部吃掉。</p><div style="display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px"><span class="pill">🎵 國中 ${m.counts['國中音樂']||0}</span><span class="pill">🎓 高中 ${m.counts['高中音樂']||0}</span><span class="pill">📚 教育 ${m.counts['教育專業']||0}</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:12px 0">${m.parts.map(([n,a])=>`<div style="border:1px solid var(--line);border-radius:12px;padding:10px"><b>${n}</b><div style="font-size:22px;font-weight:850;margin-top:4px">${a.length}<small style="font-size:12px;color:var(--muted)"> 題</small></div></div>`).join('')}</div><button id="startDailyMission" class="primary wide">🚀 開始今天的上岸任務</button>`;
   const first=home.querySelector('.stats-grid')?.nextElementSibling;first?.insertAdjacentElement('beforebegin',sec);document.getElementById('startDailyMission')?.addEventListener('click',()=>{const x=build();window.MusicTeacherExam?.startCustomQuiz(x.pool,'📅 今日上岸任務',20)});}
- document.addEventListener('DOMContentLoaded',()=>setTimeout(render,900));window.DailyExamMission={build};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(render,900));else setTimeout(render,100);
+ window.DailyExamMission={build,render};
 })();
-(()=>{if(window.__LEARNING_PROGRESS_LOADED__)return;window.__LEARNING_PROGRESS_LOADED__=true;const s=document.createElement('script');s.src='learning_progress.js?v=20260818a';document.body.appendChild(s)})();
