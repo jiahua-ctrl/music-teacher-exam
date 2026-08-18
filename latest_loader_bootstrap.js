@@ -5,5 +5,5 @@
   'essay_107_lioujia_backfill.js','essay_108_changhua_girls_detailed.js','essay_110_highschool_detailed.js','essay_111_112_highschool_detailed.js','essay_113_highschool_detailed.js','essay_114_highschool_detailed.js','essay_115_junior_senior_detailed.js','essay_115_moe_changhua_batch31.js',
   'content_adapter_v1.js','radar_106_115_priority_v1.js','question_quality_rules_v1.js','personal_priority.js'
  ];
- files.forEach(src=>document.write(`<script src="${src}?v=20260818m"><\\/script>`));
+ files.forEach(src=>document.write('<script src="'+src+'?v=20260818n"></'+'script>'));
 })();
