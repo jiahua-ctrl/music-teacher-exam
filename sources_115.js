@@ -2,6 +2,8 @@ document.write('<script src="questions_batch_115_latest_part4.js"><\/script>');
 document.write('<script src="questions_115_moe_terms_batch34.js?v=20260818"><\/script>');
 document.write('<script src="terms_115_moe_batch37.js?v=20260818"><\/script>');
 document.write('<script src="terms_115_hchs_batch38.js?v=20260818"><\/script>');
+document.write('<script src="questions_115_hchs_batch35.js?v=20260818"><\/script>');
+document.write('<script src="terms_115_hchs_batch39.js?v=20260818"><\/script>');
 document.write('<script src="essay_115_hchs_batch.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_moe_batch21.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_kshs_batch22.js?v=20260818"><\/script>');
