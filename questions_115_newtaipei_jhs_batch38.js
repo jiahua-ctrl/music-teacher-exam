@@ -1,0 +1,11 @@
+// 115 新北市立國民中學教師聯合甄選｜音樂科｜高鑑別第一批
+window.QUESTIONS = window.QUESTIONS || [];
+window.QUESTIONS.push(
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"工尺譜",question:"關於工尺譜，下列何者最不恰當？",options:["屬文字譜的一種","與漢字文化圈音樂傳統相關","可直接視為西洋固定唱名的等價記譜","歷史上有不同字譜與調高慣例"],answer:2,explanation:"工尺譜以漢字譜字記錄音高關係，實際音高與調門、樂種及傳統慣例有關，不能把每一個譜字僵化等同於西洋固定唱名。教甄常把『相對音高系統』偷換成『固定絕對音高』。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"世界音樂",question:"下列世界音樂／文化配對何者錯誤？",options:["Shamisen—日本","Gamelan—印尼","Gayageum—韓國","Tango—德國"],answer:3,explanation:"Tango主要形成於阿根廷與烏拉圭拉普拉塔河流域，並非德國。其餘三項分別是日本三味線、印尼甘美朗與韓國伽倻琴。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣客家戲曲",question:"臺灣客家『三腳採茶戲』的典型角色編制為何？",options:["二丑二旦","二丑一旦","一丑二旦","一丑三旦"],answer:1,explanation:"三腳採茶戲以二丑一旦為典型編制，『三腳』指三個角色。常見陷阱是把人數三誤解成一丑二旦。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"臺灣作曲家",question:"下列臺灣作曲家與作品配對何者正確？",options:["馬水龍—《台灣舞曲》","許常惠—《葬花吟》","郭芝苑—《1947序曲》","蕭泰然—《梆笛協奏曲》"],answer:2,explanation:"郭芝苑的重要管弦樂作品包括《1947序曲》。馬水龍代表作有《梆笛協奏曲》；《台灣舞曲》為江文也的重要作品。教甄非常喜歡用臺灣作曲家作品互換設陷阱。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"中國戲曲",question:"『調用水磨，拍捱冷板』，並以聲腔婉轉細膩著稱，2001年列入UNESCO首批人類口述和非物質遺產代表作的是？",options:["昆曲","京劇","梆子戲","歌仔戲"],answer:0,explanation:"昆曲以水磨腔著稱，唱腔細膩婉轉。2001年昆曲列入UNESCO『人類口述和非物質遺產代表作』首批名錄，是常見文化資產考點。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"中",topic:"音樂教育",question:"強調 Elemental Music，結合音樂、律動、語言與戲劇，並重視即興、探索與學習過程的是哪一教學法？",options:["Suzuki","Orff Schulwerk","Kodály","Dalcroze"],answer:1,explanation:"Orff Schulwerk強調元素性音樂、語言節奏、律動、器樂與即興。Dalcroze核心是Eurhythmics；Kodály重視歌唱、唱名與音樂讀寫；Suzuki強調母語式學習與環境。"},
+{year:"115",school:"新北市立國民中學教師聯合甄選",level:"國中",type:"choice",difficulty:"👹",topic:"歌劇",question:"下列哪一部歌劇不是 Verdi 的作品？",options:["Gianni Schicchi","Rigoletto","Il trovatore","La traviata"],answer:0,explanation:"《Gianni Schicchi》是Puccini三聯劇《Il trittico》之一；其餘皆為Verdi。作品—作曲家互換是教甄高頻陷阱。"}
+);
