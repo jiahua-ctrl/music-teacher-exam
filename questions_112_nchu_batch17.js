@@ -1,0 +1,13 @@
+window.QUESTION_BANK = window.QUESTION_BANK || [];
+window.QUESTION_BANK.push(
+{year:112,subject:'高中音樂',topic:'西洋音樂史',level:'進階',question:'下列何者不屬於19世紀國民樂派代表作品？',options:['Smetana《Má Vlast》','Balakirev《Islamey》','Debussy《L’Enfant prodigue》','Rimsky-Korsakov《Scheherazade》'],answer:2,explanation:'Debussy 的《L’Enfant prodigue》為早期作品，並非19世紀東／北歐國民樂派代表作；其餘皆與民族主義音樂脈絡密切相關。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'臺灣音樂',level:'高頻',question:'被稱為「臺灣合唱之父」的音樂家是誰？',options:['黃友棣','呂泉生','蕭友梅','許常惠'],answer:1,explanation:'呂泉生長期投入臺灣合唱教育、創作與推廣，常被稱為「臺灣合唱之父」。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'作品辨識',level:'👹 魔王',question:'關於 Mahler《大地之歌》的唐詩來源，下列哪一首未被採用？',options:['李白《送孟浩然之廣陵》','錢起《效古秋夜長》','李白《春日醉起言志》','王維《送別》'],answer:0,explanation:'《大地之歌》文本經德文轉譯與改寫，涉及李白、錢起、孟浩然、王維等詩作脈絡；《送孟浩然之廣陵》並非其中採用文本。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'宗教音樂',level:'進階',question:'若依教甄常見「世界三大神劇」說法，下列何者不在其中？',options:['Beethoven《Christus am Ölberge》','Mendelssohn《Elijah》','Haydn《The Creation》','Handel《Messiah》'],answer:0,explanation:'常見教材所稱三大神劇為 Handel《Messiah》、Haydn《The Creation》、Mendelssohn《Elijah》；Beethoven《Christus am Ölberge》不列其中。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'臺灣流行音樂',level:'高頻',question:'臺灣校園民歌史中，常被稱為「現代民歌之父」的是誰？',options:['侯德健','李建復','羅大佑','楊弦'],answer:3,explanation:'楊弦以余光中詩作譜曲並舉辦「現代民謠創作演唱會」，在臺灣現代民歌／校園民歌發展史具有關鍵地位。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'臺灣流行音樂',level:'👹 魔王',question:'下列校園民歌作品與創作者配對，何者錯誤？',options:['侯德健—《龍的傳人》','李泰祥—《橄欖樹》','李宗盛—《鄉愁四韻》','李子恆—《秋蟬》'],answer:2,explanation:'《鄉愁四韻》為羅大佑譜曲、余光中作詞，並非李宗盛作品。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'音樂產業',level:'進階',question:'臺灣「金音創作獎」的獎項分類特色，較主要依據何者？',options:['歌手性別','演唱語言','音樂風格類型','個人或團體'],answer:2,explanation:'金音創作獎重視不同音樂類型／風格的創作，例如搖滾、民謠、爵士、電音等，而非主要依性別或語言分類。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'世界音樂',level:'👹 魔王',question:'北歐牧歌／放牧文化中，用高亢聲音遠距呼喚牲畜或傳遞訊息的唱法稱為？',options:['Kulning','Yodeling','Khoomei','Scat'],answer:0,explanation:'Kulning 是斯堪地那維亞地區的傳統高音呼喊／歌唱技法，常與牧牛、遠距傳聲相關。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'聲樂',level:'進階',question:'下列歌劇詠嘆調最典型適合 Mezzo-soprano 演唱的是？',options:['〈Der Hölle Rache〉','〈Mi chiamano Mimì〉','〈Habanera〉','〈Un bel dì vedremo〉'],answer:2,explanation:'Bizet《Carmen》的〈Habanera〉由 Carmen 演唱，典型由 mezzo-soprano 擔任；夜后、Mimì、Cio-Cio-San 分屬不同女高音類型。',source:'112 中興附中'},
+{year:112,subject:'高中音樂',topic:'臺灣音樂',level:'👹 魔王',question:'下列何者不是鄧雨賢的作品？',options:['《跳舞時代》','《四季紅》','《心酸酸》','《大稻埕進行曲》'],answer:2,explanation:'《心酸酸》並非鄧雨賢代表作；《四季紅》等則是其臺灣歌謠重要作品。',source:'112 中興附中'}
+);
