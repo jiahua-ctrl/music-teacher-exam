@@ -5,6 +5,8 @@ document.write('<script src="terms_115_hchs_batch38.js?v=20260818"><\/script>');
 document.write('<script src="questions_115_hchs_batch35.js?v=20260818"><\/script>');
 document.write('<script src="terms_115_hchs_batch39.js?v=20260818"><\/script>');
 document.write('<script src="essay_115_hchs_batch.js?v=20260818"><\/script>');
+document.write('<script src="questions_115_taoyuan_jhs_batch36.js?v=20260818"><\/script>');
+document.write('<script src="terms_115_taoyuan_jhs_batch40.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_moe_batch21.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_kshs_batch22.js?v=20260818"><\/script>');
 document.write('<script src="questions_114_newtaipei_jhs_batch23.js?v=20260818"><\/script>');
