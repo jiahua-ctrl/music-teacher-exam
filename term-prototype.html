@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>音樂名詞學習 Prototype</title>
+<style>
+:root{--bg:#f5f3fa;--card:#fff;--text:#211a2d;--muted:#71697b;--line:#e6e0ed;--accent:#6b4fa3;--soft:#eee8f8;--good:#2f7d55;--warn:#b57922;--bad:#b14a4a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}.wrap{max-width:780px;margin:auto;padding:18px 14px 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.top a{color:var(--accent);text-decoration:none;font-weight:700}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 26px rgba(62,42,88,.06)}.eyebrow{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.06em}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.chip{padding:6px 10px;border-radius:999px;background:var(--soft);font-size:13px;color:#584276}.term{font-size:34px;line-height:1.25;margin:12px 0 4px}.muted{color:var(--muted)}.question{margin:18px 0 10px;font-weight:800}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.btn{border:0;border-radius:14px;padding:13px 12px;font-size:15px;font-weight:800;cursor:pointer}.choice{background:#f2eff5;color:var(--text)}.choice.active{outline:3px solid #cdbde8;background:#eee7f8}.primary{background:var(--accent);color:#fff;width:100%;margin-top:12px}.secondary{background:#eeeaf2;color:#493d57;width:100%;margin-top:10px}.input,textarea{width:100%;border:1px solid #d8d0e0;border-radius:13px;padding:12px;font-size:16px;background:#fff;color:var(--text)}textarea{min-height:125px;resize:vertical}.hidden{display:none}.answer{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}.answer h3{margin:0 0 6px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}.box{padding:12px;border-radius:14px;background:#f7f5fa;border:1px solid var(--line)}.box b{display:block;font-size:13px;color:var(--accent);margin-bottom:4px}.score{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.score .box{text-align:center}.score strong{font-size:22px;display:block}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.teacher{margin-top:14px;padding:15px;background:#fbf8ef;border-radius:16px;border:1px solid #eee4c8}.teacher b{display:block;margin-bottom:8px}.teacher p{margin:5px 0}.status{margin-top:14px;font-weight:800;text-align:center}.small{font-size:13px}.progress{height:7px;background:#e8e3ec;border-radius:999px;overflow:hidden;margin:10px 0 18px}.progress span{display:block;height:100%;background:var(--accent);width:20%}@media(max-width:560px){.choices,.score,.grid{grid-template-columns:1fr}.term{font-size:29px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div><div class="eyebrow">TEST VERSION</div><b>音樂名詞主動提取 Prototype</b></div><a href="./">← 回原網站</a></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <article class="card">
+    <div class="chips"><span class="chip" id="topic"></span><span class="chip" id="counter"></span></div>
+    <div class="eyebrow">只看原文，先不要偷看答案</div>
+    <h1 class="term" id="term"></h1>
+    <p class="muted">考試通常不會先把中文送給你，所以這一頁刻意把答案藏起來。</p>
+
+    <div class="question">① 第一眼，你覺得自己熟到哪裡？</div>
+    <div class="choices" id="confidence">
+      <button class="btn choice" data-level="2">🟢 我知道</button>
+      <button class="btn choice" data-level="1">🟡 有印象</button>
+      <button class="btn choice" data-level="0">🔴 完全不知道</button>
+    </div>
+
+    <div class="question">② 不看答案，先寫中文名稱</div>
+    <input id="zhInput" class="input" placeholder="例如：預置鋼琴">
+
+    <div class="question">③ 如果教甄現在考這題，你會怎麼解釋？</div>
+    <textarea id="explainInput" placeholder="先寫你記得的內容，不求完美。可以想：人、事、時、地、物、原因、特色、代表作品。"></textarea>
+
+    <button id="revealBtn" class="btn primary">🔍 作答完成，看解答與得分點</button>
+
+    <section id="answer" class="answer hidden">
+      <div class="eyebrow">答案揭曉</div>
+      <h2 id="zh"></h2>
+      <h3>📖 核心定義</h3><p id="definition"></p>
+      <h3>🎯 教甄答題重點</h3><p id="exam"></p>
+
+      <h3>🧭 人事時地物 × 音樂版 5W</h3>
+      <div class="grid" id="fivew"></div>
+
+      <h3>✅ 你可以自我檢核</h3>
+      <div id="checklist"></div>
+
+      <div class="teacher">
+        <b>👩‍🏫 如果我是老師，我可以怎麼教？</b>
+        <div id="teacher"></div>
+      </div>
+
+      <div class="score">
+        <div class="box"><span>🧠 辨識力</span><strong id="recognition">—</strong><small>原文→中文</small></div>
+        <div class="box"><span>✍️ 表達力</span><strong id="expression">自評</strong><small>能否寫出解釋</small></div>
+        <div class="box"><span>👩‍🏫 教學力</span><strong>練習中</strong><small>能否轉化教學</small></div>
+      </div>
+      <div class="status" id="status"></div>
+      <button id="nextBtn" class="btn secondary">下一個測試名詞 →</button>
+    </section>
+  </article>
+</div>
+<script>
+const TERMS=[
+{term:'Prepared Piano',zh:'預置鋼琴／加料鋼琴',topic:'20世紀音樂',definition:'在鋼琴琴弦之間或琴弦上放置螺絲、橡皮、金屬等物件，改變原本的音色與共鳴。',exam:'常與 John Cage 連結；代表作品可舉 Sonatas and Interludes。',fivew:{'🎵 What｜是什麼':'改變鋼琴琴弦與共鳴方式，使鋼琴產生打擊樂器般的多樣音色。','🕰️ When｜何時':'20世紀，特別與 1940 年代 Cage 的創作實踐相關。','🌍 Where｜哪裡':'主要與美國20世紀實驗音樂脈絡相關。','👤 Who｜誰':'John Cage。','💡 Why｜為什麼':'在有限演出條件下擴張鋼琴的音色與打擊效果。','🎼 Works｜代表作':'Sonatas and Interludes。'},keys:['改變標準鋼琴音色','琴弦間或琴弦上放置物件','John Cage','20世紀','Sonatas and Interludes'],teacher:['🎧 聽：先播放一般鋼琴與預置鋼琴片段，讓學生找差異。','👀 看：看琴內放入螺絲、橡皮等物件的照片。','❓ 問：鋼琴一定只能有「鋼琴聲」嗎？','🎮 玩：給學生不同材質卡，猜聲音可能會怎麼改變。','✍️ 寫：最後用「人物＋作法＋聲響＋作品」寫成名詞解釋。']},
+{term:'Cori Spezzati',zh:'分置合唱／分置合唱團',topic:'文藝復興音樂',definition:'將兩組或多組合唱團分置於不同空間位置，以交替、呼應或合唱形成空間性的複合聲響。',exam:'常與威尼斯樂派、聖馬可大教堂及 Giovanni Gabrieli 連結。',fivew:{'🎵 What｜是什麼':'多組合唱團分置不同位置，形成交替、呼應與立體聲響。','🕰️ When｜何時':'文藝復興晚期至早期巴洛克。','🌍 Where｜哪裡':'義大利威尼斯，特別是聖馬可大教堂。','👤 Who｜誰':'Andrea Gabrieli、Giovanni Gabrieli 等威尼斯樂派作曲家。','💡 Why｜為什麼':'利用教堂特殊建築與多處唱經樓，創造空間對答效果。','🎼 Works｜代表作':'可連結 Gabrieli 的多合唱作品與 Sacrae symphoniae。'},keys:['多組合唱團','空間分置','威尼斯','聖馬可大教堂','Gabrieli'],teacher:['👀 看：先看聖馬可大教堂內部空間。','🎧 聽：播放左右或前後對答的多合唱片段。','🎮 玩：全班分成兩至三組站不同位置，以節奏或短旋律互答。','🤔 想：建築空間會不會改變作曲方法？','✍️ 寫：用「地點→做法→聲響→人物」整理。']},
+{term:'Hexachord',zh:'六音音列／六音階系統',topic:'中世紀與樂理',definition:'由六個音構成的音列；中世紀視唱理論以 ut–re–mi–fa–sol–la 六音系統組織音高。',exam:'注意 natural、hard、soft hexachord，並與 Guido of Arezzo、solmization 連結。',fivew:{'🎵 What｜是什麼':'以六個音 ut–re–mi–fa–sol–la 為核心的中世紀音高與視唱組織方式。','🕰️ When｜何時':'中世紀音樂理論。','🌍 Where｜哪裡':'西歐教會音樂與音樂教育脈絡。','👤 Who｜誰':'通常與 Guido of Arezzo 的視唱教學傳統連結。','🛠️ How｜怎麼用':'透過 natural、hard、soft 三種 hexachord 與 mutation 協助視唱。','🔗 Related｜相關':'solmization、Guidonian hand。'},keys:['六個音','ut re mi fa sol la','中世紀','Guido of Arezzo','solmization'],teacher:['🎤 唱：直接用 ut–re–mi–fa–sol–la 唱六音。','✋ 看：搭配 Guidonian hand 圖示理解音高位置。','🧩 玩：把 natural／hard／soft 三組六音卡分類。','🤔 想：沒有固定唱名系統前，人們怎麼教陌生旋律？','✍️ 寫：用「目的＋六音＋人物＋三種類型」整理。']},
+{term:'Polytonality',zh:'多調性',topic:'20世紀音樂',definition:'同一時間並置兩個或以上可辨識的調性中心；兩個調性並置也常稱 bitonality。',exam:'不要與無調性混淆；重點是「同時存在多個可辨識調性中心」。',fivew:{'🎵 What｜是什麼':'同時出現兩個或以上可辨識調性中心。','🕰️ When｜何時':'20世紀音樂常見的和聲語法之一。','💡 Why｜為什麼':'作曲家希望擴張傳統調性和聲，增加衝突與層次。','🛠️ How｜怎麼做':'不同聲部、音層或樂器群同時維持不同調性。','⚠️ Compare｜別混淆':'bitonality 是兩個調性；atonality 則不是多個調性中心並置。','👤 Who｜可連結':'Stravinsky、Milhaud 等20世紀作曲家常被討論。'},keys:['兩個以上調性中心','同時並置','20世紀','bitonality','不是無調性'],teacher:['🎹 聽：左手彈一個調、右手彈另一個調，直接感受衝突。','👀 看：把兩組調號或和弦用不同區塊標示。','❓ 問：兩個調同時存在，還算「有調性」嗎？','🧩 比：Polytonality／Bitonality／Atonality 三張卡分類。','✍️ 寫：先寫「同時並置多個調性中心」，再補比較。']},
+{term:'Mystic Chord',zh:'神祕和弦',topic:'20世紀音樂',definition:'與 Alexander Scriabin 密切相關的六音和弦集合，常以四度與增四度關係描述其特殊和聲色彩。',exam:'看到 Scriabin、Prometheus 要能立即連結。',fivew:{'🎵 What｜是什麼':'Scriabin 晚期作品中具代表性的六音和弦／音高集合。','🕰️ When｜何時':'20世紀初 Scriabin 晚期創作。','🌍 Where｜脈絡':'俄羅斯／歐洲世紀之交現代主義脈絡。','👤 Who｜誰':'Alexander Scriabin。','🛠️ How｜特色':'常以四度、增四度等關係堆疊描述，色彩曖昧而不依循傳統功能和聲。','🎼 Works｜代表作':'Prometheus: The Poem of Fire。'},keys:['Scriabin','六音和弦','四度或增四度關係','20世紀初','Prometheus'],teacher:['🎧 聽：先聽 Scriabin 晚期作品片段，請學生描述色彩。','🎹 看／彈：把六個音排在鍵盤上，觀察音程關係。','🧩 玩：從多組和弦卡中找出最像「神祕和弦」的排列。','🤔 想：如果和弦不再要求解決，音樂會產生什麼感覺？','✍️ 寫：用「人物＋六音＋音程特色＋代表作」作答。']}
+];
+let idx=0,confidence=null;
+const $=id=>document.getElementById(id);
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){const t=TERMS[idx];confidence=null;$('term').textContent=t.term;$('topic').textContent=t.topic;$('counter').textContent=`${idx+1} / ${TERMS.length}`;$('progressBar').style.width=`${(idx+1)/TERMS.length*100}%`;$('zhInput').value='';$('explainInput').value='';$('answer').classList.add('hidden');document.querySelectorAll('.choice').forEach(b=>b.classList.remove('active'));}
+function reveal(){const t=TERMS[idx];$('zh').textContent=t.zh;$('definition').textContent=t.definition;$('exam').textContent=t.exam;$('fivew').innerHTML=Object.entries(t.fivew).map(([k,v])=>`<div class="box"><b>${esc(k)}</b>${esc(v)}</div>`).join('');$('checklist').innerHTML=t.keys.map((k,i)=>`<label class="box" style="display:block;margin:7px 0"><input type="checkbox" data-check="${i}"> ${esc(k)}</label>`).join('');$('teacher').innerHTML=t.teacher.map(x=>`<p>${esc(x)}</p>`).join('');const typed=$('zhInput').value.trim();const zhParts=t.zh.split('／');const correct=typed&&zhParts.some(x=>typed.includes(x)||x.includes(typed));$('recognition').textContent=correct?'✓':'待加強';$('recognition').className=correct?'good':'warn';let status='🌱 先建立印象';if(confidence===2&&correct)status='🟢 已能主動辨識，下一步練完整書寫';else if(confidence===1||correct)status='🟡 有印象，還需要再提取幾次';else if(confidence===0)status='🔴 陌生題，先理解再進入間隔複習';$('status').textContent=status;$('answer').classList.remove('hidden');$('answer').scrollIntoView({behavior:'smooth',block:'start'});save();}
+function save(){const t=TERMS[idx];const key='musicTermPrototypeV1';let data={};try{data=JSON.parse(localStorage.getItem(key))||{}}catch{};const checked=[...document.querySelectorAll('[data-check]:checked')].length;data[t.term]={confidence,zh:$('zhInput').value,explain:$('explainInput').value,checked,updated:new Date().toISOString()};localStorage.setItem(key,JSON.stringify(data));}
+document.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>{confidence=Number(b.dataset.level);document.querySelectorAll('.choice').forEach(x=>x.classList.toggle('active',x===b));}));
+$('revealBtn').addEventListener('click',reveal);$('nextBtn').addEventListener('click',()=>{idx=(idx+1)%TERMS.length;render();window.scrollTo({top:0,behavior:'smooth'});});$('checklist').addEventListener('change',save);render();
+</script>
+</body>
+</html>
