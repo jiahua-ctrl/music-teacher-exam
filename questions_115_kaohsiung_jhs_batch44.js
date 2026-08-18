@@ -1,0 +1,11 @@
+// 115 高雄國中聯甄｜第二批高鑑別延伸題
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"高雄國中聯甄",category:"音樂教育",rarity:"🔥",question:"依自我決定理論（Self-Determination Theory），音樂教師讓學生在數首程度相當的作品中自行選擇演奏曲目，最直接支持哪一項基本心理需求？",options:["勝任 competence","關係／歸屬 relatedness","自主 autonomy","外在酬賞 reward"],answer:2,explanation:"Deci與Ryan的自我決定理論提出自主、勝任、關係三項基本心理需求。提供有意義且適切的選擇，最直接支持自主需求；若提供適度挑戰與可見進步，較偏向勝任；合作與被接納則較偏關係需求。"},
+{year:"115",school:"高雄國中聯甄",category:"音樂教育",rarity:"👹",question:"下列哪一個教學情境最接近 Gordon 所說的 Audiation，而非單純模仿？",options:["教師唱一句，學生立刻原樣回唱","學生在兩拍靜音期間於心中延續旋律，之後準確接回","學生依樂譜說出所有音名","學生觀看影片辨識樂器名稱"],answer:1,explanation:"Audiation的關鍵不是外在聲音持續存在，而是學習者能在沒有實際聲響時仍於心中組織並理解音樂。靜音後仍能延續旋律、節拍與調性感，是典型操作。"},
+{year:"115",school:"高雄國中聯甄",category:"音樂教育",rarity:"🔥",question:"教師希望學生在演奏錄音後使用rubric自評、選出一項改善目標，再重新錄音比較。此設計最能凸顯哪一種評量觀？",options:["Assessment of Learning","Assessment as Learning","常模參照評量","安置性評量"],answer:1,explanation:"學生主動蒐集自身表現證據、反思並調整策略，是Assessment as Learning（評量即學習）的核心，強調後設認知與自我調整。"},
+{year:"115",school:"高雄國中聯甄",category:"音樂史",rarity:"🔥",question:"關於 Fugue，下列何者最精確？",options:["必定是ABA三段體","核心在主題於不同聲部依序進入並進行對位發展","一定只能寫給鍵盤樂器","等同Rondo，主題必須固定間隔返回"],answer:1,explanation:"Fugue的辨識核心是subject在不同聲部依序進入，並配合answer、episode、stretto等對位技法發展。它不是由單一固定外型即可概括的曲式模板。"},
+{year:"115",school:"高雄國中聯甄",category:"音樂史",rarity:"👹",question:"若題幹描述『十九世紀、單樂章管弦樂、以文學或繪畫等非音樂意象作為創作依據、Liszt為關鍵人物』，最可能指何種體裁？",options:["Concerto grosso","Symphonic Poem","Opera seria","Trio Sonata"],answer:1,explanation:"這四個線索共同指向交響詩：十九世紀浪漫主義、Liszt、單樂章管弦樂、標題性／非音樂意象。"},
+{year:"115",school:"高雄國中聯甄",category:"音樂教育",rarity:"👹",question:"下列音樂教育法與核心概念的配對，何者錯誤？",options:["Gordon—Audiation","Dalcroze—Eurhythmics","Orff—Elemental Music","Kodály—以器樂即興取代歌唱與音樂讀寫"],answer:3,explanation:"Kodály重視歌唱、母語民歌、音樂讀寫與內在聽覺；『器樂即興、語言律動、Elemental Music』較接近Orff。這是教甄常用的四大教學法互換陷阱。"},
+{year:"115",school:"高雄國中聯甄",category:"教育理論",rarity:"🔥",question:"自我決定理論中，若學生因完成一段原本不會的節奏型、收到具體回饋並感受到『我做得到』，最直接被支持的是哪一需求？",options:["Autonomy","Competence","Relatedness","External regulation"],answer:1,explanation:"能力提升、適度挑戰、具體回饋與成功經驗主要支持competence（勝任需求）。教甄常把自主、勝任、關係三需求用教室情境交叉命題。"}
+);
