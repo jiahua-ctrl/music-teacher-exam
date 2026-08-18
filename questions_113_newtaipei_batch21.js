@@ -1,0 +1,13 @@
+// 113 新北市高中聯招：剩餘冷門考點（依公開歷屆題目改寫）
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:113,subject:'高中音樂',topic:'20世紀音樂',level:'👹魔王',question:'關於 Karlheinz Stockhausen 的創作，下列何者最不適合作為其代表性創作領域？',options:['電子音樂','機遇音樂','具體音樂相關實驗','微分音音樂作為主要代表領域'],answer:3,explanation:'Stockhausen 是戰後前衛音樂的重要人物，與電子音樂、序列技法、空間音樂及機遇性思維密切相關；微分音並非辨識其創作最核心的標籤。',source:'113 新北市公立高中教師聯合甄選音樂科第10題考點'},
+{year:113,subject:'高中音樂',topic:'中世紀音樂',level:'👹魔王',question:'Melismatic Organum（花唱式奧干農）最典型的聲部關係為何？',options:['兩聲部完全平行四、五度','下方定旋律以長時值延伸，上方聲部以大量音群裝飾','所有聲部採同節奏音對音','以主調和聲伴奏單一旋律'],answer:1,explanation:'花唱式奧干農常讓 tenor 的聖詠音延長，上方 duplum 在單一長音上演唱多個音，形成華麗的 melisma。',source:'113 新北市公立高中教師聯合甄選音樂科第15題考點'},
+{year:113,subject:'高中音樂',topic:'藝術跨域',level:'👹魔王',question:'曾以視覺構圖與色彩探索音樂結構，並創作與 J. S. Bach 複格／對位概念相關作品的藝術家為何？',options:['Paul Klee','Luigi Russolo','Paul Hindemith','Edvard Munch'],answer:0,explanation:'Paul Klee 深受音樂影響，其作品與教學常運用節奏、複調、結構等音樂概念，是藝術跨域常見考點。',source:'113 新北市公立高中教師聯合甄選音樂科第16題考點'},
+{year:113,subject:'高中音樂',topic:'和聲',level:'👹魔王',question:'若以 C 大調的導音三和弦 B–D–F 作為共同和弦轉調，最合理可將其重新解釋為哪一調的 ii°？',options:['a小調','A大調','G大調','F大調'],answer:0,explanation:'B–D–F 在 C 大調為 vii°，同時可視為 a 小調的 ii°，因此能作為共同和弦進入 a 小調。',source:'113 新北市公立高中教師聯合甄選音樂科第18題考點'},
+{year:113,subject:'高中音樂',topic:'和聲',level:'進階',question:'下列何者可形成 Imperfect Authentic Cadence（IAC）？',options:['V–I，但最高聲部終止於主音以外的和弦音','V–vi','ii–V','IV–I'],answer:0,explanation:'正格終止須具有屬功能至主和弦的進行；若 V–I 未符合 PAC 的根音位置與最高聲部主音等完整條件，即屬 IAC。',source:'113 新北市公立高中教師聯合甄選音樂科第20題考點'},
+{year:113,subject:'高中音樂',topic:'世界音樂',level:'進階',question:'關於日本傳統樂器，下列何者正確？',options:['尺八通常有八個指孔','日本箏常可與三味線、尺八合奏','伽倻琴是日本雅樂核心樂器','三味線由左手持撥、右手按弦'],answer:1,explanation:'尺八典型為五孔；伽倻琴是韓國樂器；三味線通常右手持撥、左手按弦。箏、三味線、尺八可形成三曲合奏。',source:'113 新北市公立高中教師聯合甄選音樂科第22題考點'},
+{year:113,subject:'高中音樂',topic:'流行與世界音樂',level:'進階',question:'Reggae 最具代表性的節奏感之一為何？',options:['只強調第一拍','吉他／鍵盤常在反拍（offbeat）切分','固定三拍子華爾滋節奏','完全沒有低音線'],answer:1,explanation:'Reggae 常以吉他或鍵盤在反拍做短促切分（skank），並具有突出的低音線與特殊鼓組節奏。',source:'113 新北市公立高中教師聯合甄選音樂科第23題考點'},
+{year:113,subject:'高中音樂',topic:'電影配樂',level:'👹魔王',question:'下列電影配樂作曲家與作品配對何者錯誤？',options:['Henry Mancini—Breakfast at Tiffany’s','Ennio Morricone—The Legend of 1900','John Williams—Schindler’s List','Arnold Schoenberg—The Book Thief'],answer:3,explanation:'《The Book Thief》電影配樂由 John Williams 創作，Schoenberg 並非該片作曲者。',source:'113 新北市公立高中教師聯合甄選音樂科第25題考點'},
+{year:113,subject:'高中音樂',topic:'音樂教育',level:'👹魔王',question:'Gordon 音樂學習理論中的「音樂性向」較接近下列何者？',options:['只等同學生目前的演奏成績','對音樂學習潛能的估測，並可透過適當工具評量','完全固定且不受發展影響','只測絕對音感'],answer:1,explanation:'Music aptitude 著重音樂學習潛能，不等同 achievement（已學得的成就）。Gordon 發展多種音樂性向測驗，是音樂教育教甄常見冷門概念。',source:'113 新北市公立高中教師聯合甄選音樂科相關音樂教育考點'}
+);
