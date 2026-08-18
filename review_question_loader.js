@@ -1,0 +1,13 @@
+(()=>{
+ if(window.__REVIEW_QUESTION_LOADER__)return;window.__REVIEW_QUESTION_LOADER__=true;
+ const files=[
+  'questions_official_111_115.js','questions_batch_114_jh_music_edu.js','questions_batch_113_tainan.js','questions_batch_114_newtaipei_tainan_ntnu_part7.js','questions_batch_114_kaohsiung_taipei_part8.js','questions_batch_115_latest_part1.js','questions_batch_115_latest_part2.js','questions_batch_115_newtaipei_part3.js',
+  'questions_rare_batch1.js','questions_rare_batch2.js','questions_rare_batch3.js','questions_rare_batch4.js','questions_rare_batch5.js','questions_rare_batch6.js','questions_rare_batch7.js','questions_rare_batch8.js',
+  'questions_junior_111_batch1.js','questions_junior_112_115_batch2.js','questions_junior_112_115_batch3.js','questions_junior_113_114_batch4.js','questions_junior_113_batch5.js','questions_junior_115_central_batch6.js','questions_junior_115_central_taoyuan_batch7.js','questions_junior_115_taoyuan_kaohsiung_batch8.js','questions_junior_115_kaohsiung_batch9.js','questions_junior_115_kaohsiung_batch10.js','questions_junior_115_kaohsiung_batch11.js',
+  'questions_115_moe_nonchoice_batch12.js','questions_115_moe_nonchoice_batch13.js','questions_115_chsh_nonchoice_batch14.js','questions_115_neihu_batch15.js','questions_112_tcfsh_batch16.js','questions_112_nchu_batch17.js','questions_113_nchu_batch18.js','questions_113_moe_batch19.js','questions_113_newtaipei_batch20.js',
+  'questions_108_110_backfill_batch21.js','questions_106_107_backfill_batch22.js','questions_107_highschool_depth_batch23.js','questions_107_music_education_batch24.js','questions_108_highschool_depth_batch25.js','questions_111_highschool_depth_batch26.js','questions_112_113_highschool_depth_batch27.js','questions_114_junior_senior_depth_batch28.js','questions_115_junior_senior_depth_batch29.js','questions_115_analysis_depth_batch30.js'
+ ];
+ const loaded=new Set([...document.scripts].map(s=>(s.getAttribute('src')||'').split('?')[0]));
+ function load(src){return new Promise(resolve=>{if(loaded.has(src)){resolve();return}const s=document.createElement('script');s.src=src+'?v=20260819a';s.onload=()=>{loaded.add(src);resolve()};s.onerror=()=>resolve();document.body.appendChild(s)})}
+ (async()=>{for(const src of files)await load(src);window.__REVIEW_QUESTIONS_READY__=true;window.dispatchEvent(new CustomEvent('musicExamReviewQuestionsReady',{detail:{count:Array.isArray(window.LOCAL_QUESTIONS)?window.LOCAL_QUESTIONS.length:0}}))})();
+})();
