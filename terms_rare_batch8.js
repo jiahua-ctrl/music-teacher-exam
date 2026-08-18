@@ -1,0 +1,12 @@
+window.TERM_PROMPTS = (window.TERM_PROMPTS || []).concat([
+{id:'TERM-R8-001',term:'VGL',zh:'VGL（教甄歷屆縮寫考點）',topic:'音樂學／工具書',level:'冷門魔王',definition:'110 教育部高中聯招曾要求考生寫出 VGL 的英文全名、中文字義與特色；屬於需要辨識專業縮寫與音樂學工具的高冷門考點。',exam:'此題特別適合保留原縮寫做主動回憶；正式複習時應連同英文全名與用途一起記憶。',related:'110 教育部高中聯招；音樂學縮寫'},
+{id:'TERM-R8-002',term:'Gluck',zh:'葛路克',topic:'歌劇史',level:'高中音樂',definition:'Christoph Willibald Gluck（1714–1787），18世紀歌劇改革的重要作曲家，主張音樂應服務戲劇，減少炫技與僵化形式。',exam:'110 教育部聯招把「葛路克」整個人物當名詞釋義；要會寫歌劇改革、Orfeo ed Euridice，以及音樂與戲劇統一。',related:'opera reform；Orfeo ed Euridice'},
+{id:'TERM-R8-003',term:'Idée fixe',zh:'固定樂念',topic:'浪漫時期',level:'高中音樂',definition:'白遼士用以貫穿《幻想交響曲》的代表性旋律觀念；同一主題在不同樂章依情境改變配器、節奏與性格。',exam:'看到 Berlioz、《幻想交響曲》、青年藝術家所迷戀女子的主題，就要連到 idée fixe。',related:'Hector Berlioz；Symphonie fantastique'},
+{id:'TERM-R8-004',term:'Modes of Limited Transposition',zh:'有限移位調式',topic:'20世紀音樂',level:'冷門魔王',definition:'梅湘系統化使用的一組對稱性音階／調式，其音程結構使它們只能移調有限次數便開始重複原有音高集合。',exam:'教甄常把 Messiaen、節奏、色彩與有限移位調式放在同一題組。',related:'Olivier Messiaen；symmetry'},
+{id:'TERM-R8-005',term:'《菊花夜行軍》',zh:'臺灣當代音樂作品考點',topic:'臺灣音樂',level:'冷門魔王',definition:'近年高中音樂教甄曾直接將《菊花夜行軍》列為名詞解釋，準備時應能辨識其臺灣當代音樂文化脈絡，而非只背西洋音樂史。',exam:'112 興大附中正式出題；屬於作品名稱型名詞題。',related:'112 興大附中；臺灣當代音樂'},
+{id:'TERM-R8-006',term:'《很久沒有敬我了你》',zh:'臺灣當代音樂／原住民族文化作品',topic:'臺灣音樂',level:'冷門魔王',definition:'臺灣當代舞台／音樂創作中與原住民族文化對話的重要作品名稱，曾被高中音樂教甄直接列為名詞解釋。',exam:'準備時除了作品名稱，也要建立「臺灣當代創作＋原住民族文化」的知識連結。',related:'112 興大附中；原住民族文化'},
+{id:'TERM-R8-007',term:'Internet Symphony No. 1 “Eroica”',zh:'《網路交響曲第一號：英雄》',topic:'音樂科技與當代音樂',level:'冷門魔王',definition:'譚盾受 Google／YouTube 相關計畫委託創作、與 YouTube Symphony Orchestra 計畫密切相關的管弦樂作品。',exam:'112 教育部高中聯招直接要求寫作曲家；看到 Google、YouTube、Internet Symphony 要想到譚盾。',related:'Tan Dun；YouTube Symphony Orchestra'},
+{id:'TERM-R8-008',term:'《百鳥朝鳳》',zh:'嗩吶傳統名曲',topic:'中國傳統音樂',level:'高中音樂',definition:'中國嗩吶代表性傳統樂曲，以嗩吶模擬多種鳥鳴、展現吹奏技巧與民間音樂色彩。',exam:'112 教育部聯招直接問獨奏樂器；最核心辨識點就是「嗩吶」。',related:'嗩吶；中國民間器樂'},
+{id:'TERM-R8-009',term:'客家八音',zh:'客家傳統器樂合奏',topic:'臺灣傳統音樂',level:'冷門魔王',definition:'臺灣客家傳統器樂合奏文化的重要類型，常見於婚喪喜慶、祭典等民俗場合；編制與曲目會依地域與場合而異。',exam:'112 臺中一中直接列為名詞解釋。不要把「八音」死背成固定八件樂器。',related:'客家音樂；臺灣傳統音樂'},
+{id:'TERM-R8-010',term:'Off-Broadway',zh:'外百老匯',topic:'音樂劇與劇場',level:'高中音樂',definition:'紐約劇場分類之一，通常指座位規模小於 Broadway 劇院、但大於 Off-Off-Broadway 的專業劇場與製作體系。',exam:'112 教育部高中聯招直接考名詞解釋；要能和 Broadway、Off-Off-Broadway 的劇場規模與製作生態區分。',related:'New York theatre；musical theatre'}
+]);
