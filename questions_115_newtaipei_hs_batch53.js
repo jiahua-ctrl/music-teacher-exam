@@ -8,3 +8,4 @@ window.EXTRA_QUESTIONS.push(
 {year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"education",question:"SEL社會情緒學習常見的五大核心能力中，不包括下列何者？",options:["Self-awareness","Self-management","Social awareness","Absolute pitch"],answer:3,explanation:"SEL核心常整理為自我覺察、自我管理、社會覺察、人際關係技巧與負責任決策；絕對音感是音樂能力，不是SEL核心能力。"},
 {year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"education",question:"若將SEL融入高中音樂欣賞課，下列哪一種設計最能同時維持音樂學科性與社會情緒學習？",options:["只問學生『你今天心情好嗎？』","要求學生公開分享最痛苦的私人經驗","要求學生用音色、力度、節奏等音樂證據說明情緒感受，並比較不同同學的解讀","播放放鬆音樂後讓全班安靜休息"],answer:2,explanation:"高品質SEL融入不應脫離音樂學科。『我感覺…因為我聽到…』能把情緒覺察、觀點理解與音樂證據分析結合。"}
 );
+(function(){var s=document.createElement('script');s.src='terms_115_newtaipei_hs_batch63.js';document.head.appendChild(s);})();
