@@ -16,3 +16,12 @@ window.EXTRA_QUESTIONS.push(
 {year:"115",school:"跨考區高頻",category:"高頻總複習",question:"學生聽完自己的演奏錄音，依規準自評、找出問題並規劃下一次練習，最接近哪一種評量？",options:["Assessment of Learning","Assessment as Learning","只屬總結性評量","與評量無關"],answer:1,explanation:"學生主動監控自己的學習、依證據自評並調整策略，正是Assessment as Learning強調的後設認知與自我調節。"},
 {year:"115",school:"跨考區高頻",category:"高頻總複習",question:"數位音樂教學若要真正展現科技融入，哪個任務最完整？",options:["把紙本選擇題改成線上選擇題","用DAW錄音、編曲、試聽、修正並標示素材授權","只播放YouTube影片","請學生抄寫DAW定義"],answer:1,explanation:"科技融入的價值在於讓學生產生新的創作、回饋與修正歷程，而不是只把原本活動數位化。"}
 );
+
+// 載入第三批：考前30分鐘衝刺邏輯＋🔥高頻標籤
+(function(){
+  if(document.querySelector('script[data-hf115-b3]')) return;
+  var s=document.createElement('script');
+  s.src='highfreq_115_cross_exam_batch3.js';
+  s.dataset.hf115B3='1';
+  document.head.appendChild(s);
+})();
