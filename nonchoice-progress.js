@@ -1,0 +1,12 @@
+(()=>{
+const ESSAY_KEY='musicTeacherEssayProgressV1',TRIAL_KEY='musicTeacherTrialProgressV1';
+const $=id=>document.getElementById(id);const load=k=>{try{return JSON.parse(localStorage.getItem(k))||{}}catch{return{}}};const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function essayId(){const q=$('essayQuestion')?.textContent||'';const item=(window.ESSAY_PROMPTS||[]).find(x=>x.question===q);return item?.id||q}
+function recordEssay(){const id=essayId();if(!id)return;const text=$('essayAnswer')?.value?.trim()||'';const d=load(ESSAY_KEY),r=d[id]||{attempts:0,completed:0};r.attempts++;if(text.length>=80)r.completed++;r.lastAt=Date.now();r.lastLength=text.length;d[id]=r;save(ESSAY_KEY,d);refreshCenter()}
+function recordTrial(started=false){const d=load(TRIAL_KEY);d.totalStarts=(d.totalStarts||0)+(started?1:0);d.lastAt=Date.now();save(TRIAL_KEY,d);refreshCenter()}
+function refreshCenter(){const center=$('nonchoiceCenter');if(!center)return;const e=load(ESSAY_KEY),t=load(TRIAL_KEY),essaySeen=Object.keys(e).length,essayCompleted=Object.values(e).filter(x=>(x.completed||0)>0).length;const essayMeta=$('ncEssayProgress');if(essayMeta)essayMeta.textContent=`已練 ${essaySeen} 題｜完成書寫 ${essayCompleted} 題`;const trialMeta=$('ncTrialProgress');if(trialMeta)trialMeta.textContent=(t.totalStarts||0)?`已開始 ${t.totalStarts} 次｜最近 ${new Date(t.lastAt).toLocaleDateString()}`:'尚未開始試教紀錄'}
+function enhanceCenter(){const essay=$('ncEssayBtn'),trial=$('ncTrialBtn');if(essay&&!$('ncEssayProgress')){const d=document.createElement('div');d.id='ncEssayProgress';d.className='nc-count';essay.appendChild(d)}if(trial&&!$('ncTrialProgress')){const d=document.createElement('div');d.id='ncTrialProgress';d.className='nc-count';trial.appendChild(d)}refreshCenter()}
+function wire(){const show=$('showHintBtn');if(show&&!show.dataset.progressWired){show.dataset.progressWired='1';show.addEventListener('click',recordEssay)}const trialStart=$('mtTrialStart');if(trialStart&&!trialStart.dataset.progressWired){trialStart.dataset.progressWired='1';trialStart.addEventListener('click',()=>recordTrial(true))}enhanceCenter()}
+function init(){let n=0;const timer=setInterval(()=>{wire();n++;if(n>80)clearInterval(timer)},250)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
