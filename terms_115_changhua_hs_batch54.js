@@ -6,3 +6,5 @@ window.EXTRA_TERMS.push(
 );
 (function(){var s=document.createElement('script');s.src='questions_115_changhua_hs_batch49.js';document.head.appendChild(s);})();
 (function(){var s=document.createElement('script');s.src='terms_115_changhua_hs_batch55.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='terms_115_changhua_hs_batch56.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='essay_115_changhua_hs_shortanswer_batch.js';document.head.appendChild(s);})();
