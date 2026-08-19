@@ -11,7 +11,8 @@
     loadScript('nonchoice-progress.js?v=20260819b','nonchoice-progress');
     loadScript('trial-diagnosis.js?v=20260819a','trial-diagnosis');
     loadScript('ability-map.js?v=20260819b','ability-map');
-    loadScript('daily-mission.js?v=20260819a','daily-mission');
+    loadScript('daily-mission.js?v=20260819b','daily-mission');
+    loadScript('learning-history.js?v=20260819a','learning-history');
   }
   loadBootTools();
   function mount(){
