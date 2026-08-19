@@ -19,7 +19,7 @@
     loadScript('home-layering.js?v=20260819b','home-layering');
     loadScript('mobile-home.js?v=20260819a','mobile-home');
     loadScript('score-hierarchy.js?v=20260819a','score-hierarchy');
-    loadScript('term-mastery-ladder.js?v=20260819b','term-mastery-ladder');
+    loadScript('term-mastery-ladder.js?v=20260819c','term-mastery-ladder');
     loadScript('term-answer-structure.js?v=20260819a','term-answer-structure');
     loadScript('term-points-mode.js?v=20260819a','term-points-mode');
   }
