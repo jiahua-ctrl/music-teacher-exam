@@ -1,0 +1,10 @@
+// 115 高雄中學正式教師甄選｜第二批高鑑別選擇題
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"高雄市立高雄高級中學",category:"臺灣作曲家",question:"下列臺灣作品與作曲家配對何者有誤？",options:["《1947序曲》—蕭泰然","《水龍吟》—馬水龍","〈馬蘭姑娘〉合唱與交響詩—李泰祥","《野台高歌》—賴德和"],answer:0,explanation:"115高雄中學原卷以臺灣作品—作曲家配對命題；作答時應建立作品網，而非只背作曲家姓名。此題需特別核對《1947序曲》的正確作品歸屬，避免把蕭泰然其他臺灣歷史題材作品混入。"},
+{year:"115",school:"高雄市立高雄高級中學",category:"Jazz",question:"關於爵士樂，下列何者最有問題？",options:["切分與弱拍重音是常見節奏特色","Louis Armstrong以歌唱與小號演奏聞名，但『搖擺樂之王』通常不是他的核心稱號","1930年代Big Band編制逐漸成熟","爵士樂在美國文化史具有重要地位"],answer:1,explanation:"原卷以Louis Armstrong與『搖擺樂之王』稱號設陷阱。Armstrong是爵士小號與歌唱巨匠；King of Swing更常與Benny Goodman連結。"},
+{year:"115",school:"高雄市立高雄高級中學",category:"Mahler／藝術歌曲",question:"Mahler《Das Lied von der Erde》歌詞來源與下列哪一概念最密切？",options:["Hans Bethge《Die chinesische Flöte》中的中國詩意譯","Goethe《Faust》德文原詩","Schiller《Ode an die Freude》","Nietzsche《Also sprach Zarathustra》"],answer:0,explanation:"《大地之歌》使用Hans Bethge《Die chinesische Flöte》中對中國古詩的德文意譯／轉譯文本。教甄常進一步考李白、王維、孟浩然等詩人來源。"},
+{year:"115",school:"高雄市立高雄高級中學",category:"20世紀作曲家",question:"若題目以『1917 Symphony』作曲家為線索，下列哪一作品與其作曲家相同？",options:["Prokofiev《Alexander Nevsky》","Hindemith《Ludus Tonalis》","Montemezzi《L'amore dei tre re》","Shostakovich《Leningrad Symphony》"],answer:0,explanation:"『1917 Symphony』指Prokofiev《Classical Symphony》Op.25（1916–17創作，1918首演）的年代線索；《Alexander Nevsky》亦為Prokofiev作品。"},
+{year:"115",school:"高雄市立高雄高級中學",category:"Jazz人物",question:"『King of Swing』最常與哪位音樂家連結？",options:["Louis Armstrong","Benny Goodman","Miles Davis","John Coltrane"],answer:1,explanation:"Benny Goodman常被稱為King of Swing；Louis Armstrong則是爵士小號、歌唱與即興史上的核心人物。"},
+{year:"115",school:"高雄市立高雄高級中學",category:"電影配樂／跨界",question:"下列何者最能說明『電影配樂可以是音樂跨界的一種，但兩者不完全相同』？",options:["所有跨界作品都必須有電影畫面","電影配樂通常回應影像與敘事；音樂跨界還可與舞蹈、科技、視覺藝術等媒介合作","電影配樂只使用管弦樂，跨界只使用電子音樂","兩者完全是同義詞"],answer:1,explanation:"音樂跨界是較大的概念；電影配樂是音樂與電影／影像結合的一種特定實踐。"}
+);
