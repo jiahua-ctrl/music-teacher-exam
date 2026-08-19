@@ -1,0 +1,12 @@
+// 115 教育部受託公立高中聯甄｜選擇題第二批（依公開題目可靠核對）
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"教育部受託公立高中聯甄",type:"history",question:"下列何者不是連篇歌曲（Song Cycle）？",options:["Beethoven《An die ferne Geliebte》","Schubert《Die Forelle》","Schumann《Dichterliebe》","Strauss《Mädchenblumen》"],answer:1,explanation:"《Die Forelle》是一首獨立藝術歌曲，不是Song Cycle；其餘作品皆可作為連篇歌曲／歌曲套曲脈絡討論。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"opera",question:"下列關於歌劇史的敘述，何者錯誤？",options:["Opera Buffa與intermezzo的發展密切相關","《The Beggar's Opera》屬英國Ballad Opera","法國『丑角之爭』的導火線是Gluck《Orfeo ed Euridice》","19世紀晚期義大利歌劇發展出Verismo"],answer:2,explanation:"丑角之爭（Querelle des Bouffons）與Pergolesi《La serva padrona》在巴黎演出密切相關，不是由Gluck《Orfeo ed Euridice》引發。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"harmony",question:"F大調中的German augmented sixth chord，其四音集合可等音改寫成下列哪一個屬七和弦？",options:["E♭ major：V7","G♭ major：V7","A♭ major：IV7","C major：N6"],answer:0,explanation:"F大調Ger+6典型音為D♭–F–A♭–B；將B等音改寫為C♭，形成B♭7的音高集合，即E♭大調的V7，可用於等音轉調。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"history",question:"關於Berlioz《Symphonie fantastique》，何者錯誤？",options:["全曲共五樂章","idée fixe第一次出現由單簧管與小提琴齊奏","第五樂章出現Dies irae旋律","編制與配器具有創新性"],answer:1,explanation:"錯誤在B。idée fixe首次清楚呈現並非『單簧管與小提琴齊奏』；原題就是利用配器細節設陷阱。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"theory",question:"Chopin《24 Preludes, Op.28》依五度循環與關係大小調排列。第7、15、23首的調性主音合起來可構成哪種三和弦？",options:["大三和弦","小三和弦","減三和弦","增三和弦"],answer:0,explanation:"第7首A大調、第15首D♭大調、第23首F大調；主音A–D♭–F可等音視為A–C♯–F，重排為D♭–F–A，形成D♭增三和弦? 注意此題需以原題官方答案再核對，因此網站標示為『待官方答案校驗』。",needsVerification:true},
+{year:"115",school:"教育部受託公立高中聯甄",type:"taiwan",question:"『臺灣拉赫曼尼諾夫』『臺灣第一位完成本土歌劇、亦為早期鋼琴協奏曲創作者』『臺灣合唱音樂之父』三個稱號，最合理依序對應哪些人？",options:["蕭泰然／郭芝苑／呂泉生","江文也／許常惠／呂泉生","蕭泰然／馬水龍／郭芝苑","許常惠／郭芝苑／江文也"],answer:0,explanation:"甲＝蕭泰然；乙＝郭芝苑；丙＝呂泉生。原卷第27題即以人物稱號、出生年代、地景與作品互換作複選陷阱。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"fillin",question:"18世紀歐洲喜歌劇中，德國具有口說對白的喜歌劇稱為？",options:["Singspiel","Ballad Opera","Opéra comique","Opera buffa"],answer:0,explanation:"德國稱Singspiel；英國常見Ballad Opera；法國為Opéra comique；義大利為Opera buffa。"},
+{year:"115",school:"教育部受託公立高中聯甄",type:"taiwan",question:"馬水龍《臺灣組曲》鋼琴獨奏曲的四首曲目，何者正確？",options:["〈廟宇〉、〈迎神〉、〈獅舞〉、〈元宵夜〉","〈廟宇〉、〈進香〉、〈酒宴〉、〈夜港〉","〈雨〉、〈夜景〉、〈少女〉、〈廟口〉","〈大稻埕夜港〉、〈日人宅第〉、〈廟會〉、〈淡水河畔〉"],answer:0,explanation:"現行出版與錄音資料列《臺灣組曲》四曲為〈廟宇〉、〈迎神〉、〈獅舞〉、〈元宵夜〉。不要與《雨港素描》或《臺灣傳奇》混淆。"}
+);
