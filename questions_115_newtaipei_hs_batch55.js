@@ -1,0 +1,10 @@
+// 115 新北市公立高中聯甄｜藝術歌曲與西洋音樂史延伸題
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"taiwan",question:"下列臺灣藝術歌曲之詞曲作者配對，何者錯誤？",options:["《玫瑰三願》龍七詞／黃自曲","《管芒花》許丙丁詞／鄧雨賢曲","《杜鵑花》方建鵬詞／黃友棣曲","《上美的花》東方白詞／蕭泰然曲"],answer:0,explanation:"原卷第4題以藝術歌曲詞曲作者配對命題。常見《玫瑰三願》為龍七詞、黃自曲；準備臺灣／華語藝術歌曲時，詞作者與曲作者要成對記憶。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"關於巴洛克法式序曲 French Overture，下列何者最符合典型特徵？",options:["由Scarlatti建立快－慢－快三段義大利序曲模式","通常以莊嚴附點節奏的慢段開始，接快速模仿／賦格式段落","全曲固定為快速賦格，沒有速度與質地對比","以奏鳴曲式呈示部與再現部為核心"],answer:1,explanation:"French Overture與Lully傳統密切相關，典型特色為莊嚴、附點節奏明顯的慢段，接快速模仿或賦格式段落；與義大利序曲常見快－慢－快模式應分開。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"Schubert藝術歌曲與詩人配對中，下列何者錯誤？",options:["《An den Mond》－Goethe","《Die Forelle》－C. F. D. Schubart","《Heidenröslein》－Schiller","《Winterreise》－Wilhelm Müller"],answer:2,explanation:"《Heidenröslein（野玫瑰）》詩作者是Goethe，不是Schiller。《Winterreise》則使用Wilhelm Müller詩作。教甄常考『歌曲－詩人』而非只考作曲家。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"下列作曲家與Faust題材作品類型的配對，何者最可靠？",options:["Gounod－歌劇《Faust》","Liszt－《Faust Symphony》","Berlioz－《La damnation de Faust》","以上皆是"],answer:3,explanation:"Faust是19世紀重要跨藝術題材：Gounod寫歌劇《Faust》；Liszt寫《Faust Symphony》；Berlioz寫《La damnation de Faust》，常譯《浮士德的天譴》。可用『同一文本，不同曲種』整理。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"Stravinsky《Symphony of Psalms（詩篇交響曲）》的特殊管弦樂配置中，刻意省略哪一組弦樂器？",options:["小提琴與中提琴","大提琴與低音提琴","豎琴與鋼琴","雙簧管與低音管"],answer:0,explanation:"《Symphony of Psalms》著名的配器特色之一是省略小提琴與中提琴，保留大提琴與低音提琴等低音弦樂，形成較冷峻、非浪漫式的音響色彩。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"關於Mussorgsky《Pictures at an Exhibition（展覽會之畫）》，下列何者正確？",options:["原作為鋼琴組曲，Ravel後來留下著名管弦樂改編版","原作即為Ravel的管弦樂作品","作品沒有Promenade主題","作曲家屬法國六人團"],answer:0,explanation:"《展覽會之畫》原為Mussorgsky鋼琴作品，以Promenade串聯多幅畫作；Ravel的管弦樂改編版尤其著名。"}
+);
