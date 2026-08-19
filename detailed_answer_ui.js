@@ -13,6 +13,7 @@
     loadScript('ability-map.js?v=20260819b','ability-map');
     loadScript('daily-mission.js?v=20260819b','daily-mission');
     loadScript('learning-history.js?v=20260819a','learning-history');
+    loadScript('weekly-summary.js?v=20260819a','weekly-summary');
   }
   loadBootTools();
   function mount(){
