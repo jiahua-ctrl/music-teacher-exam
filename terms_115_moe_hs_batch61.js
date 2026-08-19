@@ -8,3 +8,4 @@ window.EXTRA_TERMS.push(
 {term:"楊弦與臺灣現代民歌運動",year:"115",school:"教育部受託公立高中聯甄",rarity:"🔥臺灣流行音樂史",definition:"楊弦於1975年在臺北中山堂舉辦《現代民謠創作演唱會》，以余光中等現代詩入歌，被視為臺灣1970年代現代民歌／校園民歌運動的重要開端之一。",keywords:["楊弦","1975","臺北中山堂","余光中","現代民謠","校園民歌"],confusion:"不要與李雙澤1976年的淡江『唱自己的歌』事件混淆；兩者都是民歌運動的重要節點，但時間與象徵意義不同。",teaching:"建立『1975→1976→之後』聲音時間軸：學生分組查楊弦、李雙澤、胡德夫等人物，並用一首歌、一張照片、一則時代事件回答『青年為什麼開始想唱自己的歌？』。",answer:"【人物與事件】楊弦是臺灣1970年代現代民歌發展的重要人物。1975年他於臺北中山堂舉辦《現代民謠創作演唱會》，將余光中等現代詩作譜成歌曲公開演出。\n\n【歷史意義】此事件常被視為臺灣現代民歌／校園民歌運動的重要起點之一，象徵青年創作者開始以自己的語言、生活與文學素材創作歌曲。\n\n【辨析】1976年李雙澤的淡江事件與『唱自己的歌』同樣重要，但不是同一事件。考場應分清楊弦＝1975中山堂、李雙澤＝1976淡江。"}
 );
 (function(){var s=document.createElement('script');s.src='questions_115_moe_hs_batch52.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='essay_115_newtaipei_hs_batch.js';document.head.appendChild(s);})();
