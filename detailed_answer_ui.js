@@ -10,6 +10,7 @@
     loadScript('nonchoice-center.js?v=20260819a','nonchoice-center');
     loadScript('nonchoice-progress.js?v=20260819b','nonchoice-progress');
     loadScript('trial-diagnosis.js?v=20260819a','trial-diagnosis');
+    loadScript('ability-map.js?v=20260819a','ability-map');
   }
   loadBootTools();
   function mount(){
