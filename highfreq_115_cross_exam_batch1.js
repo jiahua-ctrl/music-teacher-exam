@@ -16,3 +16,12 @@ window.EXTRA_QUESTIONS.push(
 {year:"115",school:"跨考區高頻",category:"高頻總複習",question:"若只能用一句話區分Sampling與Loop，何者最準確？",options:["Sampling是取用聲音素材；Loop是讓聲音素材循環","Sampling只能用人聲；Loop只能用鼓聲","兩者完全相同","Loop一定涉及侵權，Sampling一定不涉及"],answer:0,explanation:"記憶口訣：Sampling問『拿了什麼聲音？』；Loop問『哪段聲音在循環？』。"},
 {year:"115",school:"跨考區高頻",category:"高頻總複習",question:"南管考題若同時出現『館閣、指譜曲、2009 UNESCO、林吳素霞』，最佳準備策略為何？",options:["四項分開死背","建立同一張南管知識網","只背UNESCO年份","只記一首曲名"],answer:1,explanation:"115多份試卷從不同角度反覆命中南管；把組織傳承、曲目分類、文化資產與人物整合成知識網，比逐題孤立背誦有效。"}
 );
+
+// 載入第二批跨考區高頻考點
+(function(){
+  if(document.querySelector('script[data-hf115-b2]')) return;
+  var s=document.createElement('script');
+  s.src='highfreq_115_cross_exam_batch2.js';
+  s.dataset.hf115B2='1';
+  document.head.appendChild(s);
+})();
