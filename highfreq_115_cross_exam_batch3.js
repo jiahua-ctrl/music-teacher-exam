@@ -18,7 +18,6 @@ window.EXAM_SPRINT_CONFIG = {
   ]
 };
 
-// 顯示用標籤：介面可依此欄位呈現🔥與高頻星等
 window.EXAM_HIGH_FREQUENCY.forEach(function(item){
   item.badges = item.badges || [];
   if(item.level === '★★★★★') item.badges.push('🔥必讀');
@@ -33,3 +32,11 @@ window.EXTRA_QUESTIONS.push(
 {year:"115",school:"考前30分鐘",category:"衝刺策略",question:"下列哪一組最適合放入『👹易混淆對決』？",options:["Sampling／Loop","Bach／Mozart的出生年份","鋼琴／小提琴圖片","C大調音階／生日快樂歌"],answer:0,explanation:"Sampling與Loop概念相近、又常在數位音樂題交叉出現，非常適合用對照方式快速釐清。"},
 {year:"115",school:"考前30分鐘",category:"名詞輸出",question:"名詞解釋若只有90秒，哪個結構最穩定？",options:["只寫中文翻譯","一句定義→Who/When/Where→核心特色→代表人物或作品→意義／辨析","把知道的全部無順序寫出","只寫自己的感想"],answer:1,explanation:"先下定義，再用5W2H中最關鍵資訊補脈絡，最後用代表與意義收束，最容易在有限時間形成完整答案。"}
 );
+
+(function(){
+  if(document.querySelector('script[data-confusion115]')) return;
+  var s=document.createElement('script');
+  s.src='confusion_tracking_115.js?v=20260819';
+  s.dataset.confusion115='1';
+  document.head.appendChild(s);
+})();
