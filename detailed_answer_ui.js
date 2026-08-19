@@ -14,7 +14,7 @@
     loadScript('ability-map.js?v=20260819b','ability-map');
     loadScript('daily-mission.js?v=20260819b','daily-mission');
     loadScript('learning-history.js?v=20260819a','learning-history');
-    loadScript('weekly-summary.js?v=20260819a','weekly-summary');
+    loadScript('weekly-summary.js?v=20260819b','weekly-summary');
     loadScript('weekly-review.js?v=20260819b','weekly-review');
     loadScript('home-layering.js?v=20260819c','home-layering');
     loadScript('mobile-home.js?v=20260819a','mobile-home');
@@ -26,7 +26,7 @@
     loadScript('term-readiness-summary.js?v=20260819b','term-readiness-summary');
     loadScript('term-daily-plan.js?v=20260819b','term-daily-plan');
     loadScript('term-daily-runner.js?v=20260819c','term-daily-runner');
-    loadScript('term-daily-resume.js?v=20260819a','term-daily-resume');
+    loadScript('term-daily-resume.js?v=20260819b','term-daily-resume');
   }
   loadBootTools();
   function mount(){
