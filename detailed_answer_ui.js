@@ -22,6 +22,7 @@
     loadScript('term-mastery-ladder.js?v=20260819c','term-mastery-ladder');
     loadScript('term-answer-structure.js?v=20260819a','term-answer-structure');
     loadScript('term-points-mode.js?v=20260819a','term-points-mode');
+    loadScript('term-next-action.js?v=20260819a','term-next-action');
   }
   loadBootTools();
   function mount(){
