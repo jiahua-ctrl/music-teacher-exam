@@ -1,0 +1,10 @@
+// 115 國立彰化高中｜第三批高鑑別題：20世紀時間軸、夜曲、文化遺產
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"國立彰化高中",type:"history",question:"下列20世紀作品依『首演／首次公開呈現』年代由早至晚排列，何者最合理？",options:["Holst《The Planets》→Schoenberg《Piano Suite, Op.25》→Varèse《Ionisation》→Hindemith《Ludus Tonalis》","Schoenberg《Op.25》→Holst《The Planets》→Hindemith《Ludus Tonalis》→Varèse《Ionisation》","Varèse《Ionisation》→Holst《The Planets》→Schoenberg《Op.25》→Hindemith《Ludus Tonalis》","Holst《The Planets》→Varèse《Ionisation》→Schoenberg《Op.25》→Hindemith《Ludus Tonalis》"],answer:0,explanation:"建立時間軸比死背單一年份更穩：The Planets完整首演1920；Schoenberg Op.25於1920年代初完成並於1924公開演出；Ionisation首演1933；Ludus Tonalis完成於1942並於1943首演。彰中原題第9題就是用作品年代做交叉辨識。"},
+{year:"115",school:"國立彰化高中",type:"history",question:"若題目問『鋼琴夜曲（Nocturne）的奠基者／創立此曲種的重要作曲家』，最應優先選誰？",options:["Frédéric Chopin","John Field","Johannes Brahms","Franz Liszt"],answer:1,explanation:"彰中第15題官方答案為John Field。Field是鋼琴夜曲的重要奠基者；Chopin承繼並將此體裁發展到高度成熟。"},
+{year:"115",school:"國立彰化高中",type:"form",question:"下列何者最符合Nocturne（夜曲）的體裁描述？",options:["固定三節詩節、反覆韻腳並有envoi的法國詩歌形式","威尼斯船夫傳唱的民歌或仿其風格的作品","古典時期流行的一種室內樂編制名稱","反映夜晚情緒、氣氛或感受的音樂作品"],answer:3,explanation:"彰中第13題官方答案為④。此題將ballade／barcarolle等定義混入選項，考的是曲種辨識而非只背中文名稱。"},
+{year:"115",school:"國立彰化高中",type:"terms",question:"下列音樂術語配對何者最合理？",options:["Larghetto比Largo略快；smorzando可與perdendosi的消逝感相近","Larghetto比Largo更慢；smorzando表示突然強奏","espressivo等同毫無表情；doloroso表示歡快","sforzando-piano表示全段逐漸加速"],answer:0,explanation:"彰中第14題考術語細辨。Larghetto通常較Largo稍快；smorzando與perdendosi都可表現逐漸消逝、減弱的效果。"},
+{year:"115",school:"國立彰化高中",type:"heritage",question:"依彰化高中115原題與官方答案，下列哪一項當時未被列入UNESCO非物質文化遺產相關名錄？",options:["日本歌舞伎","韓國盤索里","蒙古馬頭琴傳統音樂","越南水木偶戲（水傀儡）"],answer:3,explanation:"彰中第17題官方答案為④。此題適合連同『非物質文化遺產五大領域』一起準備，避免只背國家與項目配對。"},
+{year:"115",school:"國立彰化高中",type:"history",question:"下列哪組『作品—時代定位』配對最合理？",options:["Holst《The Planets》—第一次世界大戰前後的20世紀初英國管弦樂","Varèse《Ionisation》—18世紀古典樂派打擊樂作品","Hindemith《Ludus Tonalis》—19世紀早期浪漫鋼琴套曲","Schoenberg《Op.25》—巴洛克鍵盤組曲"],answer:0,explanation:"The Planets創作於1914–1916，是20世紀初英國管弦樂代表之一；Ionisation、Ludus Tonalis與Schoenberg Op.25皆屬20世紀現代音樂脈絡。"}
+);
