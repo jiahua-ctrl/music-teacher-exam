@@ -21,6 +21,7 @@
     loadScript('score-hierarchy.js?v=20260819a','score-hierarchy');
     loadScript('term-mastery-ladder.js?v=20260819b','term-mastery-ladder');
     loadScript('term-answer-structure.js?v=20260819a','term-answer-structure');
+    loadScript('term-points-mode.js?v=20260819a','term-points-mode');
   }
   loadBootTools();
   function mount(){
