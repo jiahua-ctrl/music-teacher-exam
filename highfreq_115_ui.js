@@ -3,114 +3,36 @@
   if(window.__HF115_UI_LOADED__) return;
   window.__HF115_UI_LOADED__=true;
 
-  function loadData(cb){
-    if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){cb();return;}
-    if(!document.querySelector('script[data-hf115-entry]')){
-      var s=document.createElement('script');
-      s.src='highfreq_115_cross_exam_batch1.js?v=20260819';
-      s.dataset.hf115Entry='1';
-      s.onload=function(){waitForData(cb,0)};
-      document.head.appendChild(s);
-    }else waitForData(cb,0);
-  }
-  function waitForData(cb,n){
-    if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){setTimeout(cb,120);return;}
-    if(n>30)return;
-    setTimeout(function(){waitForData(cb,n+1)},100);
-  }
-  function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]});}
-  function ensureStyles(){
-    if(document.getElementById('hf115Style'))return;
-    var st=document.createElement('style');st.id='hf115Style';st.textContent=`
-      .hf115-wrap{display:grid;gap:14px}.hf115-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.hf115-btn{border:1px solid rgba(127,127,127,.2);border-radius:16px;padding:14px;text-align:left;background:var(--card,#fff);cursor:pointer}.hf115-btn b{display:block;font-size:1rem;margin-bottom:5px}.hf115-btn small{display:block;opacity:.72;line-height:1.45}.hf115-btn.primaryish{border-color:rgba(107,79,163,.38);box-shadow:0 5px 16px rgba(107,79,163,.08)}.hf115-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.hf115-topic{border:1px solid rgba(127,127,127,.18);border-radius:16px;padding:14px;background:rgba(127,127,127,.04)}.hf115-rank{font-size:.78rem;opacity:.68}.hf115-badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.hf115-badge{font-size:.72rem;border-radius:999px;padding:4px 8px;background:rgba(107,79,163,.12)}.hf115-topic h4{margin:5px 0 8px}.hf115-topic p{margin:7px 0;line-height:1.55}.hf115-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(127,127,127,.25)}.hf115-topic.open .hf115-detail{display:block}.hf115-plan,.hf115-oral{display:none;margin-top:12px}.hf115-plan.open,.hf115-oral.open{display:block}.hf115-step{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(127,127,127,.12)}.hf115-step:last-child{border-bottom:0}.hf115-time{font-weight:700}.hf115-note{font-size:.9rem;opacity:.78}.hf115-oral-card{padding:16px;border:1px solid rgba(127,127,127,.18);border-radius:16px;background:rgba(127,127,127,.035)}.hf115-timer{font-size:2rem;font-weight:800;letter-spacing:.04em;margin:8px 0}.hf115-oral-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.hf115-answer{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(127,127,127,.25);white-space:pre-wrap;line-height:1.65}.hf115-answer.open{display:block}.dark .hf115-btn,.dark .hf115-topic,.dark .hf115-oral-card{background:rgba(255,255,255,.04)}
-    `;document.head.appendChild(st);
-  }
-  function hfText(x){return [x.topic].concat(x.mustKnow||[]).join(' ').toLowerCase();}
-  function questionText(q){return [q.topic,q.question,q.explanation,q.source_title,q.exam].filter(Boolean).join(' ').toLowerCase();}
-  function buildHighFreqPool(){
-    var api=window.MusicTeacherExam;if(!api||!Array.isArray(api.questions))return [];
-    var hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12);
-    var tokens=[];hfs.forEach(function(x){
-      [x.topic].concat(x.mustKnow||[]).forEach(function(v){String(v||'').split(/[／—＝、\s]+/).forEach(function(t){if(t&&t.length>=3)tokens.push(t.toLowerCase())})});
-    });
-    tokens=[...new Set(tokens)];
-    var stats=api.loadStats?api.loadStats():{wrong:[],unknown:[]};
-    return api.questions.map(function(q){
-      var txt=questionText(q),matches=tokens.reduce(function(n,t){return n+(txt.includes(t)?1:0)},0);
-      var wrong=(stats.wrong||[]).includes(q.id),unknown=(stats.unknown||[]).includes(q.id);
-      var bonus=(unknown?12:wrong?9:0)+matches*2+(String(q.year)==='115'?2:0);
-      return {q:q,score:bonus};
-    }).filter(function(x){return x.score>0}).sort(function(a,b){return b.score-a.score||Math.random()-.5}).map(function(x){return x.q});
-  }
-  function oralPool(){
-    var arr=Array.isArray(window.EXTRA_TERMS)?window.EXTRA_TERMS:[];
-    var hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12),keys=[];
-    hfs.forEach(function(x){keys.push(String(x.topic||''));(x.mustKnow||[]).forEach(function(k){keys.push(String(k))})});
-    keys=keys.map(function(k){return k.toLowerCase()}).filter(function(k){return k.length>=3});
-    var found=arr.filter(function(t){var txt=[t.term,t.definition,t.answer,(t.keywords||[]).join(' ')].filter(Boolean).join(' ').toLowerCase();return keys.some(function(k){return txt.includes(k)})});
-    if(found.length)return found;
-    return hfs.map(function(x){return {term:x.topic,definition:(x.mustKnow||[]).join(' → '),answer:x.answerFrame,confusion:x.trap}});
-  }
-  var oralTimer=null,oralLeft=60,currentOral=null;
-  function stopTimer(){if(oralTimer){clearInterval(oralTimer);oralTimer=null}}
-  function drawOral(sec){
-    stopTimer();oralLeft=60;var pool=oralPool();currentOral=pool[Math.floor(Math.random()*pool.length)]||null;
-    var name=sec.querySelector('#hf115OralName'),timer=sec.querySelector('#hf115Timer'),ans=sec.querySelector('#hf115OralAnswer');
-    if(name)name.textContent=currentOral?currentOral.term:'目前尚無可練習名詞';if(timer)timer.textContent='60';if(ans){ans.classList.remove('open');ans.innerHTML='';}
-  }
-  function revealOral(sec){
-    if(!currentOral)return;stopTimer();var ans=sec.querySelector('#hf115OralAnswer');
-    var body=currentOral.answer||currentOral.definition||'';var trap=currentOral.confusion?`\n\n👹 易錯：${currentOral.confusion}`:'';
-    ans.textContent=`✍️ 參考擬答\n${body}${trap}`;ans.classList.add('open');
-  }
-  function startOralTimer(sec){
-    stopTimer();oralLeft=60;var timer=sec.querySelector('#hf115Timer');if(timer)timer.textContent=oralLeft;
-    oralTimer=setInterval(function(){oralLeft--;if(timer)timer.textContent=Math.max(0,oralLeft);if(oralLeft<=0){stopTimer();revealOral(sec)}},1000);
-  }
-  function render(){
-    var home=document.getElementById('homeView');if(!home||document.getElementById('hf115Section'))return;
-    ensureStyles();
-    var data=(window.EXAM_HIGH_FREQUENCY||[]).slice().sort(function(a,b){return (a.rank||99)-(b.rank||99)});
-    var sec=document.createElement('section');sec.id='hf115Section';sec.className='card section-card';
-    sec.innerHTML=`<div class="section-title"><div><span class="eyebrow">115跨考區命題趨勢</span><h3>🔥 高頻衝刺</h3></div></div>
-      <p class="muted">不是再多讀一份題庫，而是先抓「跨考區重複＋容易混淆＋能寫成名詞／申論」的核心。</p>
-      <div class="hf115-wrap">
-        <div class="hf115-actions">
-          <button class="hf115-btn primaryish" id="hf115QuizBtn"><b>🎯 開始高頻10題</b><small>優先抽跨考區高頻＋曾答錯／不知道</small></button>
-          <button class="hf115-btn primaryish" id="hf115OralBtn"><b>🎙️ 60秒名詞口試</b><small>先自己說，再看完整擬答與易錯提醒</small></button>
-          <button class="hf115-btn" id="hf115TopBtn"><b>🔥 先看必讀高頻</b><small>依★★★★★、★★★★☆與跨考區重複排序</small></button>
-          <button class="hf115-btn" id="hf115SprintBtn"><b>⏱️ 考前只剩30分鐘</b><small>錯題急救 → 知識網 → 易混淆 → 名詞輸出</small></button>
-        </div>
-        <div id="hf115Plan" class="hf115-plan"></div>
-        <div id="hf115Oral" class="hf115-oral"><div class="hf115-oral-card"><span class="eyebrow">60秒名詞輸出</span><h3 id="hf115OralName"></h3><div class="hf115-timer"><span id="hf115Timer">60</span><small style="font-size:.8rem;font-weight:400"> 秒</small></div><p class="muted">建議結構：一句定義 → Who／When／Where → 核心特色 → 代表人物／作品 → 意義／辨析。</p><div class="hf115-oral-actions"><button class="primary" id="hf115StartOral">▶ 開始60秒</button><button class="ghost" id="hf115RevealOral">👀 看擬答</button><button class="ghost" id="hf115NextOral">↻ 換一題</button></div><div id="hf115OralAnswer" class="hf115-answer"></div></div></div>
-        <div id="hf115Grid" class="hf115-grid"></div>
-      </div>`;
-    var weakness=home.querySelector('#weaknessList')?.closest('.section-card');
-    if(weakness)home.insertBefore(sec,weakness);else home.appendChild(sec);
-
-    var grid=sec.querySelector('#hf115Grid');
-    grid.innerHTML=data.slice(0,12).map(function(x){
-      var badges=(x.badges&&x.badges.length?x.badges:[x.level||'']).filter(Boolean);
-      return `<article class="hf115-topic" tabindex="0"><div class="hf115-rank">#${esc(x.rank)} ${esc(x.level||'')}</div><h4>${esc(x.topic)}</h4><div class="hf115-badges">${badges.map(function(b){return `<span class="hf115-badge">${esc(b)}</span>`}).join('')}</div><p class="hf115-note">${esc((x.mustKnow||[]).slice(0,4).join(' → '))}</p><div class="hf115-detail"><p><b>👹 易錯：</b>${esc(x.trap||'')}</p><p><b>✍️ 擬答骨架：</b>${esc(x.answerFrame||'')}</p><p class="hf115-note"><b>出現：</b>${esc((x.appears||[]).join('、'))}</p></div></article>`;
-    }).join('');
-    grid.querySelectorAll('.hf115-topic').forEach(function(card){var toggle=function(){card.classList.toggle('open')};card.addEventListener('click',toggle);card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}})});
-
-    var plan=sec.querySelector('#hf115Plan'),oral=sec.querySelector('#hf115Oral');
-    sec.querySelector('#hf115SprintBtn').addEventListener('click',function(){
-      var cfg=window.EXAM_SPRINT_CONFIG||{};var steps=cfg.thirtyMinutePlan||[];
-      plan.innerHTML=`<div class="feedback-title">⏱️ ${esc(cfg.title||'30分鐘衝刺')}</div><p class="muted">${esc(cfg.description||'')}</p>${steps.map(function(s){return `<div class="hf115-step"><div class="hf115-time">${esc(s.minutes)}</div><div><b>${esc(s.task)}</b><div class="hf115-note">${esc(s.detail)}</div></div></div>`}).join('')}`;
-      plan.classList.toggle('open');
-    });
-    sec.querySelector('#hf115TopBtn').addEventListener('click',function(){grid.scrollIntoView({behavior:'smooth',block:'start'})});
-    sec.querySelector('#hf115QuizBtn').addEventListener('click',function(){
-      var pool=buildHighFreqPool();var api=window.MusicTeacherExam;
-      if(api&&api.startCustomQuiz&&pool.length){api.startCustomQuiz(pool,'🔥高頻衝刺',10)}else alert('高頻題庫正在整理中，請重新整理後再試一次。');
-    });
-    sec.querySelector('#hf115OralBtn').addEventListener('click',function(){oral.classList.toggle('open');if(oral.classList.contains('open')){drawOral(sec);oral.scrollIntoView({behavior:'smooth',block:'center'})}else stopTimer()});
-    sec.querySelector('#hf115StartOral').addEventListener('click',function(){startOralTimer(sec)});
-    sec.querySelector('#hf115RevealOral').addEventListener('click',function(){revealOral(sec)});
-    sec.querySelector('#hf115NextOral').addEventListener('click',function(){drawOral(sec)});
-  }
-  function boot(){loadData(render)}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+  var battles=[
+    {a:'Sampling',b:'Loop',q:'哪一句最能區分兩者？',answer:'Sampling＝擷取／取用聲音素材；Loop＝讓一段聲音反覆循環。Sample可以被做成Loop，但兩者不是同義詞。',cue:'拿了什麼聲音？ vs 哪段聲音一直循環？'},
+    {a:'Polytonality',b:'Polychord',q:'分析時到底在看什麼層級？',answer:'Polytonality看「同時存在幾個調性中心」；Polychord看「同時疊置幾個和弦」。前者是調性層級，後者是垂直和弦層級。',cue:'多個調 vs 多個和弦'},
+    {a:'Louis Armstrong',b:'Benny Goodman',q:'誰是 King of Swing？',answer:'Benny Goodman＝King of Swing；Louis Armstrong則應連結小號、歌唱與爵士即興的重要發展。',cue:'Armstrong＝小號／即興；Goodman＝Swing'},
+    {a:'Sonata da chiesa',b:'Sonata da camera',q:'教甄最常怎麼分？',answer:'Sonata da chiesa＝教會奏鳴曲，常見慢－快－慢－快並重視對位；Sonata da camera＝室內奏鳴曲，較接近前奏曲加一連串舞曲。',cue:'chiesa＝church；camera＝chamber／舞曲組曲'},
+    {a:'Assessment as Learning',b:'Assessment for Learning',q:'學生自評和教師形成性回饋，分別偏哪一邊？',answer:'Assessment as Learning強調學生自我監控、反思與後設認知；Assessment for Learning強調教師運用形成性評量證據調整教學並促進下一步學習。',cue:'as＝學生監控自己；for＝評量服務下一步學習'},
+    {a:'Assessment of Learning',b:'Assessment as Learning',q:'期末成果判定和自我調節如何區分？',answer:'Assessment of Learning偏向總結性成果判定；Assessment as Learning則把評量本身變成學生反思、自評與調整策略的學習過程。',cue:'of＝學完之後判定；as＝評量本身就是學習'},
+    {a:'Pasibutbut',b:'來甦 Lai Su',q:'兩首原住民族音樂最不能混淆的是什麼？',answer:'Pasibutbut＝布農族重要祭儀多聲部歌唱；〈來甦〉＝排灣族古謠，可連結持續低音／Drone與群體歌唱。族群首先不能寫反。',cue:'Pasibutbut＝布農；來甦＝排灣'},
+    {a:'Berceuse',b:'Barcarolle',q:'一個是搖籃曲，一個是船歌，怎麼記？',answer:'Berceuse＝Lullaby／搖籃曲；Barcarolle＝船歌，常聯想到威尼斯船歌與搖曳節拍。',cue:'Berceuse＝哄睡；Barcarolle＝船'},
+    {a:'Neapolitan N6',b:'Augmented Sixth',q:'看到「6」為什麼不能直接當增六和弦？',answer:'N6的6表示拿坡里和弦常用第一轉位的低音上方六度位置；增六和弦則以♭6與♯4形成增六音程並向外解決到屬音5。',cue:'N6＝轉位數字；+6＝真正的增六音程'},
+    {a:'Mystic Chord',b:'Petrushka Polychord',q:'兩者都是20世紀特殊聲響，核心差在哪？',answer:'Mystic Chord與Scriabin密切相關，是特定六音和聲材料；Petrushka chord常以兩個三和弦疊置理解，重點是Polychord。',cue:'Scriabin六音 vs Stravinsky和弦疊置'}
+  ];
+  var battleIndex=0;
+  function loadData(cb){if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){cb();return;}if(!document.querySelector('script[data-hf115-entry]')){var s=document.createElement('script');s.src='highfreq_115_cross_exam_batch1.js?v=20260819';s.dataset.hf115Entry='1';s.onload=function(){waitForData(cb,0)};document.head.appendChild(s)}else waitForData(cb,0)}
+  function waitForData(cb,n){if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){setTimeout(cb,120);return}if(n>30)return;setTimeout(function(){waitForData(cb,n+1)},100)}
+  function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]})}
+  function ensureStyles(){if(document.getElementById('hf115Style'))return;var st=document.createElement('style');st.id='hf115Style';st.textContent=`
+.hf115-wrap{display:grid;gap:14px}.hf115-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.hf115-btn{border:1px solid rgba(127,127,127,.2);border-radius:16px;padding:14px;text-align:left;background:var(--card,#fff);cursor:pointer}.hf115-btn b{display:block;font-size:1rem;margin-bottom:5px}.hf115-btn small{display:block;opacity:.72;line-height:1.45}.hf115-btn.primaryish{border-color:rgba(107,79,163,.38);box-shadow:0 5px 16px rgba(107,79,163,.08)}.hf115-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.hf115-topic{border:1px solid rgba(127,127,127,.18);border-radius:16px;padding:14px;background:rgba(127,127,127,.04)}.hf115-rank{font-size:.78rem;opacity:.68}.hf115-badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.hf115-badge{font-size:.72rem;border-radius:999px;padding:4px 8px;background:rgba(107,79,163,.12)}.hf115-topic h4{margin:5px 0 8px}.hf115-topic p{margin:7px 0;line-height:1.55}.hf115-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(127,127,127,.25)}.hf115-topic.open .hf115-detail{display:block}.hf115-plan,.hf115-oral,.hf115-battle{display:none;margin-top:12px}.hf115-plan.open,.hf115-oral.open,.hf115-battle.open{display:block}.hf115-step{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(127,127,127,.12)}.hf115-step:last-child{border-bottom:0}.hf115-time{font-weight:700}.hf115-note{font-size:.9rem;opacity:.78}.hf115-oral-card,.hf115-battle-card{padding:16px;border:1px solid rgba(127,127,127,.18);border-radius:16px;background:rgba(127,127,127,.035)}.hf115-timer{font-size:2rem;font-weight:800;letter-spacing:.04em;margin:8px 0}.hf115-oral-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.hf115-answer{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(127,127,127,.25);white-space:pre-wrap;line-height:1.65}.hf115-answer.open{display:block}.hf115-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:12px 0}.hf115-fighter{padding:14px;border-radius:14px;background:rgba(107,79,163,.08);font-weight:800;text-align:center}.hf115-vsmark{font-weight:900;opacity:.6}.hf115-cue{margin-top:10px;padding:10px;border-radius:12px;background:rgba(127,127,127,.07)}.dark .hf115-btn,.dark .hf115-topic,.dark .hf115-oral-card,.dark .hf115-battle-card{background:rgba(255,255,255,.04)}
+`;document.head.appendChild(st)}
+  function questionText(q){return [q.topic,q.question,q.explanation,q.source_title,q.exam].filter(Boolean).join(' ').toLowerCase()}
+  function buildHighFreqPool(){var api=window.MusicTeacherExam;if(!api||!Array.isArray(api.questions))return[];var hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12),tokens=[];hfs.forEach(function(x){[x.topic].concat(x.mustKnow||[]).forEach(function(v){String(v||'').split(/[／—＝、\s]+/).forEach(function(t){if(t&&t.length>=3)tokens.push(t.toLowerCase())})})});tokens=[...new Set(tokens)];var stats=api.loadStats?api.loadStats():{wrong:[],unknown:[]};return api.questions.map(function(q){var txt=questionText(q),matches=tokens.reduce(function(n,t){return n+(txt.includes(t)?1:0)},0),wrong=(stats.wrong||[]).includes(q.id),unknown=(stats.unknown||[]).includes(q.id),bonus=(unknown?12:wrong?9:0)+matches*2+(String(q.year)==='115'?2:0);return{q:q,score:bonus}}).filter(function(x){return x.score>0}).sort(function(a,b){return b.score-a.score||Math.random()-.5}).map(function(x){return x.q})}
+  function oralPool(){var arr=Array.isArray(window.EXTRA_TERMS)?window.EXTRA_TERMS:[],hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12),keys=[];hfs.forEach(function(x){keys.push(String(x.topic||''));(x.mustKnow||[]).forEach(function(k){keys.push(String(k))})});keys=keys.map(function(k){return k.toLowerCase()}).filter(function(k){return k.length>=3});var found=arr.filter(function(t){var txt=[t.term,t.definition,t.answer,(t.keywords||[]).join(' ')].filter(Boolean).join(' ').toLowerCase();return keys.some(function(k){return txt.includes(k)})});if(found.length)return found;return hfs.map(function(x){return{term:x.topic,definition:(x.mustKnow||[]).join(' → '),answer:x.answerFrame,confusion:x.trap}})}
+  var oralTimer=null,oralLeft=60,currentOral=null;function stopTimer(){if(oralTimer){clearInterval(oralTimer);oralTimer=null}}
+  function drawOral(sec){stopTimer();oralLeft=60;var pool=oralPool();currentOral=pool[Math.floor(Math.random()*pool.length)]||null;var name=sec.querySelector('#hf115OralName'),timer=sec.querySelector('#hf115Timer'),ans=sec.querySelector('#hf115OralAnswer');if(name)name.textContent=currentOral?currentOral.term:'目前尚無可練習名詞';if(timer)timer.textContent='60';if(ans){ans.classList.remove('open');ans.innerHTML=''}}
+  function revealOral(sec){if(!currentOral)return;stopTimer();var ans=sec.querySelector('#hf115OralAnswer'),body=currentOral.answer||currentOral.definition||'',trap=currentOral.confusion?`\n\n👹 易錯：${currentOral.confusion}`:'';ans.textContent=`✍️ 參考擬答\n${body}${trap}`;ans.classList.add('open')}
+  function startOralTimer(sec){stopTimer();oralLeft=60;var timer=sec.querySelector('#hf115Timer');if(timer)timer.textContent=oralLeft;oralTimer=setInterval(function(){oralLeft--;if(timer)timer.textContent=Math.max(0,oralLeft);if(oralLeft<=0){stopTimer();revealOral(sec)}},1000)}
+  function drawBattle(sec,next){if(next)battleIndex=(battleIndex+1)%battles.length;else battleIndex=Math.floor(Math.random()*battles.length);var x=battles[battleIndex],box=sec.querySelector('#hf115BattleBody'),ans=sec.querySelector('#hf115BattleAnswer');box.innerHTML=`<div class="hf115-vs"><div class="hf115-fighter">${esc(x.a)}</div><div class="hf115-vsmark">VS</div><div class="hf115-fighter">${esc(x.b)}</div></div><p><b>👹 ${esc(x.q)}</b></p><div class="hf115-cue">先不要看答案，試著用一句話說出差異。</div>`;ans.classList.remove('open');ans.innerHTML=''}
+  function revealBattle(sec){var x=battles[battleIndex],ans=sec.querySelector('#hf115BattleAnswer');ans.innerHTML=`<b>✅ 一句話辨析</b><br>${esc(x.answer)}<div class="hf115-cue"><b>🧠 記憶鉤子：</b>${esc(x.cue)}</div>`;ans.classList.add('open')}
+  function render(){var home=document.getElementById('homeView');if(!home||document.getElementById('hf115Section'))return;ensureStyles();var data=(window.EXAM_HIGH_FREQUENCY||[]).slice().sort(function(a,b){return(a.rank||99)-(b.rank||99)}),sec=document.createElement('section');sec.id='hf115Section';sec.className='card section-card';sec.innerHTML=`<div class="section-title"><div><span class="eyebrow">115跨考區命題趨勢</span><h3>🔥 高頻衝刺</h3></div></div><p class="muted">不是再多讀一份題庫，而是先抓「跨考區重複＋容易混淆＋能寫成名詞／申論」的核心。</p><div class="hf115-wrap"><div class="hf115-actions"><button class="hf115-btn primaryish" id="hf115QuizBtn"><b>🎯 開始高頻10題</b><small>優先抽跨考區高頻＋曾答錯／不知道</small></button><button class="hf115-btn primaryish" id="hf115BattleBtn"><b>👹 易混淆PK</b><small>兩個都看過，考場最容易選錯的概念對決</small></button><button class="hf115-btn primaryish" id="hf115OralBtn"><b>🎙️ 60秒名詞口試</b><small>先自己說，再看完整擬答與易錯提醒</small></button><button class="hf115-btn" id="hf115TopBtn"><b>🔥 先看必讀高頻</b><small>依★★★★★、★★★★☆與跨考區重複排序</small></button><button class="hf115-btn" id="hf115SprintBtn"><b>⏱️ 考前只剩30分鐘</b><small>錯題急救 → 知識網 → 易混淆 → 名詞輸出</small></button></div><div id="hf115Plan" class="hf115-plan"></div><div id="hf115Battle" class="hf115-battle"><div class="hf115-battle-card"><span class="eyebrow">易混淆概念對決</span><div id="hf115BattleBody"></div><div class="hf115-oral-actions"><button class="primary" id="hf115RevealBattle">⚔️ 看辨析</button><button class="ghost" id="hf115NextBattle">↻ 下一組</button></div><div id="hf115BattleAnswer" class="hf115-answer"></div></div></div><div id="hf115Oral" class="hf115-oral"><div class="hf115-oral-card"><span class="eyebrow">60秒名詞輸出</span><h3 id="hf115OralName"></h3><div class="hf115-timer"><span id="hf115Timer">60</span><small style="font-size:.8rem;font-weight:400"> 秒</small></div><p class="muted">建議結構：一句定義 → Who／When／Where → 核心特色 → 代表人物／作品 → 意義／辨析。</p><div class="hf115-oral-actions"><button class="primary" id="hf115StartOral">▶ 開始60秒</button><button class="ghost" id="hf115RevealOral">👀 看擬答</button><button class="ghost" id="hf115NextOral">↻ 換一題</button></div><div id="hf115OralAnswer" class="hf115-answer"></div></div></div><div id="hf115Grid" class="hf115-grid"></div></div>`;var weakness=home.querySelector('#weaknessList')?.closest('.section-card');if(weakness)home.insertBefore(sec,weakness);else home.appendChild(sec);
+    var grid=sec.querySelector('#hf115Grid');grid.innerHTML=data.slice(0,12).map(function(x){var badges=(x.badges&&x.badges.length?x.badges:[x.level||'']).filter(Boolean);return`<article class="hf115-topic" tabindex="0"><div class="hf115-rank">#${esc(x.rank)} ${esc(x.level||'')}</div><h4>${esc(x.topic)}</h4><div class="hf115-badges">${badges.map(function(b){return`<span class="hf115-badge">${esc(b)}</span>`}).join('')}</div><p class="hf115-note">${esc((x.mustKnow||[]).slice(0,4).join(' → '))}</p><div class="hf115-detail"><p><b>👹 易錯：</b>${esc(x.trap||'')}</p><p><b>✍️ 擬答骨架：</b>${esc(x.answerFrame||'')}</p><p class="hf115-note"><b>出現：</b>${esc((x.appears||[]).join('、'))}</p></div></article>`}).join('');grid.querySelectorAll('.hf115-topic').forEach(function(card){var toggle=function(){card.classList.toggle('open')};card.addEventListener('click',toggle);card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}})});
+    var plan=sec.querySelector('#hf115Plan'),oral=sec.querySelector('#hf115Oral'),battle=sec.querySelector('#hf115Battle');sec.querySelector('#hf115SprintBtn').addEventListener('click',function(){var cfg=window.EXAM_SPRINT_CONFIG||{},steps=cfg.thirtyMinutePlan||[];plan.innerHTML=`<div class="feedback-title">⏱️ ${esc(cfg.title||'30分鐘衝刺')}</div><p class="muted">${esc(cfg.description||'')}</p>${steps.map(function(s){return`<div class="hf115-step"><div class="hf115-time">${esc(s.minutes)}</div><div><b>${esc(s.task)}</b><div class="hf115-note">${esc(s.detail)}</div></div></div>`}).join('')}`;plan.classList.toggle('open')});sec.querySelector('#hf115TopBtn').addEventListener('click',function(){grid.scrollIntoView({behavior:'smooth',block:'start'})});sec.querySelector('#hf115QuizBtn').addEventListener('click',function(){var pool=buildHighFreqPool(),api=window.MusicTeacherExam;if(api&&api.startCustomQuiz&&pool.length){api.startCustomQuiz(pool,'🔥高頻衝刺',10)}else alert('高頻題庫正在整理中，請重新整理後再試一次。')});sec.querySelector('#hf115BattleBtn').addEventListener('click',function(){battle.classList.toggle('open');if(battle.classList.contains('open')){drawBattle(sec,false);battle.scrollIntoView({behavior:'smooth',block:'center'})}});sec.querySelector('#hf115RevealBattle').addEventListener('click',function(){revealBattle(sec)});sec.querySelector('#hf115NextBattle').addEventListener('click',function(){drawBattle(sec,true)});sec.querySelector('#hf115OralBtn').addEventListener('click',function(){oral.classList.toggle('open');if(oral.classList.contains('open')){drawOral(sec);oral.scrollIntoView({behavior:'smooth',block:'center'})}else stopTimer()});sec.querySelector('#hf115StartOral').addEventListener('click',function(){startOralTimer(sec)});sec.querySelector('#hf115RevealOral').addEventListener('click',function(){revealOral(sec)});sec.querySelector('#hf115NextOral').addEventListener('click',function(){drawOral(sec)})}
+  function boot(){loadData(render)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()
 })();
