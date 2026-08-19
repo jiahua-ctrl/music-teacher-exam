@@ -23,6 +23,7 @@
     loadScript('term-answer-structure.js?v=20260819a','term-answer-structure');
     loadScript('term-points-mode.js?v=20260819a','term-points-mode');
     loadScript('term-next-action.js?v=20260819a','term-next-action');
+    loadScript('term-readiness-summary.js?v=20260819a','term-readiness-summary');
   }
   loadBootTools();
   function mount(){
