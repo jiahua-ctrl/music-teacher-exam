@@ -1,0 +1,18 @@
+// 115 首頁｜今日推薦
+(function(){
+ if(window.__DAILY_REC115__)return;window.__DAILY_REC115__=true;
+ function qs(s,r){return (r||document).querySelector(s)}
+ function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]})}
+ function click(id){var b=document.getElementById(id);if(!b)return false;b.click();setTimeout(function(){b.scrollIntoView({behavior:'smooth',block:'center'})},100);return true}
+ function stats(){try{var a=window.MusicTeacherExam;return a&&a.loadStats?a.loadStats():{wrong:[],unknown:[]}}catch(e){return{wrong:[],unknown:[]}}}
+ function confusion(){try{var a=window.Confusion115&&window.Confusion115.top?window.Confusion115.top():[];return a&&a.length?a[0]:null}catch(e){return null}}
+ function mission(pair){try{return window.SelfStudy115&&window.SelfStudy115.state?window.SelfStudy115.state(pair):{done:[],level:0}}catch(e){return{done:[],level:0}}}
+ function decide(){var c=confusion(),st=stats();
+  if(c){var m=mission(c.pair),n=(m.done||[]).length;if(n<2)return{icon:'🩹',title:'今天先救一個弱點',text:'目前最需要補強的是「'+c.pair+'」。先做一次PK，再挑2格九宮格，不用一次全部完成。',action:'weak',label:'開始弱點補強',reason:'因為這組概念曾反覆混淆，先修正錯誤記憶比開新範圍更有效。'};if(n<7)return{icon:'🧩',title:'今天把弱點再推進一級',text:'「'+c.pair+'」已完成 '+n+'/9 格。今天再完成1～2種不同學習方式，讓它從會認答案變成真的分得出來。',action:'grid',label:'繼續九宮格',reason:'你已經開始修復這個弱點，現在最值得延續同一條學習線。'};return{icon:'🏆',title:'今天做一次驗證',text:'「'+c.pair+'」九宮格已完成 '+n+'/9 格。先不要再重讀，回到題目驗證是否真的穩定。',action:'quiz',label:'做高頻10題驗證',reason:'完成補強後要用提取與作答驗證，才能確認不是只對內容熟悉。'}}
+  var wrong=(st.wrong||[]).length,unknown=(st.unknown||[]).length;if(wrong+unknown>0)return{icon:'🎯',title:'今天先做高頻10題',text:'目前仍有 '+wrong+' 題錯題、'+unknown+' 題「不知道」。先做一輪短題組，系統會再幫你縮小真正的弱點。',action:'quiz',label:'開始高頻10題',reason:'先取得新的作答證據，再決定要補哪個概念。'};
+  return{icon:'🌱',title:'今天從10題開始就好',text:'目前沒有明顯急救弱點。做一輪高頻10題，維持手感並讓系統持續更新推薦。',action:'quiz',label:'開始今天10題',reason:'沒有弱點時，以短而穩定的主動提取維持記憶最實用。'}
+ }
+ function act(type){if(type==='quiz')return click('hf115QuizBtn');if(type==='weak'){click('hf115BattleBtn');return true}if(type==='grid'){if(click('selfStudy115Btn'))return true;click('hf115BattleBtn');return true}return false}
+ function render(){var guide=qs('#hf115GuideStart');if(!guide)return false;var old=qs('#hf115DailyRec');if(old)old.remove();var r=decide(),box=document.createElement('div');box.id='hf115DailyRec';box.style.cssText='padding:15px;border:1px solid rgba(107,79,163,.28);border-radius:16px;background:rgba(107,79,163,.055);margin-bottom:12px';box.innerHTML='<span class="eyebrow">系統依目前狀態推薦</span><div style="display:flex;gap:10px;align-items:flex-start;margin-top:5px"><div style="font-size:1.7rem">'+r.icon+'</div><div style="flex:1"><h3 style="margin:0 0 5px">'+esc(r.title)+'</h3><p style="margin:0;line-height:1.6">'+esc(r.text)+'</p><p class="hf115-note" style="margin:7px 0 0">為什麼：'+esc(r.reason)+'</p></div></div><div class="hf115-guide-actions"><button class="primary" id="hf115DailyAction">'+esc(r.label)+'</button><button class="ghost" id="hf115DailyRefresh">↻ 重新判斷</button></div>';guide.insertBefore(box,guide.firstChild);qs('#hf115DailyAction',box).onclick=function(){act(r.action)};qs('#hf115DailyRefresh',box).onclick=render;return true}
+ function boot(){var n=0,t=setInterval(function(){n++;if(render()){clearInterval(t);var obs=new MutationObserver(function(){if(!qs('#hf115DailyRec')&&qs('#hf115GuideStart'))render()});obs.observe(document.body,{childList:true,subtree:true})}if(n>80)clearInterval(t)},150)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();window.DailyRecommendation115={decide:decide,render:render};
+})();
