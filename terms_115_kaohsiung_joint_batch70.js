@@ -5,3 +5,5 @@ window.EXTRA_TERMS.push(
 {term:"林吳素霞",year:"115",school:"高雄市高中聯甄",rarity:"🔥臺灣傳統音樂／南管",definition:"臺灣重要南管音樂保存與傳承者，長期投入南管演唱、教學與文化傳承；115高雄高中聯甄以2025年第36屆傳藝金曲獎特別獎為線索命題。",keywords:["南管","傳統音樂","傳承","傳藝金曲獎","臺灣"],confusion:"題目可能以說唱、歌仔戲、客家八音作干擾；林吳素霞的核心辨識標籤是南管。",teaching:"設計『人物線索卡』：學生不能直接看姓名，只看地域、樂種、樂器、獎項與傳承工作逐步解鎖人物，最後討論傳統音樂為何需要保存者與傳習者。",answer:"【人物定位】林吳素霞是臺灣重要的南管音樂保存與傳承者。\n\n【專長】其音樂生命與南管演唱、學習、教學及傳承密切相關。南管是臺灣重要傳統音樂之一，保存古老曲牌、唱腔與器樂合奏傳統。\n\n【當代意義】她的貢獻不只在舞臺演出，更在於長期保存與傳遞傳統音樂知識，使南管能在當代社會持續被學習與實踐。\n\n【命題線索】115高雄市高中聯甄以2025年第36屆傳藝金曲獎特別獎作人物辨識線索。\n\n【考場關鍵字】林吳素霞＝南管＝保存傳承＝傳藝金曲獎。"}
 );
 (function(){var s=document.createElement('script');s.src='essay_115_kaohsiung_joint_batch.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='terms_115_kaohsiung_joint_batch71.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='questions_115_kaohsiung_joint_batch59.js';document.head.appendChild(s);})();
