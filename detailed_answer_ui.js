@@ -25,7 +25,7 @@
     loadScript('term-next-action.js?v=20260819a','term-next-action');
     loadScript('term-readiness-summary.js?v=20260819b','term-readiness-summary');
     loadScript('term-daily-plan.js?v=20260819b','term-daily-plan');
-    loadScript('term-daily-runner.js?v=20260819b','term-daily-runner');
+    loadScript('term-daily-runner.js?v=20260819c','term-daily-runner');
   }
   loadBootTools();
   function mount(){
