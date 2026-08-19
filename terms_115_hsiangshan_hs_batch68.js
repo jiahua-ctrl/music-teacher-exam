@@ -7,3 +7,5 @@ window.EXTRA_TERMS.push(
 {term:"Fado（法朵）",year:"115",school:"新竹市立香山高中",rarity:"🔥世界音樂／葡萄牙",definition:"葡萄牙城市歌曲傳統，尤其與Lisbon密切相關，常以Portuguese guitar伴奏，歌詞表達愛、離別、命運與saudade等複雜情感；Amália Rodrigues為代表歌者。",keywords:["Portugal","Lisbon","saudade","Portuguese guitar","Amália Rodrigues"],confusion:"不要與西班牙Flamenco混淆；Fado的國家核心是Portugal，代表聲響之一是Portuguese guitar。",teaching:"給學生三段不標國家的聲音：Fado、Flamenco、Tango。學生用『人聲、樂器、節奏、情緒證據』判斷，再討論為何不能只用國族刻板印象分類。",answer:"【定義】Fado是葡萄牙重要的城市歌曲傳統，19世紀以來尤其與Lisbon的都市文化密切相關。\n\n【音樂特色】通常由獨唱者演唱，搭配Portuguese guitar與古典吉他等伴奏，歌詞常觸及愛情、離別、海洋、命運與人生感懷。\n\n【核心概念】常以葡萄牙語saudade描述其難以單純翻譯的懷念、失落與渴望情緒。\n\n【人物】Amália Rodrigues是20世紀將Fado推向國際的重要歌者。\n\n【辨析】Fado屬葡萄牙文化，不是西班牙Flamenco。\n\n【關鍵字】Portugal、Lisbon、saudade、Portuguese guitar、Amália Rodrigues。"}
 );
 (function(){var s=document.createElement('script');s.src='essay_115_hsiangshan_hs_batch.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='terms_115_hsiangshan_hs_batch69.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='essay_115_hsiangshan_hs_batch2.js';document.head.appendChild(s);})();
