@@ -7,3 +7,4 @@ window.EXTRA_TERMS.push(
 {term:"Secondary Leading-tone Chord（副導和弦）—快速判讀法",year:"115",school:"新北市公立高中聯甄",rarity:"👹和聲分析",definition:"以某個非主和弦為暫時目標，建立在該目標根音下方半音的減三或減七和弦，標示為vii°/x或vii°7/x。",keywords:["vii°/x","vii°7/x","tonicization","leading tone","diminished seventh"],confusion:"看到調外升音不要立即判成V/x；若該音是目標根音下方半音且形成減和弦，應優先檢查副導和弦。",teaching:"『半音追蹤器』：每題只圈調外音，先向上半音找它想去哪個根音，再問該根音在原調是第幾級；最後拼成vii°7/x。",answer:"【定義】Secondary leading-tone chord是以調內非主和弦作為暫時主音化目標，在其根音下方半音建立減三和弦或減七和弦，形成強烈導向效果。\n\n【分析流程】①找調外升降音；②判斷根音；③看根音是否為某目標和弦根音的下方半音；④確認和弦是否為 diminished triad／seventh；⑤標示vii°/x或vii°7/x。\n\n【例】C大調中D♯–F♯–A–C為D♯減七。D♯向上半音導向E，而E是iii級根音，因此分析為vii°7/iii。\n\n【考場口訣】『調外升音先別喊副屬：向上半音找主人；若自己是減和弦，就是副導候選。』"}
 );
 (function(){var s=document.createElement('script');s.src='questions_115_newtaipei_hs_batch58.js';document.head.appendChild(s);})();
+(function(){var s=document.createElement('script');s.src='terms_115_hsiangshan_hs_batch68.js';document.head.appendChild(s);})();
