@@ -15,8 +15,8 @@
     loadScript('daily-mission.js?v=20260819b','daily-mission');
     loadScript('learning-history.js?v=20260819a','learning-history');
     loadScript('weekly-summary.js?v=20260819a','weekly-summary');
-    loadScript('weekly-review.js?v=20260819a','weekly-review');
-    loadScript('home-layering.js?v=20260819b','home-layering');
+    loadScript('weekly-review.js?v=20260819b','weekly-review');
+    loadScript('home-layering.js?v=20260819c','home-layering');
     loadScript('mobile-home.js?v=20260819a','mobile-home');
     loadScript('score-hierarchy.js?v=20260819a','score-hierarchy');
     loadScript('term-mastery-ladder.js?v=20260819d','term-mastery-ladder');
