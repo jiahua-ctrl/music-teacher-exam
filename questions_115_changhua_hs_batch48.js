@@ -1,0 +1,11 @@
+// 115 國立彰化高中｜官方試題與官方答案可可靠核對之文字題（第二批）
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"國立彰化高中",type:"instrumentation",question:"彰化高中115音樂科第7題的法文樂器名稱中，哪一組中文配對正確？",options:["Grand Flûte＝中音長笛；Caisse claire＝沙鈴","Cornet à Piston＝短號；Grosse Caisse＝大鼓","Cymbalum＝鈸；Grand Flûte＝中音長笛","Caisse claire＝沙鈴；Cymbalum＝鈸"],answer:1,explanation:"官方答案第7題為②。Cornet à Piston是活塞短號（cornet），Grosse Caisse是大鼓；Grand Flûte通常指長笛，Caisse claire是小鼓／軍鼓，Cymbalum不是一般『鈸』的法文對應。"},
+{year:"115",school:"國立彰化高中",type:"history",question:"下列哪首作品不是典型Ragtime風格作品？",options:["Joseph Kosma《Autumn Leaves》","Scott Joplin《The Entertainer》","Debussy《Le Petit Nègre》","Gershwin《Swanee》"],answer:0,explanation:"官方第8題答案為①。《Autumn Leaves》是Joseph Kosma所作的法國香頌／爵士標準曲脈絡；Joplin是Ragtime核心人物，Debussy《Le Petit Nègre》明顯受ragtime/cakewalk影響。"},
+{year:"115",school:"國立彰化高中",type:"indigenous",question:"下列臺灣原住民音樂家／族群配對，何者正確？",options:["陳建年＝卑南族；張惠妹＝卑南族；謝水能＝排灣族；桑布伊＝卑南族","陸森寶＝泰雅族；郭英男＝布農族；王宏恩＝賽夏族；桑布伊＝卑南族","高一生＝魯凱族；胡德夫＝阿美族；李泰祥＝賽德克族；謝水能＝排灣族","陳建年＝阿美族；張惠妹＝排灣族；郭英男＝卑南族；王宏恩＝布農族"],answer:0,explanation:"官方第11題答案為④，對應原卷的『丙丁壬癸』：陳建年、張惠妹、桑布伊皆為卑南族；謝水能為排灣族。此題很適合用『人物—族群』互換製造陷阱。"},
+{year:"115",school:"國立彰化高中",type:"world",question:"下列舞曲、拍號與起源國家的配對何者正確？",options:["Polka－二拍子－法國","Pavane－二拍子－捷克","Habanera－二拍子－古巴","Passepied－三拍子－西班牙"],answer:2,explanation:"官方第18題答案為③。Habanera源於古巴哈瓦那，典型為二拍子律動；Polka源於波希米亞／捷克地區，Pavane與西班牙／義大利宮廷舞蹈脈絡相關，Passepied則是法國巴洛克舞曲。"},
+{year:"115",school:"國立彰化高中",type:"harmony",question:"哪一種變化和弦最適合利用等音異名作為轉調樞紐？",options:["半減七和弦","拿坡里六和弦","德國增六和弦","法國增六和弦"],answer:2,explanation:"官方第19題答案為③。德國增六和弦可透過等音改寫成屬七和弦的音程結構，因此特別適合等音轉調。"},
+{year:"115",school:"國立彰化高中",type:"history",question:"關於Mahler《Das Lied von der Erde（大地之歌）》所採用的《中國笛》唐詩來源，下列哪位詩人的作品不在題目所指的來源中？",options:["李白","杜甫","王維","孟浩然"],answer:1,explanation:"官方第20題答案為②。Mahler透過Hans Bethge《Die chinesische Flöte》的德譯／意譯文本取材中國詩歌；教甄常以詩人來源、譯介鏈與作品名稱交叉命題。"},
+{year:"115",school:"國立彰化高中",type:"heritage",question:"依彰化高中115原題與官方答案，下列哪一項不屬於《保護非物質文化遺產公約》列舉的核心領域？",options:["口頭傳說與表述","有關宗教與哲學的知識和實踐","表演藝術","社會風俗、儀式與節慶"],answer:1,explanation:"官方第16題答案為②。公約列舉領域包括口頭傳統與表述、表演藝術、社會實踐／儀式／節慶、關於自然與宇宙的知識與實踐，以及傳統手工藝技能；原選項將其改成『宗教與哲學』。"}
+);
