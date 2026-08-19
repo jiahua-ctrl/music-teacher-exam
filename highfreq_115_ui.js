@@ -14,7 +14,7 @@
     }else waitForData(cb,0);
   }
   function waitForData(cb,n){
-    if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){setTimeout(cb,80);return;}
+    if(Array.isArray(window.EXAM_HIGH_FREQUENCY)&&window.EXAM_HIGH_FREQUENCY.length){setTimeout(cb,120);return;}
     if(n>30)return;
     setTimeout(function(){waitForData(cb,n+1)},100);
   }
@@ -22,8 +22,50 @@
   function ensureStyles(){
     if(document.getElementById('hf115Style'))return;
     var st=document.createElement('style');st.id='hf115Style';st.textContent=`
-      .hf115-wrap{display:grid;gap:14px}.hf115-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.hf115-btn{border:1px solid rgba(127,127,127,.2);border-radius:16px;padding:14px;text-align:left;background:var(--card,#fff);cursor:pointer}.hf115-btn b{display:block;font-size:1rem;margin-bottom:5px}.hf115-btn small{display:block;opacity:.72;line-height:1.45}.hf115-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.hf115-topic{border:1px solid rgba(127,127,127,.18);border-radius:16px;padding:14px;background:rgba(127,127,127,.04)}.hf115-rank{font-size:.78rem;opacity:.68}.hf115-badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.hf115-badge{font-size:.72rem;border-radius:999px;padding:4px 8px;background:rgba(107,79,163,.12)}.hf115-topic h4{margin:5px 0 8px}.hf115-topic p{margin:7px 0;line-height:1.55}.hf115-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(127,127,127,.25)}.hf115-topic.open .hf115-detail{display:block}.hf115-plan{display:none;margin-top:12px}.hf115-plan.open{display:block}.hf115-step{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(127,127,127,.12)}.hf115-step:last-child{border-bottom:0}.hf115-time{font-weight:700}.hf115-note{font-size:.9rem;opacity:.78}.dark .hf115-btn,.dark .hf115-topic{background:rgba(255,255,255,.04)}
+      .hf115-wrap{display:grid;gap:14px}.hf115-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.hf115-btn{border:1px solid rgba(127,127,127,.2);border-radius:16px;padding:14px;text-align:left;background:var(--card,#fff);cursor:pointer}.hf115-btn b{display:block;font-size:1rem;margin-bottom:5px}.hf115-btn small{display:block;opacity:.72;line-height:1.45}.hf115-btn.primaryish{border-color:rgba(107,79,163,.38);box-shadow:0 5px 16px rgba(107,79,163,.08)}.hf115-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.hf115-topic{border:1px solid rgba(127,127,127,.18);border-radius:16px;padding:14px;background:rgba(127,127,127,.04)}.hf115-rank{font-size:.78rem;opacity:.68}.hf115-badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.hf115-badge{font-size:.72rem;border-radius:999px;padding:4px 8px;background:rgba(107,79,163,.12)}.hf115-topic h4{margin:5px 0 8px}.hf115-topic p{margin:7px 0;line-height:1.55}.hf115-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(127,127,127,.25)}.hf115-topic.open .hf115-detail{display:block}.hf115-plan,.hf115-oral{display:none;margin-top:12px}.hf115-plan.open,.hf115-oral.open{display:block}.hf115-step{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(127,127,127,.12)}.hf115-step:last-child{border-bottom:0}.hf115-time{font-weight:700}.hf115-note{font-size:.9rem;opacity:.78}.hf115-oral-card{padding:16px;border:1px solid rgba(127,127,127,.18);border-radius:16px;background:rgba(127,127,127,.035)}.hf115-timer{font-size:2rem;font-weight:800;letter-spacing:.04em;margin:8px 0}.hf115-oral-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.hf115-answer{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(127,127,127,.25);white-space:pre-wrap;line-height:1.65}.hf115-answer.open{display:block}.dark .hf115-btn,.dark .hf115-topic,.dark .hf115-oral-card{background:rgba(255,255,255,.04)}
     `;document.head.appendChild(st);
+  }
+  function hfText(x){return [x.topic].concat(x.mustKnow||[]).join(' ').toLowerCase();}
+  function questionText(q){return [q.topic,q.question,q.explanation,q.source_title,q.exam].filter(Boolean).join(' ').toLowerCase();}
+  function buildHighFreqPool(){
+    var api=window.MusicTeacherExam;if(!api||!Array.isArray(api.questions))return [];
+    var hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12);
+    var tokens=[];hfs.forEach(function(x){
+      [x.topic].concat(x.mustKnow||[]).forEach(function(v){String(v||'').split(/[／—＝、\s]+/).forEach(function(t){if(t&&t.length>=3)tokens.push(t.toLowerCase())})});
+    });
+    tokens=[...new Set(tokens)];
+    var stats=api.loadStats?api.loadStats():{wrong:[],unknown:[]};
+    return api.questions.map(function(q){
+      var txt=questionText(q),matches=tokens.reduce(function(n,t){return n+(txt.includes(t)?1:0)},0);
+      var wrong=(stats.wrong||[]).includes(q.id),unknown=(stats.unknown||[]).includes(q.id);
+      var bonus=(unknown?12:wrong?9:0)+matches*2+(String(q.year)==='115'?2:0);
+      return {q:q,score:bonus};
+    }).filter(function(x){return x.score>0}).sort(function(a,b){return b.score-a.score||Math.random()-.5}).map(function(x){return x.q});
+  }
+  function oralPool(){
+    var arr=Array.isArray(window.EXTRA_TERMS)?window.EXTRA_TERMS:[];
+    var hfs=(window.EXAM_HIGH_FREQUENCY||[]).slice(0,12),keys=[];
+    hfs.forEach(function(x){keys.push(String(x.topic||''));(x.mustKnow||[]).forEach(function(k){keys.push(String(k))})});
+    keys=keys.map(function(k){return k.toLowerCase()}).filter(function(k){return k.length>=3});
+    var found=arr.filter(function(t){var txt=[t.term,t.definition,t.answer,(t.keywords||[]).join(' ')].filter(Boolean).join(' ').toLowerCase();return keys.some(function(k){return txt.includes(k)})});
+    if(found.length)return found;
+    return hfs.map(function(x){return {term:x.topic,definition:(x.mustKnow||[]).join(' → '),answer:x.answerFrame,confusion:x.trap}});
+  }
+  var oralTimer=null,oralLeft=60,currentOral=null;
+  function stopTimer(){if(oralTimer){clearInterval(oralTimer);oralTimer=null}}
+  function drawOral(sec){
+    stopTimer();oralLeft=60;var pool=oralPool();currentOral=pool[Math.floor(Math.random()*pool.length)]||null;
+    var name=sec.querySelector('#hf115OralName'),timer=sec.querySelector('#hf115Timer'),ans=sec.querySelector('#hf115OralAnswer');
+    if(name)name.textContent=currentOral?currentOral.term:'目前尚無可練習名詞';if(timer)timer.textContent='60';if(ans){ans.classList.remove('open');ans.innerHTML='';}
+  }
+  function revealOral(sec){
+    if(!currentOral)return;stopTimer();var ans=sec.querySelector('#hf115OralAnswer');
+    var body=currentOral.answer||currentOral.definition||'';var trap=currentOral.confusion?`\n\n👹 易錯：${currentOral.confusion}`:'';
+    ans.textContent=`✍️ 參考擬答\n${body}${trap}`;ans.classList.add('open');
+  }
+  function startOralTimer(sec){
+    stopTimer();oralLeft=60;var timer=sec.querySelector('#hf115Timer');if(timer)timer.textContent=oralLeft;
+    oralTimer=setInterval(function(){oralLeft--;if(timer)timer.textContent=Math.max(0,oralLeft);if(oralLeft<=0){stopTimer();revealOral(sec)}},1000);
   }
   function render(){
     var home=document.getElementById('homeView');if(!home||document.getElementById('hf115Section'))return;
@@ -34,10 +76,13 @@
       <p class="muted">不是再多讀一份題庫，而是先抓「跨考區重複＋容易混淆＋能寫成名詞／申論」的核心。</p>
       <div class="hf115-wrap">
         <div class="hf115-actions">
+          <button class="hf115-btn primaryish" id="hf115QuizBtn"><b>🎯 開始高頻10題</b><small>優先抽跨考區高頻＋曾答錯／不知道</small></button>
+          <button class="hf115-btn primaryish" id="hf115OralBtn"><b>🎙️ 60秒名詞口試</b><small>先自己說，再看完整擬答與易錯提醒</small></button>
           <button class="hf115-btn" id="hf115TopBtn"><b>🔥 先看必讀高頻</b><small>依★★★★★、★★★★☆與跨考區重複排序</small></button>
           <button class="hf115-btn" id="hf115SprintBtn"><b>⏱️ 考前只剩30分鐘</b><small>錯題急救 → 知識網 → 易混淆 → 名詞輸出</small></button>
         </div>
         <div id="hf115Plan" class="hf115-plan"></div>
+        <div id="hf115Oral" class="hf115-oral"><div class="hf115-oral-card"><span class="eyebrow">60秒名詞輸出</span><h3 id="hf115OralName"></h3><div class="hf115-timer"><span id="hf115Timer">60</span><small style="font-size:.8rem;font-weight:400"> 秒</small></div><p class="muted">建議結構：一句定義 → Who／When／Where → 核心特色 → 代表人物／作品 → 意義／辨析。</p><div class="hf115-oral-actions"><button class="primary" id="hf115StartOral">▶ 開始60秒</button><button class="ghost" id="hf115RevealOral">👀 看擬答</button><button class="ghost" id="hf115NextOral">↻ 換一題</button></div><div id="hf115OralAnswer" class="hf115-answer"></div></div></div>
         <div id="hf115Grid" class="hf115-grid"></div>
       </div>`;
     var weakness=home.querySelector('#weaknessList')?.closest('.section-card');
@@ -50,13 +95,21 @@
     }).join('');
     grid.querySelectorAll('.hf115-topic').forEach(function(card){var toggle=function(){card.classList.toggle('open')};card.addEventListener('click',toggle);card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}})});
 
-    var plan=sec.querySelector('#hf115Plan');
+    var plan=sec.querySelector('#hf115Plan'),oral=sec.querySelector('#hf115Oral');
     sec.querySelector('#hf115SprintBtn').addEventListener('click',function(){
       var cfg=window.EXAM_SPRINT_CONFIG||{};var steps=cfg.thirtyMinutePlan||[];
       plan.innerHTML=`<div class="feedback-title">⏱️ ${esc(cfg.title||'30分鐘衝刺')}</div><p class="muted">${esc(cfg.description||'')}</p>${steps.map(function(s){return `<div class="hf115-step"><div class="hf115-time">${esc(s.minutes)}</div><div><b>${esc(s.task)}</b><div class="hf115-note">${esc(s.detail)}</div></div></div>`}).join('')}`;
       plan.classList.toggle('open');
     });
-    sec.querySelector('#hf115TopBtn').addEventListener('click',function(){sec.querySelector('#hf115Grid').scrollIntoView({behavior:'smooth',block:'start'})});
+    sec.querySelector('#hf115TopBtn').addEventListener('click',function(){grid.scrollIntoView({behavior:'smooth',block:'start'})});
+    sec.querySelector('#hf115QuizBtn').addEventListener('click',function(){
+      var pool=buildHighFreqPool();var api=window.MusicTeacherExam;
+      if(api&&api.startCustomQuiz&&pool.length){api.startCustomQuiz(pool,'🔥高頻衝刺',10)}else alert('高頻題庫正在整理中，請重新整理後再試一次。');
+    });
+    sec.querySelector('#hf115OralBtn').addEventListener('click',function(){oral.classList.toggle('open');if(oral.classList.contains('open')){drawOral(sec);oral.scrollIntoView({behavior:'smooth',block:'center'})}else stopTimer()});
+    sec.querySelector('#hf115StartOral').addEventListener('click',function(){startOralTimer(sec)});
+    sec.querySelector('#hf115RevealOral').addEventListener('click',function(){revealOral(sec)});
+    sec.querySelector('#hf115NextOral').addEventListener('click',function(){drawOral(sec)});
   }
   function boot(){loadData(render)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
