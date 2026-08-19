@@ -19,6 +19,7 @@
     loadScript('home-layering.js?v=20260819b','home-layering');
     loadScript('mobile-home.js?v=20260819a','mobile-home');
     loadScript('score-hierarchy.js?v=20260819a','score-hierarchy');
+    loadScript('term-mastery-ladder.js?v=20260819a','term-mastery-ladder');
   }
   loadBootTools();
   function mount(){
