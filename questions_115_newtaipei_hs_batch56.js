@@ -1,0 +1,14 @@
+// 115 新北市公立高中聯甄｜第5–20題核心概念反向練習
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"新北市公立高中聯甄",type:"taiwan",question:"歌曲〈美麗島〉的詞、曲作者組合為何？",options:["向陽／馬兆駿","瘂弦／胡德夫","楊祖珺／李泰祥","陳秀喜／李雙澤"],answer:3,explanation:"〈美麗島〉由詩人陳秀喜作詞、李雙澤作曲。教甄常把1970年代臺灣現代民歌運動人物交叉配對。"},
+{year:"115",school:"新北市公立高中聯甄",type:"instrument",question:"依中國傳統八音分類，下列哪一組配對錯誤？",options:["敔、柷－木","篪、塤－土","搏拊、堂鼓－革","蘆笙、葫蘆絲－匏"],answer:1,explanation:"塤屬土，但篪是竹製吹管，應屬竹類，因此『篪、塤－土』錯誤。八音為金、石、土、革、絲、木、匏、竹。"},
+{year:"115",school:"新北市公立高中聯甄",type:"world",question:"非洲樂器與Hornbostel–Sachs發音分類何者錯誤？",options:["Balafon－體鳴","Djembe－膜鳴","Kora－弦鳴","Mbira－氣鳴"],answer:3,explanation:"Mbira以金屬簧片本體振動發聲，屬體鳴樂器（idiophone），不是氣鳴。"},
+{year:"115",school:"新北市公立高中聯甄",type:"world",question:"下列何者不是印度古典音樂的核心概念？",options:["Raga","Tala","Swaras","Slendro"],answer:3,explanation:"Raga為旋律框架、Tala為節奏週期、Swaras為音級；Slendro則是印尼甘美朗常見音階系統。"},
+{year:"115",school:"新北市公立高中聯甄",type:"world",question:"關於日本歌舞伎Kabuki，下列何者正確？",options:["現代仍以男女演員共同扮演所有角色為核心傳統","為UNESCO非物質文化遺產，隈取臉譜可呈現角色性格","以尺八作為所有劇目的固定主奏樂器","起源即為專供貴族觀賞的極簡儀式"],answer:1,explanation:"歌舞伎是日本重要傳統劇場藝術，列入UNESCO非物質文化遺產；隈取是辨識度很高的化妝形式。傳統成熟期舞臺角色主要由男性演員擔任。"},
+{year:"115",school:"新北市公立高中聯甄",type:"modern",question:"若要介紹Minimalism在電影配樂中的反覆分解和弦、琶音與時間堆疊，下列哪組最具代表性？",options:["Hans Zimmer－Dune","Tan Dun－Crouching Tiger, Hidden Dragon","Philip Glass－The Hours","Ryuichi Sakamoto－The Last Emperor"],answer:2,explanation:"Philip Glass是美國極簡音樂重要代表，《The Hours》配樂大量運用反覆型、琶音與漸變堆疊。"},
+{year:"115",school:"新北市公立高中聯甄",type:"popular",question:"關於Hip-hop發展，下列何者最需要修正？",options:["Hip-hop於1970年代紐約Bronx形成，而非以Harlem為唯一誕生地","DJ Kool Herc與breakbeat發展密切相關","Public Enemy以政治與社會議題著稱","El Général的作品與阿拉伯之春突尼西亞抗議脈絡相關"],answer:0,explanation:"原卷以『1970年代紐約哈林區，由非裔創作歌手發起』設陷阱。Hip-hop起源通常定位於1970年代Bronx街區文化，DJ、MC、breaking、graffiti共同發展。"},
+{year:"115",school:"新北市公立高中聯甄",type:"popular",question:"下列流行音樂發展順序何者較合理？",options:["Country→R&B→Rock→Heavy Metal","Country→R&B→Heavy Metal→Rock","R&B→Country→Rock→Heavy Metal","R&B→Country→Rock→Disco"],answer:0,explanation:"以主要風格形成期概略排序：鄉村音樂與R&B先於1950年代Rock and Roll，而Heavy Metal於1960年代末至1970年代形成。"},
+{year:"115",school:"新北市公立高中聯甄",type:"popular",question:"關於Bobby McFerrin〈Don't Worry, Be Happy〉，下列何者錯誤？",options:["由Bobby McFerrin創作演唱","標題靈感與Meher Baba名言相關","收錄於Simple Pleasures","獲1989奧斯卡最佳原創歌曲"],answer:3,explanation:"歌曲獲得Grammy年度歌曲、年度唱片等重要獎項，但不是1989奧斯卡最佳原創歌曲。"},
+{year:"115",school:"新北市公立高中聯甄",type:"popular",question:"哪位流行歌手成立Born This Way Foundation，長期關注青年心理健康、反霸凌與平權？",options:["Beyoncé","Taylor Swift","Lady Gaga","Adele"],answer:2,explanation:"Lady Gaga與母親共同成立Born This Way Foundation；此線索常與其平權倡議、流行音樂作品一起命題。"}
+);
