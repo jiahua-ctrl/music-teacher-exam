@@ -8,3 +8,4 @@ window.EXTRA_QUESTIONS.push(
 {year:"115",school:"高雄市立高雄高級中學",category:"Jazz人物",question:"『King of Swing』最常與哪位音樂家連結？",options:["Louis Armstrong","Benny Goodman","Miles Davis","John Coltrane"],answer:1,explanation:"Benny Goodman常被稱為King of Swing；Louis Armstrong則是爵士小號、歌唱與即興史上的核心人物。"},
 {year:"115",school:"高雄市立高雄高級中學",category:"電影配樂／跨界",question:"下列何者最能說明『電影配樂可以是音樂跨界的一種，但兩者不完全相同』？",options:["所有跨界作品都必須有電影畫面","電影配樂通常回應影像與敘事；音樂跨界還可與舞蹈、科技、視覺藝術等媒介合作","電影配樂只使用管弦樂，跨界只使用電子音樂","兩者完全是同義詞"],answer:1,explanation:"音樂跨界是較大的概念；電影配樂是音樂與電影／影像結合的一種特定實踐。"}
 );
+(function(){var s=document.createElement('script');s.src='questions_115_kaohsiung_hs_batch64.js';document.head.appendChild(s);})();
