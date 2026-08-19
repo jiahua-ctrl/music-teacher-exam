@@ -14,6 +14,7 @@
     loadScript('daily-mission.js?v=20260819b','daily-mission');
     loadScript('learning-history.js?v=20260819a','learning-history');
     loadScript('weekly-summary.js?v=20260819a','weekly-summary');
+    loadScript('weekly-review.js?v=20260819a','weekly-review');
   }
   loadBootTools();
   function mount(){
