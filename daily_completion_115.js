@@ -15,7 +15,8 @@
  function patch(){var api=window.MusicTeacherExam;if(api&&api.startCustomQuiz&&!api.__dailyDonePatched){var orig=api.startCustomQuiz;api.startCustomQuiz=function(pool,label,limit){if(String(label||'').includes('高頻'))mark('quiz');return orig.call(api,pool,label,limit)};api.__dailyDonePatched=true}
  var battle=document.getElementById('hf115BattleBtn');if(battle&&!battle.dataset.dailyDone){battle.dataset.dailyDone='1';battle.addEventListener('click',function(){mark('weak')})}
  var grid=document.getElementById('selfStudy115Btn');if(grid&&!grid.dataset.dailyDone){grid.dataset.dailyDone='1';grid.addEventListener('click',function(){mark('grid')})}}
- function boot(){var n=0,t=setInterval(function(){n++;patch();if(render()&&n>3)clearInterval(t);if(n>80)clearInterval(t)},180)}
+ function loadWeekly(){if(document.querySelector('script[data-weekly-rhythm115]'))return;var s=document.createElement('script');s.src='weekly_learning_rhythm_115.js?v=20260819';s.dataset.weeklyRhythm115='1';document.head.appendChild(s)}
+ function boot(){var n=0,t=setInterval(function(){n++;patch();if(render()&&n>3){loadWeekly();clearInterval(t)}if(n>80)clearInterval(t)},180)}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
  window.DailyCompletion115={load:load,mark:mark,progress:progress,streak:streak,render:render};
 })();
