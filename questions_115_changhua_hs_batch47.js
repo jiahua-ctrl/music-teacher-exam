@@ -1,0 +1,10 @@
+// 115 國立彰化高中｜可由文字可靠核對之高鑑別概念題
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"國立彰化高中",type:"concept",question:"浪漫主義『War of the Romantics』中，Liszt與Wagner常被視為哪一陣營的重要代表，而Brahms通常不被列入？",options:["New German School（新德意志樂派）","Second Viennese School","Mannheim School","Notre Dame School"],answer:0,explanation:"New German School常與Liszt、Wagner及標題音樂、未來音樂等觀念相關；Brahms與較保守的絕對音樂陣營常被放在論戰另一側。"},
+{year:"115",school:"國立彰化高中",type:"concept",question:"奏鳴曲式分析中，P、TR、S最常分別表示什麼？",options:["Primary theme、Transition、Secondary theme","Prelude、Trio、Scherzo","Principal key、Tonic return、Subdominant","Phrase、Transformation、Sequence"],answer:0,explanation:"在現代奏鳴曲式分析語彙中，P=Primary theme/theme zone，TR=Transition，S=Secondary theme/theme zone。"},
+{year:"115",school:"國立彰化高中",type:"trap",question:"下列何者最能區分heterophony與homophony？",options:["heterophony讓同一基本旋律的不同變體同時出現；homophony通常有主旋律與和聲支持","heterophony一定沒有節奏，homophony一定有節奏","heterophony只存在亞洲音樂，homophony只存在西洋音樂","heterophony等同嚴格卡農"],answer:0,explanation:"異音複音的辨識核心是『同一旋律、多個同步變體』；不能用地域或是否有節奏來定義。"},
+{year:"115",school:"國立彰化高中",type:"trap",question:"關於Berg《Wozzeck》，何者正確？",options:["以自由無調性語言結合嚴密傳統形式，是表現主義歌劇代表","是Schoenberg十二音歌劇","是Wagner晚期樂劇，首演於19世紀","以義大利美聲詠嘆調為唯一結構"],answer:0,explanation:"《Wozzeck》由Alban Berg創作，1925首演；其重要特色是表現主義、自由無調性與passacaglia、invention等傳統形式並存。"},
+{year:"115",school:"國立彰化高中",type:"history",question:"第一次世界大戰後，哪一組最能反映歐洲音樂中『反晚期浪漫、尋求清晰秩序與社會功能』的傾向？",options:["Neoclassicism與Gebrauchsmusik","Ars Nova與Organum","Bel canto與Grand Opera","Spectralism與Minimalism"],answer:0,explanation:"1920年代的新古典主義、新即物主義與Gebrauchsmusik，都可放在一戰後反浪漫、重新思考秩序與社會功能的脈絡理解。"},
+{year:"115",school:"國立彰化高中",type:"taiwan",question:"歌仔戲的發展順序何者最合理？",options:["宜蘭歌仔／民間說唱→落地掃→內外臺→廣播電影電視→現代劇場","電視歌仔戲→落地掃→宜蘭歌仔→南管","京劇→崑曲→歌仔戲→北管","現代劇場→落地掃→廣播→宜蘭歌仔"],answer:0,explanation:"歌仔戲是臺灣本土生成的活態戲曲，從民間歌仔與落地掃逐步舞臺化，之後又適應廣播、電影、電視與現代劇場。"}
+);
