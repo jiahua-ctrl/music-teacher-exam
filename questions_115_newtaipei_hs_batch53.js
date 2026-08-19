@@ -1,0 +1,10 @@
+// 115 新北市公立高中聯甄｜高鑑別延伸題（依原卷核心申論與高中音樂專業範圍整理）
+window.EXTRA_QUESTIONS = window.EXTRA_QUESTIONS || [];
+window.EXTRA_QUESTIONS.push(
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"pedagogy",question:"關於Dalcroze Eurhythmics，下列何者最符合其核心理念？",options:["以固定唱名反覆視唱為唯一核心","透過身體動作將節奏、速度、力度與樂句等音樂概念內化","以木琴即興取代所有讀譜活動","以歷史講述建立學生的音樂風格知識"],answer:1,explanation:"Eurhythmics的核心是以身體作為音樂理解媒介，透過走動、停頓、方向、重量與空間等動作回應節奏、速度、力度、拍感與樂句。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"pedagogy",question:"Dalcroze教學常見的三個互補面向，何者最適當？",options:["Eurhythmics、Solfège、Improvisation","Movement、Recorder、Composition","Solfège、Harmony、Counterpoint","Listening、History、Conducting"],answer:0,explanation:"Dalcroze常以Eurhythmics（律動）、Solfège（視唱／聽覺訓練）與Improvisation（即興）相互配合。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"conductor",question:"下列哪一組與德國指揮家Kurt Masur的生涯關聯最密切？",options:["Leipzig Gewandhaus Orchestra與New York Philharmonic","Berlin Philharmonic與Chicago Symphony Orchestra","Vienna Philharmonic與Boston Symphony Orchestra","Concertgebouw Orchestra與Philadelphia Orchestra"],answer:0,explanation:"Masur長期與Leipzig Gewandhaus Orchestra關係密切，後來亦曾任New York Philharmonic音樂總監。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"history",question:"Kurt Masur除了指揮生涯外，常因哪一項1989年的歷史脈絡被提及？",options:["參與萊比錫和平呼籲與東德和平示威脈絡","創立Bayreuth Festival","首演Stravinsky《The Rite of Spring》","建立Darmstadt Summer Courses"],answer:0,explanation:"1989年東德政治緊張期間，Masur參與萊比錫呼籲和平、避免暴力的公共行動，因此常被討論為藝術家公共角色的案例。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"education",question:"SEL社會情緒學習常見的五大核心能力中，不包括下列何者？",options:["Self-awareness","Self-management","Social awareness","Absolute pitch"],answer:3,explanation:"SEL核心常整理為自我覺察、自我管理、社會覺察、人際關係技巧與負責任決策；絕對音感是音樂能力，不是SEL核心能力。"},
+{year:"115",school:"新北市公立高級中等學校教師聯合甄選",type:"education",question:"若將SEL融入高中音樂欣賞課，下列哪一種設計最能同時維持音樂學科性與社會情緒學習？",options:["只問學生『你今天心情好嗎？』","要求學生公開分享最痛苦的私人經驗","要求學生用音色、力度、節奏等音樂證據說明情緒感受，並比較不同同學的解讀","播放放鬆音樂後讓全班安靜休息"],answer:2,explanation:"高品質SEL融入不應脫離音樂學科。『我感覺…因為我聽到…』能把情緒覺察、觀點理解與音樂證據分析結合。"}
+);
