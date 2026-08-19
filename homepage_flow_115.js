@@ -15,6 +15,7 @@
   function openPane(name){['Start','Weak','Advanced'].forEach(function(n){qs('#hf115Guide'+n)?.classList.remove('open')});qs('#hf115Guide'+name.charAt(0).toUpperCase()+name.slice(1))?.classList.add('open');if(name==='weak')qs('#hf115GuideWeakText').textContent=diagnosisText()}
   g.querySelectorAll('[data-pane]').forEach(function(b){b.onclick=function(){openPane(b.dataset.pane)}});
   qs('#hf115GuideQuiz').onclick=function(){clickId('hf115QuizBtn')};qs('#hf115GuidePK').onclick=function(){clickId('hf115BattleBtn')};qs('#hf115GuideGrid').onclick=function(){if(!clickId('selfStudy115Btn')){alert('先完成幾組易混淆PK，系統才能依弱點產生九宮格。')}};qs('#hf115GuideOral').onclick=function(){clickId('hf115OralBtn')};qs('#hf115GuideSprint').onclick=function(){clickId('hf115SprintBtn')};qs('#hf115GuideTop').onclick=function(){clickId('hf115TopBtn')};qs('#hf115GuidePortfolio').onclick=function(){if(!clickId('ss115PortfolioBtn'))alert('作品集正在載入，稍後再試一次。')};qs('#hf115MoreTools').onclick=function(){actions.classList.toggle('open');this.querySelector('b').textContent=actions.classList.contains('open')?'收起全部工具':'展開全部工具'};
+  if(!document.querySelector('script[data-dailyrec115]')){var s=document.createElement('script');s.src='daily_recommendation_115.js?v=20260819';s.dataset.dailyrec115='1';document.head.appendChild(s)}
   return true}
  function boot(){var n=0,t=setInterval(function(){n++;if(build())clearInterval(t);if(n>80)clearInterval(t)},150)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
