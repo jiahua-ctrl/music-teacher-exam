@@ -7,6 +7,8 @@
    window.DailyExamMission?.render?.();
    window.LearningProgress?.render?.();
    window.StudyNotesLibrary?.render?.();
+   const pp=document.getElementById('personalPriorityRadar');
+   if(pp)window.PersonalExamPriority?.render?.(pp.dataset.level||'');
    window.HomeCategoryOrganizer?.apply?.();
    window.dispatchEvent(new CustomEvent('musicExamLearningSynced',{detail:{reason,at:Date.now()}}));
   },80)
