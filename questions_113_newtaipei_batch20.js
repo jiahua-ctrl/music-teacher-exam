@@ -20,3 +20,12 @@ window.EXTRA_QUESTIONS.push(
 {year:113,subject:'高中音樂',topic:'電影配樂',level:'👹 魔王',question:'下列電影配樂作曲家與作品配對何者錯誤？',options:['Henry Mancini—Breakfast at Tiffany’s','Ennio Morricone—The Legend of 1900','John Williams—Schindler’s List','Arnold Schoenberg—The Book Thief'],answer:3,explanation:'《The Book Thief》電影配樂由 John Williams 創作。',source:'113 新北市高中教師聯合甄選音樂科第25題考點'},
 {year:113,subject:'高中音樂',topic:'音樂教育',level:'👹 魔王',question:'Gordon 音樂學習理論中的「音樂性向」較接近下列何者？',options:['只等同學生目前的演奏成績','對音樂學習潛能的估測，並可透過適當工具評量','完全固定且不受發展影響','只測絕對音感'],answer:1,explanation:'Music aptitude 著重音樂學習潛能，不等同 achievement（已學得的成就）。',source:'113 新北市高中教師聯合甄選音樂科相關音樂教育考點'}
 );
+
+// 115跨考區高頻衝刺首頁介面（獨立模組，不改原答題核心）
+(function(){
+  if(document.querySelector('script[data-hf115-ui]')) return;
+  var s=document.createElement('script');
+  s.src='highfreq_115_ui.js?v=20260819';
+  s.dataset.hf115Ui='1';
+  document.head.appendChild(s);
+})();
