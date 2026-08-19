@@ -18,6 +18,7 @@
     loadScript('weekly-review.js?v=20260819a','weekly-review');
     loadScript('home-layering.js?v=20260819b','home-layering');
     loadScript('mobile-home.js?v=20260819a','mobile-home');
+    loadScript('score-hierarchy.js?v=20260819a','score-hierarchy');
   }
   loadBootTools();
   function mount(){
