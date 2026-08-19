@@ -15,5 +15,6 @@
  function currentPair(){var h=document.querySelector('#selfStudy115 h3');return h?String(h.textContent).replace(/^🧩\s*/,'').trim():''}
  function enhance(){var box=document.getElementById('selfStudy115');if(!box)return false;var w=box.querySelector('[data-mission="write"]'),c=box.querySelector('[data-mission="create"]');if(w&&!w.dataset.interactive){w.dataset.interactive='1';w.addEventListener('click',function(e){if(e.__ss115)return;e.preventDefault();e.stopImmediatePropagation();openWrite(currentPair())},true)}if(c&&!c.dataset.interactive){c.dataset.interactive='1';c.addEventListener('click',function(e){if(e.__ss115)return;e.preventDefault();e.stopImmediatePropagation();openCreate(currentPair())},true)}return !!(w&&c)}
  var obs=new MutationObserver(function(){enhance()});obs.observe(document.documentElement,{childList:true,subtree:true});enhance();
+ if(!document.querySelector('script[data-selfstudy115-i2]')){var s=document.createElement('script');s.src='selfstudy_interactive2_115.js?v=20260819';s.dataset.selfstudy115I2='1';document.head.appendChild(s)}
  window.SelfStudyInteractive115={load:load,openWrite:openWrite,openCreate:openCreate};
 })();
