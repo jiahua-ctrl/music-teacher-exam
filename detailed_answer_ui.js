@@ -7,6 +7,7 @@
     loadScript('latest_loader_bootstrap.js?v=20260818aa','latest-loader');
     loadScript('term-learning.js?v=20260818d','term-learning');
     loadScript('bad-question.js?v=20260818a','bad-question');
+    loadScript('nonchoice-center.js?v=20260819a','nonchoice-center');
   }
   loadBootTools();
   function mount(){
