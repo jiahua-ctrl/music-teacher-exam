@@ -8,6 +8,7 @@
     loadScript('term-learning.js?v=20260818d','term-learning');
     loadScript('bad-question.js?v=20260818a','bad-question');
     loadScript('nonchoice-center.js?v=20260819a','nonchoice-center');
+    loadScript('nonchoice-progress.js?v=20260819a','nonchoice-progress');
   }
   loadBootTools();
   function mount(){
