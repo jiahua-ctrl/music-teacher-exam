@@ -6,10 +6,4 @@ window.EXTRA_TERMS.push(
 {term:"Gesamtkunstwerk（整體藝術作品）",year:"115",school:"高雄國中聯甄",rarity:"🔥浪漫樂派",definition:"Richard Wagner的重要藝術理念，主張音樂、詩歌、戲劇、舞台、視覺等元素在樂劇中形成整合的藝術整體，而非彼此附屬。",keywords:["Richard Wagner","music drama","Leitmotif","poetry","drama","stage"],confusion:"不要只翻成『綜合藝術』就結束；考場應連到Wagner、樂劇、主導動機、戲劇與音樂整合。",teaching:"『一個故事五個設計師』：小組分成音樂、台詞、舞台、燈光、動作角色，為同一30秒情境設計素材，再討論若其中一項與其他元素衝突，整體敘事如何受影響。",answer:"【定義】Gesamtkunstwerk常譯為『整體藝術作品』，與19世紀德國作曲家Richard Wagner的藝術理念密切相關。\n\n【理念】Wagner認為歌劇／樂劇不應只是歌唱加上舞台，而應讓詩歌、戲劇、音樂、舞台美術、動作與視覺等共同服務於整體戲劇表達。\n\n【音樂特色】其樂劇常運用Leitmotif（主導動機）、連續性的音樂結構、大型管弦樂與高度半音化和聲，使音樂參與人物、事件與心理的敘事。\n\n【意義】此理念對後來歌劇、電影配樂、跨媒體藝術及現代舞台製作均具有深遠影響。"},
 {term:"《梆笛協奏曲》",year:"115",school:"高雄國中聯甄",rarity:"🔥跨考區",definition:"臺灣作曲家馬水龍的重要代表作，以梆笛為獨奏樂器與西方管弦樂團協奏，呈現傳統中國器樂音色與現代管弦樂語法的融合。",keywords:["馬水龍","1981","bangdi","concerto","Taiwan","orchestra"],confusion:"不要與蕭泰然、江文也、郭芝苑作品互換；『梆笛＋西方管弦樂團』是最重要辨識線索。",teaching:"『聲音跨界談判』：學生分成梆笛組與管弦樂組，先列各自音色／演奏特色，再決定若兩者要共同演奏，哪些元素保留、哪些需調整，最後連回作品的文化融合。",answer:"【人物與作品】《梆笛協奏曲》為臺灣作曲家馬水龍的重要作品，1981年由新日本愛樂交響樂團首演。\n\n【特色】作品以音色明亮、穿透力強的梆笛作為獨奏樂器，與西方大型管弦樂團形成協奏關係，結合中國傳統器樂語彙與西方協奏曲、配器及結構觀念。\n\n【意義】此作象徵戰後臺灣現代作曲家對本土／中華音樂素材與西方現代創作技法整合的探索，亦長期具有高度公共辨識度。\n\n【教甄關鍵字】馬水龍、梆笛、管弦樂團、1981、跨文化融合。"}
 );
-
-// 下一站：115 高科實中國中部全非選題詳細擬答
-(function(){
-  var s=document.createElement('script');
-  s.src='essay_115_nkust_experimental_batch.js';
-  document.head.appendChild(s);
-})();
+(function(){var a=document.createElement('script');a.src='essay_115_nkust_experimental_batch.js';document.head.appendChild(a);var b=document.createElement('script');b.src='terms_115_kaohsiung_hs_batch51.js';document.head.appendChild(b);})();
