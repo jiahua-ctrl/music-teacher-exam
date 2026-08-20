@@ -72,7 +72,7 @@
       const sourced=coreQuestions.filter(q=>q.source_type&&q.source_type!=='自編練習').length;
       status.textContent=`目前 ${coreQuestions.length} 題選擇題＋${coreTerms.length} 題名詞解釋＋${coreEssays.length} 題申論／試教挑戰，其中 ${sourced} 題選擇題具近年考點來源標示。`;
     }
-    const yearEl=document.getElementById('yearFilter'),topicEl=document.getElementById('topicFilter');
+    const yearEl=document.getElementById('yearFilter'),topicEl=document.getElementById('topicFilter'),subjectEl=document.getElementById('subjectFilter');
     if(yearEl&&topicEl){
       const y=yearEl.value,t=topicEl.value;
       const years=[...new Set(coreQuestions.map(q=>q.year).filter(Boolean))].sort((a,b)=>Number(b)-Number(a));
@@ -81,7 +81,12 @@
       topicEl.innerHTML='<option value="">全部主題</option>'+topics.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
       if(years.includes(y))yearEl.value=y;if(topics.includes(t))topicEl.value=t;
     }
-    const count=document.getElementById('filterCount');if(count)count.textContent=`目前條件可練習 ${coreQuestions.length} 題；可再用年度／學段／主題縮小範圍。`;
+    const count=document.getElementById('filterCount');
+    if(count){
+      const y=yearEl?.value||'',s=subjectEl?.value||'',t=topicEl?.value||'';
+      const n=coreQuestions.filter(q=>(!y||String(q.year||'')===y)&&(!s||q.subject===s)&&(!t||q.topic===t)).length;
+      count.textContent=`目前條件可練習 ${n} 題。`;
+    }
   }
 
   function refresh(reason='lazy'){
