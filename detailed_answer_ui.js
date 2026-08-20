@@ -5,6 +5,7 @@
     loadScript('navigation_state.js?v=20260818aa','navigation-state');
     loadScript('home_organizer.js?v=20260818aa','home-organizer');
     loadScript('latest_loader_bootstrap.js?v=20260818aa','latest-loader');
+    loadScript('term_content_enrichment_115.js?v=20260820','term-content-enrichment');
     loadScript('term-learning.js?v=20260818d','term-learning');
     loadScript('term-ux-fix.js?v=20260819a','term-ux-fix');
     loadScript('bad-question.js?v=20260818a','bad-question');
