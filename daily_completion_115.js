@@ -5,6 +5,7 @@
  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{days:{}}}catch(e){return{days:{}}}}
  function save(s){localStorage.setItem(KEY,JSON.stringify(s||{days:{}}))}
  function today(){var d=new Date(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return d.getFullYear()+'-'+m+'-'+day}
+ function dayStart(){var d=new Date();d.setHours(0,0,0,0);return d.getTime()}
  function ensure(){var s=load();s.days=s.days||{};s.days[today()]=s.days[today()]||{quiz:false,weak:false,grid:false,manual:false,updatedAt:Date.now()};return s}
  function mark(type){var s=ensure();s.days[today()][type]=true;s.days[today()].updatedAt=Date.now();save(s);render()}
  function dayDone(x){return !!(x&&(x.manual||(x.quiz&&(x.weak||x.grid))))}
@@ -14,9 +15,10 @@
  var rec=document.getElementById('hf115DailyRec');if(rec)rec.after(box);else host.insertBefore(box,host.firstChild);var b=document.getElementById('hf115ManualDone');if(b)b.onclick=function(){mark('manual')};return true}
  function patchQuiz(){var api=window.MusicTeacherExam;if(api&&api.startCustomQuiz&&!api.__dailyDonePatched){var orig=api.startCustomQuiz;api.startCustomQuiz=function(pool,label,limit){if(String(label||'').includes('高頻'))sessionStorage.setItem(PENDING,'1');return orig.call(api,pool,label,limit)};api.__dailyDonePatched=true}}
  function detectQuizFinish(){if(sessionStorage.getItem(PENDING)==='1'&&document.getElementById('resultView')?.classList.contains('active')){sessionStorage.removeItem(PENDING);mark('quiz')}}
- function patchWeak(){['hf115ConfusedBtn','hf115MasteredBtn'].forEach(function(id){var b=document.getElementById(id);if(b&&!b.dataset.dailyDone){b.dataset.dailyDone='1';b.addEventListener('click',function(){mark('weak')})}});document.querySelectorAll('#selfStudy115 [data-mission]').forEach(function(b){if(!b.dataset.dailyDoneMission){b.dataset.dailyDoneMission='1';b.addEventListener('click',function(e){if(e.__ss115||b.textContent.includes('✓'))mark('grid')})}})}
- function loadWeekly(){if(document.querySelector('script[data-weekly-rhythm115]'))return;var s=document.createElement('script');s.src='weekly_learning_rhythm_115.js?v=20260820';s.dataset.weeklyRhythm115='1';document.head.appendChild(s)}
- function boot(){var n=0,t=setInterval(function(){n++;patchQuiz();patchWeak();detectQuizFinish();render();if(n>4)loadWeekly();if(n>100)clearInterval(t)},220)}
+ function hasTodayEvidence(storageKey,mode){var start=dayStart();try{var data=JSON.parse(localStorage.getItem(storageKey)||'{}');if(mode==='confusion')return Object.values(data||{}).some(function(x){return x&&x.updatedAt>=start});if(mode==='mission')return Object.values(data||{}).some(function(x){return x&&x.updatedAt>=start&&Array.isArray(x.done)&&x.done.length>0});return false}catch(e){return false}}
+ function syncPersistedEvidence(){var s=ensure(),x=s.days[today()],changed=false;if(!x.weak&&hasTodayEvidence('musicTeacherExamConfusions115V1','confusion')){x.weak=true;changed=true}if(!x.grid&&hasTodayEvidence('musicTeacherExamSelfStudy115V1','mission')){x.grid=true;changed=true}if(changed){x.updatedAt=Date.now();s.days[today()]=x;save(s)}}
+ function loadWeekly(){if(document.querySelector('script[data-weekly-rhythm115]'))return;var s=document.createElement('script');s.src='weekly_learning_rhythm_115.js?v=20260820c';s.dataset.weeklyRhythm115='1';document.head.appendChild(s)}
+ function boot(){var n=0,t=setInterval(function(){n++;patchQuiz();detectQuizFinish();syncPersistedEvidence();render();if(n>4)loadWeekly();if(n>100)clearInterval(t)},220)}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
- window.DailyCompletion115={load:load,mark:mark,progress:progress,streak:streak,render:render};
+ window.DailyCompletion115={load:load,mark:mark,progress:progress,streak:streak,render:render,sync:syncPersistedEvidence};
 })();
