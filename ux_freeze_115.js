@@ -1,0 +1,19 @@
+// 115 UX 凍結前整理｜只做減量、相容與防呆，不增加學習玩法
+(function(){
+ if(window.__UX_FREEZE115__)return;window.__UX_FREEZE115__=true;
+ function q(s,r){return (r||document).querySelector(s)}
+ function qa(s,r){return [...(r||document).querySelectorAll(s)]}
+ function style(){if(q('#uxFreeze115Style'))return;var s=document.createElement('style');s.id='uxFreeze115Style';s.textContent=`
+.ux115-tools-toggle{width:100%;margin-top:12px}.ux115-legacy-wrap{margin-top:10px}.ux115-legacy-wrap[hidden]{display:none!important}.ux115-reset-note{font-size:.78rem;color:var(--muted);margin:7px 0 0}
+.dark #ss115Modal,.dark #ss115Modal2,.dark #ss115Modal3,.dark #ss115Modal4{color:var(--text)}
+.dark #ss115Modal .card,.dark #ss115Modal2 .card,.dark #ss115Modal3 .card,.dark #ss115Modal4 .card{background:var(--card);border-color:var(--border)}
+#ss115Modal textarea,#ss115Modal input,#ss115Modal select,#ss115Modal2 textarea,#ss115Modal2 input,#ss115Modal2 select,#ss115Modal3 textarea,#ss115Modal3 input,#ss115Modal3 select,#ss115Modal4 textarea,#ss115Modal4 input,#ss115Modal4 select{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:9px}
+@media(max-width:680px){#ss115Modal,#ss115Modal2,#ss115Modal3,#ss115Modal4{align-items:end!important;padding:8px!important}#ss115Modal>.card,#ss115Modal2>.card,#ss115Modal3>.card,#ss115Modal4>.card{width:100%!important;max-height:88dvh!important;border-radius:18px 18px 10px 10px!important;padding:14px!important}#ss115Modal textarea,#ss115Modal2 textarea,#ss115Modal3 textarea,#ss115Modal4 textarea{font-size:16px}.ux115-tools-toggle{min-height:44px}}
+`;document.head.appendChild(s)}
+ function compactLegacy(){var home=q('#homeView');if(!home||q('#ux115LegacyWrap'))return false;var cards=qa(':scope > .section-card',home).filter(function(c){var h=q('h3',c);return h&&['每日任務','國中、高中分開準備','依年度／學段／主題刷題','名詞解釋','申論／試教挑戰'].includes(h.textContent.trim())});if(!cards.length)return false;var wrap=document.createElement('div');wrap.id='ux115LegacyWrap';wrap.className='ux115-legacy-wrap';wrap.hidden=true;cards[0].before(wrap);cards.forEach(function(c){wrap.appendChild(c)});var b=document.createElement('button');b.id='ux115LegacyToggle';b.className='ghost ux115-tools-toggle';b.textContent='展開完整題庫工具';wrap.before(b);b.onclick=function(){wrap.hidden=!wrap.hidden;b.textContent=wrap.hidden?'展開完整題庫工具':'收起完整題庫工具';if(!wrap.hidden)wrap.scrollIntoView({behavior:'smooth',block:'nearest'})};return true}
+ var extraKeys=['musicTeacherExamDaily115V1','musicTeacherExamWeeklyRhythm115V1','musicTeacherExamConfusions115V1','musicTeacherExamSelfStudy115V1','musicTeacherExamSelfStudy115InteractiveV1','musicTeacherExamSelfStudy115Interactive2V1','musicTeacherExamSelfStudy115Interactive3V1','musicTeacherExamSelfStudy115Interactive4V1'];
+ function patchReset(){var b=q('#resetBtn');if(!b||b.dataset.uxFreeze)return false;b.dataset.uxFreeze='1';var note=document.createElement('p');note.className='ux115-reset-note';note.textContent='清除紀錄會一併重設弱點診斷、九宮格與7天學習節奏。';b.closest('.section-title')?.after(note);b.addEventListener('click',function(){setTimeout(function(){extraKeys.forEach(function(k){localStorage.removeItem(k)});sessionStorage.removeItem('musicTeacherExamHighFreqPending115');location.reload()},0)},true);return true}
+ function emptyLabels(){var weak=q('#weaknessList');if(weak&&/作答後會開始分析/.test(weak.textContent))weak.innerHTML='<p class="muted">還沒有作答資料。第一次使用先做上方推薦的10題即可，這裡之後會自動整理弱點。</p>';var wt=q('#weakestTopic');if(wt&&wt.textContent.trim()==='尚無資料')wt.textContent='做題後分析'}
+ function audit(){style();compactLegacy();patchReset();emptyLabels()}
+ function boot(){var n=0,t=setInterval(function(){n++;audit();if(n>60)clearInterval(t)},250)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();window.UXFreeze115={audit:audit};
+})();
