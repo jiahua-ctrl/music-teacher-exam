@@ -16,5 +16,17 @@
  function dedupe(){['hf115Guide','hf115DailyRec','hf115DailyDone','hf115WeeklyRhythm','ux115LegacyToggle','ux115ResultNext'].forEach(function(id){var xs=qa('#'+id);xs.slice(1).forEach(function(x){x.remove()})})}
  function patchNavigation(){var home=q('#homeBtn'),retry=q('#retryBtn');if(home&&!home.dataset.uxFreezeNav){home.dataset.uxFreezeNav='1';home.addEventListener('click',function(){setTimeout(function(){window.DailyCompletion115?.render?.();window.WeeklyRhythm115?.render?.();window.UXFreeze115?.audit?.()},30)})}if(retry&&!retry.dataset.uxFreezeNav){retry.dataset.uxFreezeNav='1';retry.addEventListener('click',function(){q('#ux115ResultNext')?.remove()})}}
  function audit(){style();dedupe();compactLegacy();patchReset();patchNavigation();emptyLabels()}
- function boot(){var n=0,t=setInterval(function(){n++;audit();if(n>80)clearInterval(t)},250)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();window.UXFreeze115={audit:audit};
+ var auditTimer=null;
+ function scheduleAudit(){clearTimeout(auditTimer);auditTimer=setTimeout(audit,80)}
+ function boot(){
+   audit();
+   if('MutationObserver'in window&&document.body){
+     var observer=new MutationObserver(scheduleAudit);
+     observer.observe(document.body,{childList:true,subtree:true});
+     setTimeout(function(){observer.disconnect()},30000);
+   }
+   ['musicExamDataGroupReady','musicExamLazyGroupReady','musicExamDataSynced','musicExamLatestModulesReady'].forEach(function(evt){window.addEventListener(evt,scheduleAudit)});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+ window.UXFreeze115={audit:audit};
 })();
