@@ -2,7 +2,7 @@
   if(window.__MUSIC_EXAM_PERFORMANCE_LOADER_V1__)return;
   window.__MUSIC_EXAM_PERFORMANCE_LOADER_V1__=true;
 
-  const VERSION='20260820a';
+  const VERSION='20260820b';
   const groupState=new Map();
   const GROUPS={
     shell:[
@@ -11,7 +11,8 @@
       'score-hierarchy.js?v=20260819a'
     ],
     today:[
-      'daily-mission.js?v=20260819b'
+      // 使用新版每日任務；不再同時啟動舊 daily-mission.js 的 1.8 秒輪詢重繪。
+      'daily_mission.js?v=20260820perf'
     ],
     learning:[
       'ability-map.js?v=20260819b',
@@ -40,6 +41,14 @@
       'latest_loader_bootstrap.js?v='+VERSION
     ]
   };
+
+  // 手機捲動時避免 sticky 導覽持續做背景模糊運算。
+  if(!document.getElementById('performanceMobilePaintFix')){
+    const style=document.createElement('style');
+    style.id='performanceMobilePaintFix';
+    style.textContent='@media(max-width:680px){.topbar,#homeCategoryNav{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}';
+    document.head.appendChild(style);
+  }
 
   const baseOf=src=>src.split('?')[0];
   const existing=()=>new Map([...document.scripts].map(s=>[baseOf(s.getAttribute('src')||''),s]));
