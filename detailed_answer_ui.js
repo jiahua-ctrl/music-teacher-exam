@@ -8,10 +8,10 @@
     s.dataset[flag.replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]='1';
     document.body.appendChild(s);
   }
-  // 首屏只保留導覽、首頁整理與效能載入器。其餘學習模組改為互動／閒置時載入。
+  // 2.0：首屏只保留導覽與首頁整理；題庫、名詞、申論資料交給分層 lazy loader。
   loadScript('navigation_state.js?v=20260818aa','navigation-state');
   loadScript('home_organizer.js?v=20260818aa','home-organizer');
-  loadScript('performance_loader_v1.js?v=20260820a','performance-loader');
+  loadScript('performance_data_loader_v2.js?v=20260820v2','performance-data-loader');
   function mount(){
     const byId=id=>document.getElementById(id);
     const esc=s=>String(s||'').replace(/[&<>'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt',"'":'&#39;','\"':'&quot;'}[c]));
