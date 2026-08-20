@@ -8,6 +8,13 @@
   'content_adapter_v1.js','radar_106_115_priority_v1.js','question_quality_rules_v1.js','canonical_concepts_v1.js','high_frequency_ladder_v2.js','difficulty_ladder_v1.js','concept_mastery_v1.js','duplicate_ladder_v2.js','option_explanations_curated_115_batch1.js','option_explanations_curated_115_batch2.js','option_explanations_curated_114_batch2.js','option_explanations_curated_112_113_batch4.js','option_explanations_curated_111_batch5.js','option_explanations_curated_108_110_batch6.js','option_explanations_curated_108_depth_batch7.js','option_explanations_curated_107_depth_batch8.js','option_explanations_curated_107_education_batch9.js','option_explanations_curated_106_107_backfill_batch10.js','option_explanations_v1.js','option_explanation_ui_v1.js','study_notes_library.js','concept_knowledge_pages.js','concept_trial_teaching.js','trial_teaching_challenge.js','trial_teaching_reflection.js','trial_teaching_focus_banner.js','trial_teaching_focus_reflection.js','weakness_trend.js','personal_priority.js','daily_mission.js','daily_trial_teaching_mission.js','today_focus_summary.js','daily_mission_compact_ui.js','daily_mission_completion.js','risk_topic_drill_progress.js','daily_mission_backlog_ui.js','wrong_book_views.js','unknown_book_views.js','learning_progress.js','question_mastery_overview.js','mastery_dashboard.js','top_stats_labels.js','learning_compact_ui.js','trial_teaching_learning_summary.js','trial_teaching_milestones.js','learning_sync.js'
  ];
  const loaded=new Set([...document.scripts].map(s=>(s.getAttribute('src')||'').split('?')[0]));
- function load(src){return new Promise(resolve=>{if(loaded.has(src)){resolve();return}const s=document.createElement('script');s.src=src+'?v=20260819bs';s.onload=()=>{loaded.add(src);resolve()};s.onerror=()=>resolve();document.body.appendChild(s)})}
- (async()=>{for(const src of files)await load(src);window.dispatchEvent(new CustomEvent('musicExamLatestModulesReady'))})();
+ function idle(){return new Promise(resolve=>{'requestIdleCallback'in window?requestIdleCallback(()=>resolve(),{timeout:900}):setTimeout(resolve,28)})}
+ function load(src){return new Promise(resolve=>{if(loaded.has(src)){resolve();return}const s=document.createElement('script');s.src=src+'?v=20260820perf';s.async=true;s.onload=()=>{loaded.add(src);resolve()};s.onerror=()=>resolve();document.body.appendChild(s)})}
+ (async()=>{
+   for(const src of files){
+     await idle();
+     await load(src);
+   }
+   window.dispatchEvent(new CustomEvent('musicExamLatestModulesReady'));
+ })();
 })();
