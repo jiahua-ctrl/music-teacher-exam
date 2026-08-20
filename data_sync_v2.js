@@ -2,6 +2,14 @@
   if(window.__MUSIC_EXAM_DATA_SYNC_V2__)return;
   window.__MUSIC_EXAM_DATA_SYNC_V2__=true;
 
+  // 手機版在核心載入階段就停用 sticky 背景模糊，避免前幾秒捲動仍有額外繪圖負擔。
+  if(!document.getElementById('performanceMobilePaintFixV2')){
+    const style=document.createElement('style');
+    style.id='performanceMobilePaintFixV2';
+    style.textContent='@media(max-width:680px){.topbar,#homeCategoryNav{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}';
+    document.head.appendChild(style);
+  }
+
   const api=window.MusicTeacherExam;
   if(!api)return;
   const coreQuestions=api.questions;
