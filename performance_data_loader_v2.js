@@ -2,7 +2,7 @@
   if(window.__MUSIC_EXAM_DATA_LOADER_V2__)return;
   window.__MUSIC_EXAM_DATA_LOADER_V2__=true;
 
-  const VERSION='20260823-v2e';
+  const VERSION='20260824-v2f';
   const state=new Map();
   const loaded=new Set([...document.scripts].map(s=>(s.getAttribute('src')||'').split('?')[0]));
 
@@ -15,12 +15,14 @@
     practiceUi:['smart_practice.js','advanced_practice.js','review-collapse.js','refresh_button.js','question_quality_rules_v1.js','canonical_concepts_v1.js','high_frequency_ladder_v2.js','difficulty_ladder_v1.js','concept_mastery_v1.js','duplicate_ladder_v2.js','option_explanations_curated_115_batch1.js','option_explanations_curated_115_batch2.js','option_explanations_curated_114_batch2.js','option_explanations_curated_112_113_batch4.js','option_explanations_curated_111_batch5.js','option_explanations_curated_108_110_batch6.js','option_explanations_curated_108_depth_batch7.js','option_explanations_curated_107_depth_batch8.js','option_explanations_curated_107_education_batch9.js','option_explanations_curated_106_107_backfill_batch10.js','option_explanations_v1.js','option_explanation_ui_v1.js','wrong_book_views.js','unknown_book_views.js'],
     radarUi:['frequency_analysis.js','precise_terms_106_110.js','precise_terms_106_109_batch2.js','precise_terms_106_110_part2.js','precise_terms_107_moe_batch4.js','precise_terms_111_113_batch4.js','precise_terms_114_115_batch6.js','precise_terms_edu_112_115_batch1.js','precise_terms_edu_113_115_batch8.js','precise_terms_edu_112_batch9.js','precise_terms_edu_109_111_batch10.js','precise_terms_edu_106_108_batch11.js','precise_terms_radar.js','highfreq_115_cross_exam_batch1.js','highfreq_115_cross_exam_batch2.js','highfreq_115_cross_exam_batch3.js','highfreq_115_ui.js','radar_106_115_priority_v1.js'],
     learningUi:['ability-map.js','learning-history.js','weekly-summary.js','weekly-review.js','confusion_tracking_115.js','study_notes_library.js','weakness_trend.js','personal_priority.js','learning_progress.js','question_mastery_overview.js','mastery_dashboard.js','top_stats_labels.js','learning_compact_ui.js','learning_sync.js','selfstudy_mission_115.js','selfstudy_interactive_115.js','selfstudy_interactive2_115.js','selfstudy_interactive3_115.js','selfstudy_interactive4_115.js'],
-    writtenUi:['term_content_enrichment_115.js','term-learning.js','term-ux-fix.js','bad-question.js','nonchoice-center.js','nonchoice-progress.js','trial-diagnosis.js','term-mastery-ladder.js','term-answer-structure.js','term-points-mode.js','term-next-action.js','term-readiness-summary.js','term-daily-plan.js','term-daily-runner.js','term-daily-resume.js','concept_knowledge_pages.js','concept_trial_teaching.js','trial_teaching_challenge.js','trial_teaching_reflection.js','trial_teaching_focus_banner.js','trial_teaching_focus_reflection.js','trial_teaching_learning_summary.js','trial_teaching_milestones.js'],
+    writtenTermUi:['term_content_enrichment_115.js','term-learning.js','term-ux-fix.js','term-answer-structure.js','term-points-mode.js','term-next-action.js'],
+    writtenEssayUi:['bad-question.js','nonchoice-progress.js'],
+    writtenTrialUi:['trial-diagnosis.js','concept_knowledge_pages.js','concept_trial_teaching.js','trial_teaching_challenge.js','trial_teaching_reflection.js','trial_teaching_focus_banner.js','trial_teaching_focus_reflection.js','trial_teaching_learning_summary.js','trial_teaching_milestones.js'],
     polishUi:['ux_guardrails_115.js','ux_polish_115.js','ux_freeze_115.js']
   };
 
   const idle=(timeout=1000)=>new Promise(resolve=>{'requestIdleCallback'in window?requestIdleCallback(()=>resolve(),{timeout}):setTimeout(resolve,32)});
-  const inQuiz=()=>document.getElementById('quizView')?.classList.contains('active');
+  const inFocusedView=()=>['quizView','termView','essayView'].some(id=>document.getElementById(id)?.classList.contains('active'));
 
   function loadScript(src){
     const base=src.split('?')[0];
@@ -38,26 +40,25 @@
     try{window.MusicTeacherContentAdapter?.refresh?.();window.MusicTeacherExam?.refreshData?.(reason);window.dispatchEvent(new CustomEvent('musicExamDataChanged',{detail:{reason}}))}catch(e){console.warn('[data-loader-v2] refresh skipped',e)}
   }
 
-  function laterWhenHome(fn,delay=700){
-    setTimeout(()=>idle(1200).then(()=>{if(!inQuiz())fn()}),delay);
-  }
+  function laterWhenHome(fn,delay=700){setTimeout(()=>idle(1200).then(()=>{if(!inFocusedView())fn()}),delay)}
 
   function loadForGroup(group){
     if(group==='today'){loadGroup('todayUi');return}
     if(group==='practice'){loadGroup('questionCore',{yieldBetween:false});return}
     if(group==='radar'){loadGroup('questionArchive');laterWhenHome(()=>loadGroup('termArchive'),400);laterWhenHome(()=>loadGroup('radarUi'),1000);return}
-    if(group==='learning'){loadGroup('learningUi');return}
-    if(group==='written'){loadGroup('termArchive');laterWhenHome(()=>loadGroup('essayArchive'),500);laterWhenHome(()=>loadGroup('writtenUi'),1100)}
+    if(group==='learning'){return}
+    if(group==='written'){loadScript('nonchoice-center.js');return}
   }
 
   function intentFrom(target){
     const el=target?.closest?.('button,[data-mode],[data-g],select');if(!el)return;
     const id=el.id||'',mode=el.dataset?.mode||'',group=el.dataset?.g||'';
     if(group)loadForGroup(group);
-    if(mode){loadGroup('questionCore',{yieldBetween:false})}
-    if(id==='yearFilter'||id==='subjectFilter'||id==='topicFilter'||id==='filteredQuizBtn'){laterWhenHome(()=>loadGroup('questionArchive'),250)}
-    if(id==='termBtn'||id==='showTermBtn'||id==='nextTermBtn'){laterWhenHome(()=>loadGroup('termArchive'),200);laterWhenHome(()=>loadGroup('writtenUi'),1100)}
-    if(id==='essayBtn'||id==='showHintBtn'||id==='nextEssayBtn'){laterWhenHome(()=>loadGroup('essayArchive'),200);laterWhenHome(()=>loadGroup('writtenUi'),1100)}
+    if(mode)loadGroup('questionCore',{yieldBetween:false});
+    if(id==='yearFilter'||id==='subjectFilter'||id==='topicFilter'||id==='filteredQuizBtn')laterWhenHome(()=>loadGroup('questionArchive'),250);
+    if(id==='termBtn'||id==='ncTermBtn'||id==='showTermBtn'||id==='nextTermBtn')laterWhenHome(()=>loadGroup('writtenTermUi'),900);
+    if(id==='essayBtn'||id==='ncEssayBtn'||id==='showHintBtn'||id==='nextEssayBtn')laterWhenHome(()=>loadGroup('writtenEssayUi'),900);
+    if(id==='ncTrialBtn')laterWhenHome(()=>loadGroup('writtenTrialUi'),100);
   }
 
   document.addEventListener('pointerdown',e=>intentFrom(e.target),{passive:true,capture:true});
