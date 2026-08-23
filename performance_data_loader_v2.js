@@ -2,7 +2,7 @@
   if(window.__MUSIC_EXAM_DATA_LOADER_V2__)return;
   window.__MUSIC_EXAM_DATA_LOADER_V2__=true;
 
-  const VERSION='20260820-v2c';
+  const VERSION='20260823-v2d';
   const state=new Map();
   const loaded=new Set([...document.scripts].map(s=>(s.getAttribute('src')||'').split('?')[0]));
 
@@ -68,9 +68,9 @@
     polishUi:['ux_guardrails_115.js','ux_polish_115.js','ux_freeze_115.js']
   };
 
-  const idle=(timeout=800)=>new Promise(resolve=>{
+  const idle=(timeout=1000)=>new Promise(resolve=>{
     if('requestIdleCallback'in window)requestIdleCallback(()=>resolve(),{timeout});
-    else setTimeout(resolve,24);
+    else setTimeout(resolve,32);
   });
 
   function loadScript(src){
@@ -93,7 +93,7 @@
     if(state.has(name))return state.get(name);
     const job=(async()=>{
       for(const src of (GROUPS[name]||[])){
-        if(yieldBetween)await idle(650);
+        if(yieldBetween)await idle(900);
         await loadScript(src);
       }
       refreshApp(name);
@@ -112,6 +112,10 @@
     }catch(e){console.warn('[data-loader-v2] refresh skipped',e)}
   }
 
+  function later(fn,delay=700){
+    setTimeout(()=>idle(1200).then(fn),delay);
+  }
+
   function loadForGroup(group){
     if(group==='today'){
       loadGroup('todayUi');
@@ -119,14 +123,14 @@
     }
     if(group==='practice'){
       loadGroup('questionCore',{yieldBetween:false});
-      loadGroup('practiceUi');
-      loadGroup('questionArchive');
+      later(()=>loadGroup('practiceUi'),350);
+      later(()=>loadGroup('questionArchive'),1400);
       return;
     }
     if(group==='radar'){
       loadGroup('questionArchive');
-      loadGroup('termArchive');
-      loadGroup('radarUi');
+      later(()=>loadGroup('termArchive'),400);
+      later(()=>loadGroup('radarUi'),1000);
       return;
     }
     if(group==='learning'){
@@ -134,9 +138,9 @@
       return;
     }
     if(group==='written'){
-      loadGroup('termArchive',{yieldBetween:false});
-      loadGroup('essayArchive',{yieldBetween:false});
-      loadGroup('writtenUi');
+      loadGroup('termArchive');
+      later(()=>loadGroup('essayArchive'),500);
+      later(()=>loadGroup('writtenUi'),1100);
     }
   }
 
@@ -148,36 +152,32 @@
 
     if(mode){
       loadGroup('questionCore',{yieldBetween:false});
-      loadGroup('practiceUi');
-      // 進入刷題後再慢慢補完整歷屆庫，不阻塞第一題顯示。
-      loadGroup('questionArchive');
+      later(()=>loadGroup('practiceUi'),500);
+      later(()=>loadGroup('questionArchive'),1600);
     }
     if(id==='yearFilter'||id==='subjectFilter'||id==='topicFilter'||id==='filteredQuizBtn'){
-      loadGroup('questionArchive');
+      later(()=>loadGroup('questionArchive'),250);
     }
     if(id==='termBtn'||id==='showTermBtn'||id==='nextTermBtn'){
-      loadGroup('termArchive',{yieldBetween:false});
-      loadGroup('writtenUi');
+      later(()=>loadGroup('termArchive'),200);
+      later(()=>loadGroup('writtenUi'),1100);
     }
     if(id==='essayBtn'||id==='showHintBtn'||id==='nextEssayBtn'){
-      loadGroup('essayArchive',{yieldBetween:false});
-      loadGroup('writtenUi');
+      later(()=>loadGroup('essayArchive'),200);
+      later(()=>loadGroup('writtenUi'),1100);
     }
   }
 
-  document.addEventListener('pointerover',e=>intentFrom(e.target),{passive:true,capture:true});
+  // 只在真正互動時預載；避免滑鼠經過卡片就啟動數十個 script。
   document.addEventListener('pointerdown',e=>intentFrom(e.target),{passive:true,capture:true});
-  document.addEventListener('focusin',e=>intentFrom(e.target),{passive:true,capture:true});
+  document.addEventListener('change',e=>intentFrom(e.target),{passive:true,capture:true});
 
-  // 2.0 穩定模式：首屏只暖最常用的小型資料與今日 UI。
-  // 不再以 6.5～22 秒定時器自動把所有大模組塞回主執行緒。
-  const warm=()=>{
-    loadGroup('questionCore');
-    loadGroup('todayUi');
-    loadGroup('polishUi');
-  };
+  // 首屏只暖小型核心資料；其餘功能延到主執行緒比較空閒時再補。
+  const warm=()=>loadGroup('questionCore');
   if('requestIdleCallback'in window)requestIdleCallback(warm,{timeout:1800});
-  else setTimeout(warm,700);
+  else setTimeout(warm,800);
+  later(()=>loadGroup('todayUi'),1200);
+  later(()=>loadGroup('polishUi'),2400);
 
   window.MusicExamDataLoaderV2={loadGroup,loadForGroup,state,groups:GROUPS,refresh:refreshApp};
 })();
